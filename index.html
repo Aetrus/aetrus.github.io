@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" data-binding="gilt" data-mode="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aetheria Archive</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Character cards, kindred creators, and the Grimoire's card-making tools for Aetheria, open in your browser.">
+<meta name="theme-color" content="#0f1217">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aetheria Archive">
+<meta property="og:description" content="Character cards, kindred creators, and the Grimoire's card-making tools for Aetheria.">
+<meta property="og:image" content="https://aetrus.github.io/assets/img/og.png">
+<meta property="og:url" content="https://aetrus.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/emblem.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&family=Marcellus+SC&display=swap">
+<link rel="stylesheet" href="assets/css/archive.css">
+<script>
+  (function () {
+    var root = document.documentElement, b = null;
+    try { b = JSON.parse(localStorage.getItem('aetheria.binding')); } catch (e) {}
+    if (['gilt', 'moon', 'verdigris', 'blossom'].indexOf(b) < 0) {
+      var t = root.getAttribute('data-theme');
+      b = t === 'light' ? 'blossom' : t === 'dark' ? 'gilt'
+        : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'blossom' : 'gilt');
+    }
+    root.setAttribute('data-binding', b);
+    root.setAttribute('data-mode', b === 'blossom' ? 'light' : 'dark');
+  })();
+</script>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<a class="skip" href="#view">Skip to content</a>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="brand" href="#home" aria-label="Aetheria Archive, home">
+      <svg class="emblem" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22.5" class="em-ring"/>
+        <circle cx="24" cy="24" r="19" class="em-ring em-inner"/>
+        <path class="em-ticks" d="M24 1.5v3M24 43.5v3M1.5 24h3M43.5 24h3M8.1 8.1l2.1 2.1M37.8 37.8l2.1 2.1M8.1 39.9l2.1-2.1M37.8 10.2l2.1-2.1"/>
+        <path class="em-star" transform="translate(12 12)" d="M12 0 C12.9 7.6 16.4 11.1 24 12 C16.4 12.9 12.9 16.4 12 24 C11.1 16.4 7.6 12.9 0 12 C7.6 11.1 11.1 7.6 12 0 Z"/>
+      </svg>
+      <span class="brand-word"><span class="brand-name">Aetheria</span><span class="brand-sub">Archive</span></span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="#gallery" data-nav="gallery">Gallery</a>
+      <a href="#kindred" data-nav="kindred">Kindred</a>
+      <a href="#workshop" data-nav="workshop">Workshop</a>
+      <a href="#aetheria" data-nav="aetheria">Aetheria</a>
+    </nav>
+    <div class="binding-switch">
+      <button type="button" class="binding-orb" aria-expanded="false" aria-controls="binding-menu">
+        <span class="orb" aria-hidden="true"></span><span class="orb-label">Binding</span>
+      </button>
+      <div class="binding-menu" id="binding-menu" hidden></div>
+    </div>
+  </div>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <p class="colophon-mark"><svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0 C12.9 7.6 16.4 11.1 24 12 C16.4 12.9 12.9 16.4 12 24 C11.1 16.4 7.6 12.9 0 12 C7.6 11.1 11.1 7.6 12 0 Z"/></svg> Kept by <span id="colophon-keeper">Atrus</span> for Aetheria</p>
+    <p class="colophon-note">Cards belong to their creators. The Workshop runs entirely in your browser; nothing you open there is uploaded.</p>
+    <p class="colophon-links" id="colophon-links"></p>
+  </div>
+</footer>
+
+<nav class="dock" aria-label="Sections">
+  <a href="#home" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c.6 5 2.8 7.2 7.8 7.8-5 .6-7.2 2.8-7.8 7.8-.6-5-2.8-7.2-7.8-7.8 5-.6 7.2-2.8 7.8-7.8Z"/><path d="M5 21.5h14"/></svg><span>Archive</span></a>
+  <a href="#gallery" data-nav="gallery"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="3.5" width="11" height="15" rx="1.5" transform="rotate(8 12.5 11)"/><rect x="5" y="5" width="11" height="15" rx="1.5"/></svg><span>Gallery</span></a>
+  <a href="#kindred" data-nav="kindred"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17 9 8l6 4 5-7"/><circle cx="4" cy="17" r="1.6"/><circle cx="9" cy="8" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="20" cy="5" r="1.6"/></svg><span>Kindred</span></a>
+  <a href="#workshop" data-nav="workshop"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4"/><path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/></svg><span>Workshop</span></a>
+  <a href="#aetheria" data-nav="aetheria"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C9.5 4.8 6.5 4.5 3.5 5v13c3-.5 6-.2 8.5 1.5 2.5-1.7 5.5-2 8.5-1.5V5c-3-.5-6-.2-8.5 1.5Zm0 0v13"/></svg><span>Aetheria</span></a>
+</nav>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

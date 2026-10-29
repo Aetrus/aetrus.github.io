@@ -1,0 +1,53 @@
+{
+  "kindred": [
+    {
+      "name": "Atrus",
+      "house": true,
+      "role": "Keeper of this archive",
+      "blurb": "Builds Aetheria and the Grimoire, and writes character cards with their lore bound in.",
+      "tags": ["Romance", "Horror", "Worldbuilding"],
+      "links": [
+        { "label": "Chub", "url": "https://chub.ai/users/Atrus" },
+        { "label": "GitHub", "url": "https://github.com/Aetrus" }
+      ]
+    }
+  ],
+  "lodestars": [
+    {
+      "name": "SillyTavern Docs",
+      "kind": "Frontend",
+      "blurb": "The reference for macros, World Info and prompt order.",
+      "url": "https://docs.sillytavern.app/"
+    },
+    {
+      "name": "Character Card V2",
+      "kind": "Spec",
+      "blurb": "The card format nearly every frontend reads.",
+      "url": "https://github.com/malfoyslastname/character-card-spec-v2"
+    },
+    {
+      "name": "Character Card V3",
+      "kind": "Spec",
+      "blurb": "Assets, group-only greetings and the ccv3 chunk.",
+      "url": "https://github.com/kwaroran/character-card-spec-v3"
+    },
+    {
+      "name": "Chub",
+      "kind": "Library",
+      "blurb": "An open library of character cards and lorebooks.",
+      "url": "https://chub.ai/"
+    },
+    {
+      "name": "RisuRealm",
+      "kind": "Library",
+      "blurb": "Cards and modules from the RisuAI community.",
+      "url": "https://realm.risuai.net/"
+    },
+    {
+      "name": "Character Tavern",
+      "kind": "Library",
+      "blurb": "A public library of character cards.",
+      "url": "https://character-tavern.com/"
+    }
+  ]
+}

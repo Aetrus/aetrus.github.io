@@ -1,0 +1,79 @@
+{
+  "cards": [
+    {
+      "file": "cards/wren-calloway.png",
+      "thumb": "covers/wren-calloway.webp",
+      "slug": "wren-calloway",
+      "name": "Wren Calloway",
+      "tagline": "Keeper of the Lowmere Archive of Lost and Found",
+      "world": "Lowmere",
+      "tags": [
+        "Lowmere",
+        "Slice of Life",
+        "Mystery",
+        "Cozy",
+        "Uncanny",
+        "Librarian",
+        "SFW"
+      ],
+      "creator": "Atrus",
+      "stats": {
+        "permanent": 824,
+        "greetings": 3,
+        "lore": 5
+      },
+      "featured": true,
+      "added": "2026-10-29"
+    },
+    {
+      "file": "cards/isolde-marr.png",
+      "thumb": "covers/isolde-marr.webp",
+      "slug": "isolde-marr",
+      "name": "Isolde Marr",
+      "tagline": "Keeper of the Farlight, where the charts go white",
+      "world": "Lowmere",
+      "tags": [
+        "Lowmere",
+        "Adventure",
+        "Mystery",
+        "Lighthouse",
+        "Sea",
+        "Stoic",
+        "SFW"
+      ],
+      "creator": "Atrus",
+      "stats": {
+        "permanent": 677,
+        "greetings": 3,
+        "lore": 5
+      },
+      "featured": false,
+      "added": "2026-10-29"
+    },
+    {
+      "file": "cards/pell-low-tide-market.png",
+      "thumb": "covers/pell-low-tide-market.webp",
+      "slug": "pell-low-tide-market",
+      "name": "Pell",
+      "tagline": "Broker of small impossible things at the Low Tide Market",
+      "world": "Lowmere",
+      "tags": [
+        "Lowmere",
+        "Scenario",
+        "Multiple Characters",
+        "Whimsical",
+        "Merchant",
+        "Market",
+        "SFW"
+      ],
+      "creator": "Atrus",
+      "stats": {
+        "permanent": 810,
+        "greetings": 3,
+        "lore": 5
+      },
+      "featured": false,
+      "added": "2026-10-29"
+    }
+  ]
+}
