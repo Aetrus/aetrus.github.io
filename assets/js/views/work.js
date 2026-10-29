@@ -4,6 +4,12 @@ import { handoff } from '../handoff.js';
 import { markdown } from '../lib/markdown.js';
 import { TYPES, TYPE_ICON, folioTile } from './gallery.js';
 
+const OPENS = {
+  lorebook: { file: /\.json$/i, builder: 'Lorebook' },
+  preset: { file: /\.json$/i, builder: 'Preset' },
+  world: { file: /\.aetheria-age$/i, builder: 'World' },
+};
+
 export async function render(main, slug, { setTitle }) {
   const [works, cards] = await Promise.all([loadWorks(), loadCards().catch(() => [])]);
   const w = works.find((x) => x.slug === slug);
@@ -18,15 +24,17 @@ export async function render(main, slug, { setTitle }) {
   const files = w.files || [];
   const links = w.links || [];
   const kin = w.world ? [...cards.filter((c) => c.world === w.world), ...works.filter((x) => x !== w && x.world === w.world)] : [];
+  // The file a builder opens: a lorebook's or preset's JSON, a world's package.
+  const opens = OPENS[w.type] ? files.find((f) => OPENS[w.type].file.test(f.url)) : null;
 
   main.innerHTML = `<div class="page">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="#works">Works</a><span aria-hidden="true">${starSvg('star')}</span><span>${esc(w.name)}</span></nav>
     <article class="reader">
       <div class="reader-art">
-        <div class="folio-hero glass">
+        ${w.cover || w.thumb ? cardTile({ slug: w.slug, name: w.name, tagline: w.tagline, world: `${t.one}${w.world ? ` · ${w.world}` : ''}`, thumb: w.cover || w.thumb }, { tag: 'div', eager: true }) : `<div class="folio-hero glass">
           <span class="folio-hero-icon">${TYPE_ICON[w.type] || TYPE_ICON.other}</span>
           <span class="folio-type">${esc(t.one)}${w.version ? ` · v${esc(w.version)}` : ''}</span>
-        </div>
+        </div>`}
       </div>
       <div class="reader-main">
         <header style="display:flex;flex-direction:column;gap:10px">
@@ -43,8 +51,7 @@ export async function render(main, slug, { setTitle }) {
         </div>
         <div class="btn-row">
           ${files.map((f, i) => `<a class="btn ${i === 0 ? 'btn-gilt' : ''}" href="${esc(f.url)}" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>${esc(f.label || 'Download')}</a>`).join('')}
-          ${w.type === 'lorebook' && files.some((f) => /\.json$/i.test(f.url)) ? '<button type="button" class="btn btn-ghost" id="w-open" data-to="lorebook">Open in the Lorebook builder</button>' : ''}
-          ${w.type === 'preset' && files.some((f) => /\.json$/i.test(f.url)) ? '<button type="button" class="btn btn-ghost" id="w-open" data-to="preset">Open in the Preset builder</button>' : ''}
+          ${opens ? `<button type="button" class="btn btn-ghost" id="w-open" data-to="${esc(w.type)}">Open in the ${OPENS[w.type].builder} builder</button>` : ''}
           ${links.map((l) => `<a class="btn btn-ghost" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join('')}
         </div>
         ${w.description ? `<div class="prose">${markdown(w.description)}</div>` : ''}
@@ -57,9 +64,12 @@ export async function render(main, slug, { setTitle }) {
 
   main.querySelector('#w-open')?.addEventListener('click', async (e) => {
     const to = e.currentTarget.dataset.to;
-    const f = files.find((x) => /\.json$/i.test(x.url));
     try {
-      handoff[to] = { json: await getJSON(f.url), name: w.name };
+      if (to === 'world') {
+        const r = await fetch(opens.url);
+        if (!r.ok) throw new Error(`Could not load ${opens.url} (${r.status}).`);
+        handoff.world = { text: await r.text(), name: opens.url.split('/').pop() };
+      } else handoff[to] = { json: await getJSON(opens.url), name: w.name };
       location.hash = to;
     } catch (err) { toast(err.message); }
   });

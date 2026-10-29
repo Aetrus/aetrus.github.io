@@ -1,23 +1,76 @@
 {
   "works": [
     {
-      "slug": "lowmere-lore-spine",
+      "slug": "lantern-quay-lorebook",
       "type": "lorebook",
-      "name": "Lowmere: The Lore Spine",
-      "tagline": "The shared world behind Wren, Isolde and Pell",
-      "world": "Lowmere",
+      "name": "Lantern Quay",
+      "tagline": "What is true in Lantern Quay: the Works, the Tideright, the wreck of the Constance and the people of the town.",
+      "world": "Lantern Quay",
       "tags": [
-        "Lowmere",
-        "World Info",
-        "SFW"
+        "Lantern Quay",
+        "starter",
+        "World Info"
       ],
-      "version": "1.0",
-      "updated": "2026-10-29",
-      "description": "Eight World Info entries for the last town before the map runs out: Lowmere itself, the Archive of Lost and Found, Mr. Aske's rule, the Farlight, the White, the Low Tide Market, Mother Gannet and the Lantern Boy.\n\nImport it as a standalone lorebook in SillyTavern or Aetheria and attach it to any card set on the coast. The town entry is constant; everything else is keyed.",
+      "version": "1",
+      "updated": "2026-10-19",
+      "featured": true,
+      "thumb": "covers/lantern-quay-lorebook.webp",
+      "cover": "covers/lantern-quay-lorebook-large.webp",
+      "description": "The book of what is true in Lantern Quay, as it comes with Aetheria: thirteen World Info entries for the Works, the Tideright, the wreck of the Constance, the Cape Morrow lens and the people of the town.\n\n- The town itself is always on.\n- The other twelve fire on their keys as whole words (\"inn\" is the Tidewater Inn, never \"dinner\") and stay for that reply and the two after it.\n- It names who the hobnailed boots could belong to, and leaves it to the story.\n\nDilys Pengelly and Ansel Truscott each carry it bound into their card. This is the book on its own, as Aetheria exports it, with its picture. Import it in Aetheria (Library → Lorebooks → Import) or as World Info in SillyTavern.",
       "files": [
         {
           "label": "World Info JSON",
-          "url": "works/lowmere-lore-spine.json"
+          "url": "works/lantern-quay-lorebook.json"
+        }
+      ],
+      "links": []
+    },
+    {
+      "slug": "aetheria-storyteller",
+      "type": "preset",
+      "name": "Aetheria Storyteller",
+      "tagline": "The house preset, third edition",
+      "world": "",
+      "tags": [
+        "starter",
+        "chat completion",
+        "SillyTavern"
+      ],
+      "version": "3",
+      "updated": "2026-10-19",
+      "featured": true,
+      "thumb": "covers/aetheria-storyteller.webp",
+      "cover": "covers/aetheria-storyteller-large.webp",
+      "description": "\"Aetheria Storyteller\", the house preset that comes with Aetheria, third edition. In a new archive it is the one new stories use.\n\nIt is written for collaborative fiction in small blocks that each do one thing: never writing your character for you (nor hearing what they only think), people who know only what they have seen, voices from their own lives, facts that stay facts, prose tested against its own draft, no echo of your last line.\n\nTwelve choices, one block on in each group. Each starts at its usual:\n\n- Whose eyes? *Third person, past*\n- How do you take part? *As your character*\n- How long? *As the moment needs*\n- How fast does time move? *Steady*\n- What is the mood? *As the story sets it*\n- How does the world treat your character? *Honest*\n- Who drives the story? *Together*\n- How does romance move? *As the characters would*\n- Do people change? *As they would*\n- Talk or telling? *As the moment needs*\n- How long do consequences last? *As they would*\n- How far may it go? *Mature*\n\nThen fourteen tones that can be on together, all off at first: Wry, Tender, Eerie, Melancholy, Tense, Whimsical, Gritty, Romantic, Cosy, Lyrical, Frightening, Mysterious, Plain and Epic.\n\nOff until you want them: \"Plain talk (if it sounds like an assistant)\", \"Chance decides (a die each turn)\", \"Life offstage (a die each turn)\", \"Threads come back (a die each turn)\", \"Plan first (for models that do not think)\" and \"Think briefly (for models that think too long)\". Last of all, after the history, \"The turn\" restates the essentials.\n\nSampling: temperature 1, 32,768 context and 4,000 response tokens (room for models that reason before they write; \"How long?\" sets how long a reply is).\n\nIt is a SillyTavern chat-completion preset, so it opens there too. \"The model's habits\" is filled by Aetheria; in another app `{{model_habits}}` is left as written, so switch that block off there.",
+      "files": [
+        {
+          "label": "Preset JSON",
+          "url": "works/aetheria-storyteller.json"
+        }
+      ],
+      "links": []
+    },
+    {
+      "slug": "lantern-quay-world",
+      "type": "world",
+      "name": "Lantern Quay",
+      "tagline": "A harbour town under a cliff on a cold west coast, a tidal island, a moor inland.",
+      "world": "Lantern Quay",
+      "tags": [
+        "Lantern Quay",
+        "starter",
+        "map"
+      ],
+      "version": "1",
+      "updated": "2026-10-19",
+      "featured": true,
+      "thumb": "covers/lantern-quay-world.webp",
+      "cover": "covers/lantern-quay-world-large.webp",
+      "description": "Lantern Quay as a world with a map, the one the starter set builds on your device: a small harbour town on a cold, foggy coast, built up a cliff above its harbour, with the Tidewater Inn halfway up the cliff path and the Works at the top; Gull Rock off the strand, a tidal island reached by a stone causeway that floods at high water; and inland a heather moor with a ring of standing stones called the Teeth and a flooded sand quarry.\n\nWhat its book sets down: Lantern Quay, the cliff, the harbour, the test lamps, the slipway, the fish market, the strand, the salvage shed, the Works, the cliff path, Tidewater Inn, Gull Rock, the test tower, the keeper's cottage, the causeway, the Constance, the moor, the Teeth, the flooded quarry and the Harrowgate road.\n\nBuilt from the structure Aetheria writes out for it and laid out as a map by Aetheria's own world engine, with no model asked. This file is a recipe package: the world's book, its document and its picture. It travels light, and Aetheria and the World builder rebuild the map from it exactly when they open it.\n\nIn Aetheria, bring it in with Import (or \"Import a world…\" in the World): it waits under Review until you choose \"Add to the library\". Bringing a world in turns \"Worlds in stories\" on.",
+      "files": [
+        {
+          "label": "World package (recipe)",
+          "url": "works/lantern-quay.aetheria-age"
         }
       ],
       "links": []

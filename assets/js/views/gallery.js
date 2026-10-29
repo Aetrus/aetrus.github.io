@@ -1,5 +1,5 @@
-// Works: everything made here and posted publicly. Cards use the lifting tiles;
-// lorebooks, presets, themes and guides use folio plates.
+// Works: everything made here and posted publicly. Cards use the lifting tiles,
+// and so does any other work with a picture of its own; the rest use folio plates.
 import { esc, cardTile, liftTiles, pageHead, store, sigilSvg } from '../ui.js';
 import { loadCards, loadWorks } from '../data.js';
 
@@ -7,6 +7,7 @@ export const TYPES = {
   card: { label: 'Cards', one: 'Card' },
   lorebook: { label: 'Lorebooks', one: 'Lorebook' },
   preset: { label: 'Presets', one: 'Preset' },
+  world: { label: 'Worlds', one: 'World' },
   theme: { label: 'Themes', one: 'Theme' },
   guide: { label: 'Guides', one: 'Guide' },
   tool: { label: 'Tools', one: 'Tool' },
@@ -16,6 +17,7 @@ export const TYPES = {
 export const TYPE_ICON = {
   lorebook: '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 9c-3.2-2.2-7.4-2.7-11.5-2v24c4.1-.7 8.3-.2 11.5 2 3.2-2.2 7.4-2.7 11.5-2V7c-4.1-.7-8.3-.2-11.5 2Zm0 0v24"/><path d="M12 14h4M12 18h5M24 14h4M23 18h5"/></svg>',
   preset: '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M8 11h24M8 20h24M8 29h24"/><circle cx="14" cy="11" r="2.6"/><circle cx="25" cy="20" r="2.6"/><circle cx="18" cy="29" r="2.6"/></svg>',
+  world: '<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12.5"/><ellipse cx="20" cy="20" rx="12.5" ry="5"/><path d="M20 7.5c3.6 3.6 3.6 21.4 0 25M20 7.5c-3.6 3.6-3.6 21.4 0 25"/></svg>',
   theme: '<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12.5"/><path d="M20 7.5v25M20 7.5a12.5 12.5 0 0 1 0 25"/><path d="M20 15c.4 2.6 1.4 3.6 4 4-2.6.4-3.6 1.4-4 4-.4-2.6-1.4-3.6-4-4 2.6-.4 3.6-1.4 4-4Z"/></svg>',
   guide: '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 7h14l6 6v20H11z"/><path d="M25 7v6h6M15 18h12M15 22h12M15 26h8"/></svg>',
   tool: '<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="11"/><circle cx="20" cy="20" r="4.5"/><path d="M20 5v4M20 31v4M5 20h4M31 20h4"/></svg>',
@@ -25,6 +27,13 @@ export const TYPE_ICON = {
 export function folioTile(w) {
   const t = TYPES[w.type] || TYPES.other;
   const meta = [w.version ? `v${w.version}` : '', w.updated || '', (w.files || []).length ? `${w.files.length} file${w.files.length === 1 ? '' : 's'}` : ''].filter(Boolean);
+  // A work with its own picture is a card on the shelf, as it is in Aetheria's Library.
+  if (w.thumb) {
+    return cardTile({
+      slug: w.slug, name: w.name, tagline: w.tagline, thumb: w.thumb, nsfw: w.nsfw, meta, world: w.world,
+      eyebrow: `${t.one}${w.world ? ` · ${w.world}` : ''}`,
+    }, { href: `#work-${w.slug}` });
+  }
   return `<a class="folio glass" href="#work-${esc(w.slug)}" data-slug="${esc(w.slug)}" data-world="${esc(w.world || '')}">
     <span class="folio-icon">${TYPE_ICON[w.type] || TYPE_ICON.other}</span>
     <span class="folio-type">${esc(t.one)}${w.world ? ` · ${esc(w.world)}` : ''}${w.nsfw ? ' · <span class="flag">Mature</span>' : ''}</span>
@@ -116,8 +125,8 @@ export async function render(main, onlyType, { setTitle }) {
     groups.innerHTML = order.map((k) => {
       const items = list.filter((x) => x.type === k);
       const heading = order.length > 1 || state.type === 'all' ? `<div class="section-head"><h2 class="section-title">${TYPES[k].label}</h2><span class="mono faint">${items.length}</span></div>` : '';
-      return k === 'card'
-        ? `<section class="works-group" aria-label="${TYPES[k].label}">${heading}<div class="gallery-grid" data-cards>${items.map((c, i) => cardTile(c, { eager: i < 4 })).join('')}<svg class="starlines" aria-hidden="true"></svg></div></section>`
+      return k === 'card' || items.every((x) => x.thumb)
+        ? `<section class="works-group" aria-label="${TYPES[k].label}">${heading}<div class="gallery-grid" data-cards>${items.map((c, i) => (k === 'card' ? cardTile(c, { eager: i < 4 }) : folioTile(c))).join('')}<svg class="starlines" aria-hidden="true"></svg></div></section>`
         : `<section class="works-group" aria-label="${TYPES[k].label}">${heading}<div class="folio-grid">${items.map(folioTile).join('')}</div></section>`;
     }).join('');
     liftTiles(groups);

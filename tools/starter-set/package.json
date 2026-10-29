@@ -1,0 +1,8 @@
+{
+  "name": "aetheria-starter-set",
+  "private": true,
+  "description": "Writes Aetheria's starter set (Lantern Quay) into the Archive as real files: two PNG cards, the lorebook, the house preset and the world.",
+  "type": "module",
+  "scripts": { "build": "node generate.mjs" },
+  "dependencies": { "esbuild": "0.24.0", "jszip": "3.10.1", "pako": "2.1.0", "uuid": "9.0.1" }
+}

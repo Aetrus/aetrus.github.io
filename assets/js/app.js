@@ -8,6 +8,7 @@ export const BINDINGS = [
   { id: 'moon', name: 'Moonlit Silver', mode: 'dark', note: 'Blue-black ink under a silver moon: pewter hairlines and ice-blue light.' },
   { id: 'verdigris', name: 'Verdigris & Brass', mode: 'dark', note: 'Green-black slate in brass and copper, leaves gone to verdigris.' },
   { id: 'blossom', name: 'Blossom & Rose Gold', mode: 'light', note: 'Blush glass over a rose-lilac morning, rose-gold hairlines. Plum ink.' },
+  { id: 'plum', name: 'Plum & Blossom', mode: 'dark', note: 'Aubergine slate under a crescent moon, rose-gold hairlines, blossom-pink for your voice.' },
 ];
 
 let sky = null;

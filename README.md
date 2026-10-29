@@ -9,7 +9,7 @@ index.html            the shell (header, footer, mobile dock)
 404.html              sends stray paths home
 data/site.json        tagline, footer links, release repo, board connection
 data/cards.json       card manifest (the Cards shelf of Works)
-data/works.json       everything else you post: lorebooks, presets, themes, guides
+data/works.json       everything else you post: lorebooks, presets, worlds, themes, guides
 data/presets.json     the community Preset Archive
 data/creators.json    Kindred (creators) and Lodestars (open card libraries, specs)
 works/                files for works.json entries
@@ -26,6 +26,7 @@ assets/js/            app shell, router, views, and the format libraries
   lib/macros.js       SillyTavern macro catalogue (port of Macros.kt)
   lib/blueprints.js   [[slot]] blueprints (port of BlueprintSlots.kt)
 tools/aetheria-core/  rebuilds the vendor/aetheria bundles from Aetheria Experimental's source
+tools/starter-set/    writes Aetheria's starter set (Lantern Quay) into cards/, covers/, works/ and data/
 ```
 
 ## Add a card to Works
@@ -42,7 +43,7 @@ Cards in the same `world` are joined by starlines when you hover one in Works, a
 
 ## Add anything else to Works
 
-Lorebooks, presets, themes, guides and tools go in `data/works.json`, with their files in `works/`:
+Lorebooks, presets, worlds, themes, guides and tools go in `data/works.json`, with their files in `works/`:
 
 ```json
 {
@@ -60,7 +61,9 @@ Lorebooks, presets, themes, guides and tools go in `data/works.json`, with their
 }
 ```
 
-`type` is one of `lorebook`, `preset`, `theme`, `guide`, `tool`, `other`; Works groups them and gives each its own tab. A lorebook or preset with a `.json` file gets a button that opens it in the Lorebook or Preset builder. Give a work the same `world` as some cards and they're shown together.
+`type` is one of `lorebook`, `preset`, `world`, `theme`, `guide`, `tool`, `other`; Works groups them and gives each its own tab. A lorebook or preset with a `.json` file gets a button that opens it in the Lorebook or Preset builder, and a world with an `.aetheria-age` file one that opens it for review in the World builder. Give a work the same `world` as some cards and they're shown together.
+
+Optional: `"thumb"` (a small cover, about 520×780) and `"cover"` (a larger one) are kept with the entry; the work's page shows the cover in place of its icon. `"featured": true` puts a work on the home page's table beside the featured cards.
 
 ## The Preset Archive
 
@@ -157,6 +160,14 @@ Everything in the Workshop runs in the visitor's browser. Nothing they open or b
 
 When Aetheria's logic changes, rebuild the bundles with `tools/aetheria-core` (its README has the two commands) and commit them.
 
-## The sample cards
+## The starter set
 
-Wren Calloway, Isolde Marr and Pell (the Lowmere set) are SFW starter cards that share one world, so the gallery has something to show and the starlines have something to join. Keep them, rewrite them, or delete their PNGs, covers and `data/cards.json` entries.
+Works shows what comes with Aetheria: Lantern Quay. Dilys Pengelly and Ansel Truscott as PNG cards with the Lantern Quay lorebook bound in, the lorebook on its own as World Info, the house preset (Aetheria Storyteller) and the world as an `.aetheria-age` package, each with the picture it has in the app. They are made from Aetheria's own source by its own code, not by hand:
+
+```
+cd tools/starter-set
+npm install          (once)
+node generate.mjs
+```
+
+Run it again when Aetheria's starter set changes (`src/starter/` or `src/presets/storyteller.js`), then commit what it wrote. It reads every file back with this site's readers and Aetheria's before it writes anything, and rewrites the starter set's entries in `data/cards.json` and `data/works.json` (keeping `featured` and a card's `added`); other entries are left alone. The words for those entries live in `tools/starter-set/copy.mjs`, so edit them there. Its README says what each file is.

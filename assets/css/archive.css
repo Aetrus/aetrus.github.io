@@ -124,6 +124,35 @@
   color-scheme: light;
 }
 
+/* Plum & Blossom: Sakura's night. Aubergine slate under a crescent moon,
+   rose-gold hairlines, blossom-pink for your voice. */
+:root[data-binding="plum"] {
+  --ink-900: #141016;
+  --ink-850: #18131b;
+  --ink-800: #201922;
+  --ink-700: #2a2130;
+  --brass-300: #f0c2b0;
+  --brass-400: #d9a08e;
+  --ivory: #f3e6ea;
+  --lapis-300: #f4b3c8;
+  --lapis-400: #e48aa8;
+  --lapis-600: #a8486c;
+  --verdigris: #a7d4c0;
+  --rose: #dcaee6;
+  --signal-danger: #e0788a;
+  --signal-success: #9fd3b4;
+  --signal-warning: #e6bb78;
+  --lumen: #f2b6c6;
+  --lumen-strength: 0.45;
+  --lumen-mix: 34%;
+  --star: #f3e6ea;
+  --r-control: 12px;
+  --r-card: 16px;
+  --r-panel: 22px;
+  --tracking-label: 0.24em;
+  color-scheme: dark;
+}
+
 /* Before the script picks a Binding (or with scripts off), follow the OS. */
 @media (prefers-color-scheme: light) {
   :root:not([data-binding]):not([data-theme="dark"]) {
@@ -1098,4 +1127,315 @@ body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001s !important; animation-iteration-count: 1 !important; transition-duration: 0.001s !important; scroll-behavior: auto !important; }
   .tile:hover, .tile:focus-visible { --lift: -6px; }
+}
+
+
+/* ==========================================================================
+   BOUND, NOT BOXED — Aetheria's finish (src/ui/tokens.css FINISH, Finish.js)
+   ----------------------------------------------------------------------------
+   As in the app: a button is a plate with its corners cut, four hairlines
+   that stop short of the corners and the Binding's mark in the cut; a pane is
+   the same plate cut deeper; a menu is a square leaf with a mark inside each
+   corner; a card wears a mat, its mark at the head and the foot; a field is a
+   ruled line and a long one a passage with a thread down its margin; a switch
+   is a cut jewel. The mark is the Binding's own: the star (Gilt & Slate), the
+   crescent (Moonlit Silver), the leaf (Verdigris & Brass), the blossom (the
+   two Sakura Bindings). Everything is a mask, so the Binding's colour fills it.
+   ========================================================================== */
+:root {
+  --mark-star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0 C12.9 7.6 16.4 11.1 24 12 C16.4 12.9 12.9 16.4 12 24 C11.1 16.4 7.6 12.9 0 12 C7.6 11.1 11.1 7.6 12 0 Z'/%3E%3C/svg%3E");
+  --mark-moon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M19.6 17.2 A10.2 10.2 0 1 1 8.6 2.5 A9.2 9.2 0 0 0 19.6 17.2 Z'/%3E%3Cpath d='M18.4 2.8 L19 5.5 L21.8 6.2 L19 6.8 L18.4 9.6 L17.7 6.8 L15 6.2 L17.7 5.5 Z'/%3E%3C/svg%3E");
+  --mark-leaf: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 15.2 C8.4 12.2 9.4 5.4 12 1.6 C14.5 5.4 15.5 12.2 12 15.2 Z M11.2 16 C8 17.1 4.4 13.9 3.2 11 C6.4 10.8 10.8 12.7 11.2 16 Z M12.8 16 C13.1 12.7 17.5 10.8 20.7 11 C19.5 13.9 15.9 17.1 12.8 16 Z'/%3E%3Cpath d='M10.1 19.2 A1.9 1.9 0 1 0 13.9 19.2 A1.9 1.9 0 1 0 10.1 19.2 Z'/%3E%3C/svg%3E");
+  --mark-blossom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 10.1 C9.6 8.8 7.2 5.3 8.3 2 C9.1 0.3 10.9 0.2 12 1.2 C13 0.2 14.8 0.3 15.6 2 C16.7 5.3 14.3 8.8 12 10.1 Z M13.8 11.4 C14.3 8.7 16.8 5.4 20.3 5.4 C22.2 5.7 22.8 7.3 22.2 8.6 C23.5 9.3 23.9 11 22.5 12.4 C19.7 14.4 15.7 13.2 13.8 11.4 Z M13.1 13.5 C15.7 13.1 19.7 14.5 20.7 17.8 C21.1 19.7 19.8 20.9 18.3 20.6 C18 22.1 16.5 23.1 14.8 22.1 C12 20.1 11.9 15.9 13.1 13.5 Z M10.8 13.5 C12 15.9 11.9 20.1 9.1 22.1 C7.4 23.1 5.9 22.1 5.6 20.6 C4.2 20.9 2.8 19.7 3.2 17.8 C4.3 14.5 8.2 13.1 10.8 13.5 Z M10.2 11.4 C8.2 13.2 4.2 14.4 1.4 12.4 C0 11 0.4 9.3 1.7 8.6 C1.1 7.3 1.7 5.7 3.7 5.4 C7.1 5.4 9.7 8.7 10.2 11.4 Z'/%3E%3C/svg%3E");
+  --mark: var(--mark-star);
+  --mark-ink: var(--accent);
+
+  --mask-mark: var(--mark) center / contain no-repeat;
+  --mask-plate:
+    linear-gradient(135deg, transparent 6.4px, #000 0) top left / 51% 51% no-repeat,
+    linear-gradient(225deg, transparent 6.4px, #000 0) top right / 51% 51% no-repeat,
+    linear-gradient(315deg, transparent 6.4px, #000 0) bottom right / 51% 51% no-repeat,
+    linear-gradient(45deg, transparent 6.4px, #000 0) bottom left / 51% 51% no-repeat;
+  --mask-plate-rules:
+    linear-gradient(rgb(0 0 0 / 0.5) 0 0) top center / calc(100% - 18px) 1px no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.5) 0 0) bottom center / calc(100% - 18px) 1px no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.5) 0 0) left center / 1px calc(100% - 18px) no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.5) 0 0) right center / 1px calc(100% - 18px) no-repeat;
+  --mask-plate-marks:
+    var(--mark) left 0.5px top 0.5px / 8px 8px no-repeat,
+    var(--mark) right 0.5px top 0.5px / 8px 8px no-repeat,
+    var(--mark) right 0.5px bottom 0.5px / 8px 8px no-repeat,
+    var(--mark) left 0.5px bottom 0.5px / 8px 8px no-repeat;
+  --mask-plate-frame: var(--mask-plate-rules), var(--mask-plate-marks);
+  --mask-plate-frame-quiet:
+    linear-gradient(90deg, transparent 4px, rgb(0 0 0 / 0.55) 16px, rgb(0 0 0 / 0.55) calc(100% - 16px), transparent calc(100% - 4px)) top center / 100% 1px no-repeat,
+    linear-gradient(90deg, transparent 4px, rgb(0 0 0 / 0.55) 16px, rgb(0 0 0 / 0.55) calc(100% - 16px), transparent calc(100% - 4px)) bottom center / 100% 1px no-repeat,
+    linear-gradient(180deg, transparent 4px, rgb(0 0 0 / 0.4) 12px, rgb(0 0 0 / 0.4) calc(100% - 12px), transparent calc(100% - 4px)) left center / 1px 100% no-repeat,
+    linear-gradient(180deg, transparent 4px, rgb(0 0 0 / 0.4) 12px, rgb(0 0 0 / 0.4) calc(100% - 12px), transparent calc(100% - 4px)) right center / 1px 100% no-repeat,
+    var(--mark) left 1px top 1px / 7px 7px no-repeat,
+    var(--mark) right 1px bottom 1px / 7px 7px no-repeat;
+  --mask-card:
+    linear-gradient(135deg, transparent 11.3px, #000 0) top left / 51% 51% no-repeat,
+    linear-gradient(225deg, transparent 11.3px, #000 0) top right / 51% 51% no-repeat,
+    linear-gradient(315deg, transparent 11.3px, #000 0) bottom right / 51% 51% no-repeat,
+    linear-gradient(45deg, transparent 11.3px, #000 0) bottom left / 51% 51% no-repeat;
+  --mask-card-frame:
+    linear-gradient(rgb(0 0 0 / 0.42) 0 0) top center / calc(100% - 32px) 1px no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.42) 0 0) bottom center / calc(100% - 32px) 1px no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.42) 0 0) left center / 1px calc(100% - 32px) no-repeat,
+    linear-gradient(rgb(0 0 0 / 0.42) 0 0) right center / 1px calc(100% - 32px) no-repeat,
+    var(--mark) left 2px top 2px / 12px 12px no-repeat,
+    var(--mark) right 2px top 2px / 12px 12px no-repeat,
+    var(--mark) right 2px bottom 2px / 12px 12px no-repeat,
+    var(--mark) left 2px bottom 2px / 12px 12px no-repeat;
+  --mask-card-frame-quiet:
+    linear-gradient(90deg, transparent 6px, rgb(0 0 0 / 0.42) 28px, rgb(0 0 0 / 0.42) calc(100% - 28px), transparent calc(100% - 6px)) top center / 100% 1px no-repeat,
+    linear-gradient(90deg, transparent 6px, rgb(0 0 0 / 0.42) 28px, rgb(0 0 0 / 0.42) calc(100% - 28px), transparent calc(100% - 6px)) bottom center / 100% 1px no-repeat,
+    linear-gradient(180deg, transparent 6px, rgb(0 0 0 / 0.32) 28px, rgb(0 0 0 / 0.32) calc(100% - 28px), transparent calc(100% - 6px)) left center / 1px 100% no-repeat,
+    linear-gradient(180deg, transparent 6px, rgb(0 0 0 / 0.32) 28px, rgb(0 0 0 / 0.32) calc(100% - 28px), transparent calc(100% - 6px)) right center / 1px 100% no-repeat,
+    var(--mark) left 3px top 3px / 10px 10px no-repeat,
+    var(--mark) right 3px bottom 3px / 10px 10px no-repeat;
+  --mask-leaf-marks:
+    var(--mark) left 6px top 6px / 10px 10px no-repeat,
+    var(--mark) right 6px top 6px / 10px 10px no-repeat,
+    var(--mark) right 6px bottom 6px / 10px 10px no-repeat,
+    var(--mark) left 6px bottom 6px / 10px 10px no-repeat;
+  --mask-jewel-line: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cpath d='M8.5 0.5 H31.5 L39.3 10 L31.5 19.5 H8.5 L0.7 10 Z' fill='none' stroke='black' stroke-width='1'/%3E%3C/svg%3E") center / 40px 20px no-repeat;
+  --mask-jewel-body: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20' viewBox='0 0 40 20'%3E%3Cpath d='M8.5 0.5 H31.5 L39.3 10 L31.5 19.5 H8.5 L0.7 10 Z'/%3E%3C/svg%3E") center / 40px 20px no-repeat;
+  /* A card's mat: rules 5px inside, open at the corners and broken at the
+     middle of its head and foot, where the mark sits. Plain lines, so a card
+     never depends on a mask for its colour. */
+  --mat-ink: color-mix(in srgb, var(--mark-ink) 62%, transparent);
+  --mat-ink-soft: color-mix(in srgb, var(--mark-ink) 42%, transparent);
+  --mat-lines:
+    linear-gradient(var(--mat-ink) 0 0) left 18px top 5px / calc(50% - 28px) 1px no-repeat,
+    linear-gradient(var(--mat-ink) 0 0) right 18px top 5px / calc(50% - 28px) 1px no-repeat,
+    linear-gradient(var(--mat-ink) 0 0) left 18px bottom 5px / calc(50% - 28px) 1px no-repeat,
+    linear-gradient(var(--mat-ink) 0 0) right 18px bottom 5px / calc(50% - 28px) 1px no-repeat,
+    linear-gradient(var(--mat-ink-soft) 0 0) left 5px center / 1px calc(100% - 36px) no-repeat,
+    linear-gradient(var(--mat-ink-soft) 0 0) right 5px center / 1px calc(100% - 36px) no-repeat;
+  /* The accent held in the glass, for the one main action on a page. */
+  --seal: linear-gradient(180deg, color-mix(in srgb, var(--accent) 26%, transparent), color-mix(in srgb, var(--accent) 11%, transparent));
+  --seal-lit: linear-gradient(180deg, color-mix(in srgb, var(--accent) 36%, transparent), color-mix(in srgb, var(--accent) 16%, transparent));
+  --pane-glass: linear-gradient(180deg, color-mix(in srgb, var(--ivory) 3.5%, transparent), transparent 140px), var(--glass);
+}
+:root[data-binding="moon"] { --mark: var(--mark-moon); }
+:root[data-binding="verdigris"] { --mark: var(--mark-leaf); }
+:root[data-binding="blossom"], :root[data-binding="plum"] {
+  --mark: var(--mark-blossom);
+  /* Rose gold with the blossom's pink in it, as the app strikes it. */
+  --mark-ink: color-mix(in srgb, var(--lapis-400) 78%, var(--brass-300));
+}
+
+/* ── Marks in place of the drawn star ─────────────────────────────────────── */
+svg.star, svg.eyebrow-star, svg.toast-star, .flourish svg {
+  -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+  background: var(--mark-ink);
+}
+svg.star { background: currentColor; }
+.colophon-mark svg.star, .source-credit svg.star, .reply-by svg.star { background: var(--mark-ink); }
+svg.star path, svg.eyebrow-star path, svg.toast-star path, .flourish svg path { display: none; }
+.primary a[aria-current="page"]::after {
+  width: 9px; height: 9px; clip-path: none; background: var(--mark-ink);
+  -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+}
+.brand { position: relative; }
+.emblem .em-star { display: none; }
+.emblem-mark {
+  position: absolute; left: 10px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%);
+  background: var(--mark-ink); -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+  filter: drop-shadow(0 0 6px var(--glow)); transition: transform 0.8s var(--ease); pointer-events: none;
+}
+.brand:hover .emblem-mark { transform: translateY(-50%) rotate(45deg); }
+
+/* ── Plates: buttons and the things that act ────────────────────────────── */
+.btn, .binding-orb, .dl, .vote, .status-pill {
+  position: relative; isolation: isolate;
+  border: 0; border-radius: 0; background: transparent; box-shadow: none;
+  --plate-fill: var(--glass);
+  --plate-frame: var(--mask-plate-frame-quiet);
+  --plate-ink: var(--mark-ink);
+  --plate-ink-strength: 0.7;
+}
+.btn::before, .btn::after, .binding-orb::before, .binding-orb::after, .dl::before, .dl::after,
+.vote::before, .vote::after, .status-pill::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  transition: opacity 0.25s, background 0.25s;
+}
+.btn::before, .binding-orb::before, .dl::before, .vote::before { background: var(--plate-fill); -webkit-mask: var(--mask-plate); mask: var(--mask-plate); }
+.btn::after, .binding-orb::after, .dl::after, .vote::after, .status-pill::after {
+  background: var(--plate-ink); opacity: var(--plate-ink-strength); -webkit-mask: var(--plate-frame); mask: var(--plate-frame);
+}
+.btn:hover, .binding-orb:hover, .dl:hover, .vote:hover {
+  border-color: transparent; box-shadow: none;
+  --plate-ink-strength: 1; --plate-fill: var(--glass-strong);
+  filter: drop-shadow(0 0 10px var(--glow));
+}
+:root[data-mode] .btn-gilt, :root[data-mode] .btn-gilt:hover {
+  color: var(--text); box-shadow: none;
+  --plate-fill: var(--seal); --plate-frame: var(--mask-plate-frame); --plate-ink-strength: 0.95;
+}
+:root[data-mode] .btn-gilt:hover { --plate-fill: var(--seal-lit); }
+.btn-ghost { --plate-fill: transparent; }
+.btn-danger { color: var(--signal-danger); --plate-ink: var(--signal-danger); --plate-frame: var(--mask-plate-rules); --plate-fill: transparent; }
+.btn[disabled] { filter: none; }
+.dl-primary { background: transparent; --plate-fill: var(--seal); --plate-frame: var(--mask-plate-frame); --plate-ink-strength: 0.95; }
+.vote[aria-pressed="true"] { box-shadow: none; --plate-fill: var(--seal); --plate-ink-strength: 1; }
+.binding-orb { padding: 6px 14px 6px 8px; }
+.status-pill { padding: 6px 16px; align-self: flex-start; --plate-frame: var(--mask-plate-rules); }
+.status-pill::before {
+  width: 9px; height: 9px; border-radius: 0; box-shadow: none; background: var(--mark-ink);
+  -webkit-mask: var(--mask-mark); mask: var(--mask-mark); filter: drop-shadow(0 0 5px var(--glow));
+}
+
+/* Chips: a word, and a small plate (rules only) round the one chosen. */
+.chip { border: 0; border-radius: 0; position: relative; isolation: isolate; }
+.chip:not(.chip-static)::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: var(--mark-ink); opacity: 0; -webkit-mask: var(--mask-plate-rules); mask: var(--mask-plate-rules);
+  transition: opacity 0.2s;
+}
+.chip:not(.chip-static):hover { background: transparent; }
+.chip:not(.chip-static):hover::after { opacity: 0.45; }
+:root[data-mode] .chip[aria-pressed="true"] { color: var(--accent); background: transparent; }
+.chip[aria-pressed="true"]::after { opacity: 1; }
+.chip[aria-pressed="true"]::before {
+  content: ''; position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  background: var(--seal); -webkit-mask: var(--mask-plate); mask: var(--mask-plate);
+}
+
+/* No pills: small labels square off. */
+.sev, .status, .model, .preset-version, .flag, .badge, .key, .macro, .macro-chip { border-radius: 0; }
+
+/* ── Panes: cut deeper, marked at the corners ────────────────────────────── */
+.glass, details.fold, .binding-card, .dropzone {
+  position: relative; isolation: isolate;
+  border: 0; border-radius: 0; background: transparent; box-shadow: none;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  --pane-frame: var(--mask-card-frame-quiet);
+  --pane-fill: var(--pane-glass);
+  --pane-ink-strength: 0.75;
+}
+.glass::before, details.fold::before, .binding-card::before, .dropzone::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  border: 0; border-radius: 0; opacity: 1;
+  background: var(--pane-fill);
+  backdrop-filter: blur(14px) saturate(1.1); -webkit-backdrop-filter: blur(14px) saturate(1.1);
+  -webkit-mask: var(--mask-card); mask: var(--mask-card);
+  transition: background 0.3s;
+}
+.glass::after, details.fold::after, .binding-card::after, .dropzone::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: var(--mark-ink); opacity: var(--pane-ink-strength);
+  -webkit-mask: var(--pane-frame); mask: var(--pane-frame);
+  transition: opacity 0.3s;
+}
+/* The ones a page leads with, and the one you are handling, wear all four marks. */
+.release-hero, .board-cta, .chart-detail, .preset.is-lit, .binding-card[aria-pressed="true"],
+.door:hover, .folio:hover, .instrument:hover, .kind:hover, .dropzone:hover, .dropzone.is-over {
+  --pane-frame: var(--mask-card-frame); --pane-ink-strength: 0.95;
+}
+.door:hover, .folio:hover, .instrument:hover { border-color: transparent; box-shadow: none; filter: drop-shadow(0 18px 26px rgb(var(--shadow-rgb) / 0.5)) drop-shadow(0 0 22px var(--glow)); }
+.preset.is-lit { box-shadow: none; }
+.dropzone { border: 0; }
+.dropzone:hover, .dropzone.is-over { background: transparent; box-shadow: none; --pane-fill: var(--seal); }
+.binding-card { border-radius: 0; }
+.binding-card:hover { border-color: transparent; }
+.binding-card[aria-pressed="true"] { box-shadow: none; filter: drop-shadow(0 0 16px var(--glow)); }
+.binding-card .specimen { border-radius: 0; -webkit-mask: var(--mask-plate); mask: var(--mask-plate); border: 0; }
+/* Panes that sit inside other panes, or are only a band, stay unframed. */
+.macro-bar.glass::before, .macro-bar.glass::after, .search.glass::before, .search.glass::after,
+.gallery-controls::before, .gallery-controls::after { display: none; }
+.gallery-controls.glass { background: none; }
+
+/* A menu, a toast: a square leaf with a mark inside each corner. */
+.binding-menu, #toast { border-radius: 0; }
+.binding-menu::after, #toast::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: var(--mark-ink); opacity: 0.8;
+  -webkit-mask: var(--mask-leaf-marks); mask: var(--mask-leaf-marks);
+}
+#toast { padding: 12px 26px; }
+.binding-choice { border-radius: 0; }
+.binding-choice[aria-pressed="true"] { border-color: transparent; box-shadow: inset 2px 0 0 var(--accent); }
+
+/* ── Cards: soft corners, a mat inside, the mark at the head and the foot ── */
+.tile-lift { border-radius: var(--r-control); }
+.tile-lift::after, :root[data-binding="verdigris"] .tile-lift::after {
+  inset: 0; border: 0; border-radius: 0; z-index: 3; background: var(--mat-lines);
+}
+.tile-lift::before {
+  content: ''; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  background: var(--mark-ink); opacity: 0.9;
+  -webkit-mask: var(--mark) center top -0.5px / 11px 11px no-repeat, var(--mark) center bottom -0.5px / 11px 11px no-repeat;
+  mask: var(--mark) center top -0.5px / 11px 11px no-repeat, var(--mark) center bottom -0.5px / 11px 11px no-repeat;
+}
+.tile-corners { display: none; }
+.portrait, .lens-thumb { border-radius: var(--r-control); }
+
+/* ── Tabs: words over a lit rule ─────────────────────────────────────────── */
+.tab[aria-selected="true"], .type-tab[aria-selected="true"], .board-tab[aria-current="page"] {
+  border-bottom-color: transparent;
+  background: linear-gradient(90deg, transparent, var(--accent) 22%, var(--accent) 78%, transparent) center bottom / 100% 1.5px no-repeat;
+  text-shadow: 0 0 18px var(--glow);
+}
+
+/* ── Fields: a ruled line; a long one a passage with its thread ──────────── */
+.input, .select {
+  background-color: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0;
+  padding-left: 4px; padding-right: 4px;
+}
+.select { padding-right: 30px; }
+.search .input { padding-left: 34px; }
+.textarea {
+  background: color-mix(in srgb, var(--ink-850) 40%, transparent); border: 0; border-left: 1px solid var(--line-strong); border-radius: 0;
+  padding-left: 14px;
+}
+.input:focus, .select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 1px 0 0 var(--accent), 0 10px 16px -12px var(--glow);
+}
+.textarea:focus { border-color: var(--accent); box-shadow: -4px 0 12px -8px var(--accent); }
+.json-view, .table-wrap { border-radius: 0; }
+.json-view { border: 0; border-left: 1px solid var(--line-strong); }
+
+/* ── A switch is a cut jewel; its mark lit at the right when on ─────────── */
+.toggle input {
+  width: 40px; height: 20px; border: 0; border-radius: 0; background: transparent;
+}
+.toggle input::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: var(--line-strong); -webkit-mask: var(--mask-jewel-line); mask: var(--mask-jewel-line);
+  transition: background 0.2s;
+}
+.toggle input::after {
+  top: 4px; left: 6px; width: 12px; height: 12px; border-radius: 0;
+  background: var(--text-faint); -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+  transform: rotate(-30deg); opacity: 0.7;
+}
+.toggle input:checked { background: transparent; }
+.toggle input:checked::before {
+  background: var(--accent);
+  -webkit-mask: var(--mask-jewel-line), var(--mask-jewel-body); mask: var(--mask-jewel-line), var(--mask-jewel-body);
+  opacity: 0.85;
+}
+.toggle input:checked::after { transform: translateX(16px); background: var(--ink-900); opacity: 1; }
+
+/* ── Lists: ruled rows, the chosen one with its thread lit ───────────────── */
+.list-item, .check, .codex-row {
+  border: 0; border-bottom: 1px solid var(--line-soft); border-radius: 0; background: transparent;
+}
+.codex-row:hover { background: var(--glass-inset); border-color: var(--line); }
+.bp-item { border-radius: 0; }
+.bp-item[aria-pressed="true"] { border-color: transparent; box-shadow: inset 2px 0 0 var(--accent); }
+.hit, .reply { border-radius: 0; }
+.banner { border: 0; border-radius: 0; border-left: 1px solid var(--line-strong); }
+
+/* The builders' sheets are bound in builders/bound.css, loaded after them. */
+
+/* ── Plum & Blossom's specimen ───────────────────────────────────────────── */
+[data-specimen="plum"] i:nth-child(1) { background: #141016; } [data-specimen="plum"] i:nth-child(2) { background: #a8486c; } [data-specimen="plum"] i:nth-child(3) { background: #f0c2b0; }
+
+@media (max-width: 760px) {
+  .binding-orb { padding: 6px 8px; }
 }

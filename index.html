@@ -23,14 +23,14 @@
 <link rel="stylesheet" href="assets/css/builders/preset.css">
 <link rel="stylesheet" href="assets/css/builders/lorebook.css">
 <link rel="stylesheet" href="assets/css/builders/world.css">
+<link rel="stylesheet" href="assets/css/builders/bound.css">
 <script>
   (function () {
     var root = document.documentElement, b = null;
     try { b = JSON.parse(localStorage.getItem('aetheria.binding')); } catch (e) {}
-    if (['gilt', 'moon', 'verdigris', 'blossom'].indexOf(b) < 0) {
-      var t = root.getAttribute('data-theme');
-      b = t === 'light' ? 'blossom' : t === 'dark' ? 'gilt'
-        : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'blossom' : 'gilt');
+    if (['gilt', 'moon', 'verdigris', 'blossom', 'plum'].indexOf(b) < 0) {
+      // Gilt & Slate is the house, as it is in Aetheria.
+      b = root.getAttribute('data-theme') === 'light' ? 'blossom' : 'gilt';
     }
     root.setAttribute('data-binding', b);
     root.setAttribute('data-mode', b === 'blossom' ? 'light' : 'dark');
@@ -50,6 +50,7 @@
         <path class="em-ticks" d="M24 1.5v3M24 43.5v3M1.5 24h3M43.5 24h3M8.1 8.1l2.1 2.1M37.8 37.8l2.1 2.1M8.1 39.9l2.1-2.1M37.8 10.2l2.1-2.1"/>
         <path class="em-star" transform="translate(12 12)" d="M12 0 C12.9 7.6 16.4 11.1 24 12 C16.4 12.9 12.9 16.4 12 24 C11.1 16.4 7.6 12.9 0 12 C7.6 11.1 11.1 7.6 12 0 Z"/>
       </svg>
+      <span class="emblem-mark" aria-hidden="true"></span>
       <span class="brand-word"><span class="brand-name">Aetheria</span><span class="brand-sub">Archive</span></span>
     </a>
     <nav class="primary" aria-label="Primary">

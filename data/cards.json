@@ -1,78 +1,51 @@
 {
   "cards": [
     {
-      "file": "cards/wren-calloway.png",
-      "thumb": "covers/wren-calloway.webp",
-      "slug": "wren-calloway",
-      "name": "Wren Calloway",
-      "tagline": "Keeper of the Lowmere Archive of Lost and Found",
-      "world": "Lowmere",
+      "file": "cards/dilys-pengelly.png",
+      "thumb": "covers/dilys-pengelly.webp",
+      "slug": "dilys-pengelly",
+      "name": "Dilys Pengelly",
+      "tagline": "Lantern Quay's salvager, 27, who owns whatever the tide brings in and has stopped waiting for the tide.",
+      "world": "Lantern Quay",
       "tags": [
-        "Lowmere",
-        "Slice of Life",
-        "Mystery",
-        "Cozy",
-        "Uncanny",
-        "Librarian",
-        "SFW"
+        "Lantern Quay",
+        "starter",
+        "coastal",
+        "mystery",
+        "rivals",
+        "slice of life"
       ],
-      "creator": "Atrus",
+      "creator": "Aetheria",
       "stats": {
-        "permanent": 824,
-        "greetings": 3,
-        "lore": 5
+        "permanent": 1019,
+        "greetings": 2,
+        "lore": 13
       },
       "featured": true,
       "added": "2026-10-29"
     },
     {
-      "file": "cards/isolde-marr.png",
-      "thumb": "covers/isolde-marr.webp",
-      "slug": "isolde-marr",
-      "name": "Isolde Marr",
-      "tagline": "Keeper of the Farlight, where the charts go white",
-      "world": "Lowmere",
+      "file": "cards/ansel-truscott.png",
+      "thumb": "covers/ansel-truscott.webp",
+      "slug": "ansel-truscott",
+      "name": "Ansel Truscott",
+      "tagline": "The Works' young master grinder, 29, whose first great lens is washing up on the beach one prism at a time.",
+      "world": "Lantern Quay",
       "tags": [
-        "Lowmere",
-        "Adventure",
-        "Mystery",
-        "Lighthouse",
-        "Sea",
-        "Stoic",
-        "SFW"
+        "Lantern Quay",
+        "starter",
+        "coastal",
+        "mystery",
+        "rivals",
+        "slice of life"
       ],
-      "creator": "Atrus",
+      "creator": "Aetheria",
       "stats": {
-        "permanent": 677,
-        "greetings": 3,
-        "lore": 5
+        "permanent": 1030,
+        "greetings": 2,
+        "lore": 13
       },
-      "featured": false,
-      "added": "2026-10-29"
-    },
-    {
-      "file": "cards/pell-low-tide-market.png",
-      "thumb": "covers/pell-low-tide-market.webp",
-      "slug": "pell-low-tide-market",
-      "name": "Pell",
-      "tagline": "Broker of small impossible things at the Low Tide Market",
-      "world": "Lowmere",
-      "tags": [
-        "Lowmere",
-        "Scenario",
-        "Multiple Characters",
-        "Whimsical",
-        "Merchant",
-        "Market",
-        "SFW"
-      ],
-      "creator": "Atrus",
-      "stats": {
-        "permanent": 810,
-        "greetings": 3,
-        "lore": 5
-      },
-      "featured": false,
+      "featured": true,
       "added": "2026-10-29"
     }
   ]

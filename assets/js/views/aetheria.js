@@ -1,12 +1,14 @@
 import { esc, pageHead, starSvg } from '../ui.js';
-import { loadSite, loadReleases } from '../data.js';
+import { loadSite, loadReleases, loadCards } from '../data.js';
 import { assetButtons, relDate } from './releases.js';
 import { BINDINGS, applyBinding } from '../app.js';
 
 export async function render(main, _arg, { setTitle }) {
   setTitle('Aetheria');
-  const site = await loadSite().catch(() => ({}));
+  const [site, cards] = await Promise.all([loadSite().catch(() => ({})), loadCards().catch(() => [])]);
   const a = site.aetheria || {};
+  // The cards of the starter set that comes with the app (tools/starter-set writes them, tagged "starter").
+  const starter = cards.filter((c) => c.world === 'Lantern Quay' && (c.tags || []).includes('starter'));
   const current = document.documentElement.dataset.binding;
 
   main.innerHTML = `<div class="page">
@@ -41,11 +43,18 @@ export async function render(main, _arg, { setTitle }) {
       </div>
     </section>
 
+    ${starter.length ? `<section style="display:flex;flex-direction:column;gap:16px" aria-labelledby="a-starter">
+      <p class="eyebrow">${starSvg('eyebrow-star')}Comes with Aetheria</p>
+      <h2 class="section-title" id="a-starter">The starter set: Lantern Quay</h2>
+      <p class="dim" style="max-width:56ch">A new archive comes with two characters of Lantern Quay, a cold harbour town that grinds the lenses for every lighthouse on the coast: Dilys Pengelly, the salvager, who owns whatever the tide brings in, and Ansel Truscott, the young master grinder whose lens is in the sea. With them come their lorebook, their world and the house storytelling preset. All of it is in Works, to download or open in the builders here.</p>
+      <div class="btn-row">${starter.map((c) => `<a class="btn" href="#card-${esc(c.slug)}">${esc(c.name)}</a>`).join('')}<a class="btn btn-ghost" href="#works">All of it in Works</a></div>
+    </section>` : ''}
+
     <section class="split">
       <div style="display:flex;flex-direction:column;gap:16px">
         <p class="eyebrow">${starSvg('eyebrow-star')}Bindings</p>
-        <h2 class="section-title">One house, four bindings</h2>
-        <p class="dim" style="max-width:56ch">A Binding is Aetheria's material: the ink of the ground, the gilt of its light, the colour of your own voice. It changes how the library feels, never where anything sits. This archive wears the same four. Try one.</p>
+        <h2 class="section-title">One house, five bindings</h2>
+        <p class="dim" style="max-width:56ch">A Binding is Aetheria's material: the ink of the ground, the gilt of its light, the colour of your own voice. It changes how the library feels, never where anything sits. This archive wears the same five. Try one.</p>
       </div>
       <div class="bindings-row" role="group" aria-label="Choose a binding">
         ${BINDINGS.map((b) => `<button type="button" class="binding-card" data-binding-choice="${b.id}" aria-pressed="${b.id === current}">

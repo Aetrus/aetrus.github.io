@@ -195,7 +195,7 @@ export function runTest(book, { text = '', extra = {}, runtime = EMPTY_RUNTIME, 
   };
 }
 
-/** A sample story for the volume: its own, for the ones Aetheria and this archive ship, or lines made from its keys. */
+/** A sample story for the volume: its own, for the one Aetheria ships, or lines made from its keys. */
 export function sampleFor(book) {
   const name = String(book?.name || '').toLowerCase();
   if (name.includes('lantern quay')) {
@@ -205,15 +205,6 @@ export function sampleFor(book) {
       'Dilys: If you want your prisms, Truscott, you walk the strand before the gulls do.',
       'Ansel: Every one is etched with my mark. The Works wants them back, and so does the Board.',
       'Dilys: The Tideright says what the tide leaves is mine. Ask Pascoe Dunn, he will read it to you by the hour.',
-    ].join('\n');
-  }
-  if (name.includes('lowmere')) {
-    return [
-      'Wren: The fog is coming in off the White again.',
-      'You: Then the Low Tide Market will be out on the flats tonight?',
-      'Wren: If the Farlight keeps burning. Mother Gannet says the weather will hold.',
-      'You: And the ledger you took from the Archive?',
-      'Wren: Back on its shelf before anyone counts it.',
     ].join('\n');
   }
   const keyed = Object.values(book?.entries || {}).filter((e) => !e.disable && !e.constant && asList(e.key).length);

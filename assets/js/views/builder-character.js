@@ -416,8 +416,8 @@ export async function render(main, _arg, { setTitle }) {
         )}
         ${tagsHtml()}
         ${group('For the Archive', fieldRow(
-          textField({ path: 'extensions.aetheria.tagline', label: 'Tagline', value: ext.aetheria?.tagline || '', hint: 'One line under the name in the gallery. Other apps ignore it.', placeholder: 'Keeper of the lost and found' }),
-          textField({ path: 'extensions.world', label: 'World', value: typeof ext.world === 'string' ? ext.world : '', hint: 'The world the gallery files it under.', placeholder: 'Lowmere' }),
+          textField({ path: 'extensions.aetheria.tagline', label: 'Tagline', value: ext.aetheria?.tagline || '', hint: 'One line under the name in the gallery. Other apps ignore it.', placeholder: 'Lantern Quay’s salvager' }),
+          textField({ path: 'extensions.world', label: 'World', value: typeof ext.world === 'string' ? ext.world : '', hint: 'The world the gallery files it under.', placeholder: 'Lantern Quay' }),
         ), { note: '· kept in the card’s extensions' })}`,
       };
     },

@@ -71,7 +71,8 @@ export function cardTile(c, { href = `#card-${c.slug}`, tag = 'a', eager = false
     ? `<img src="${esc(art)}" alt="" ${eager ? '' : 'loading="lazy"'} decoding="async">`
     : `<div class="tile-sigil">${sigilSvg(c.name, { size: 140 })}</div>`;
   const stats = c.stats || {};
-  const statBits = [
+  // A work with a picture comes as a card too, its own line beneath.
+  const statBits = Array.isArray(c.meta) ? c.meta.filter(Boolean) : [
     stats.permanent ? `≈${fmtTokens(stats.permanent)} tk` : null,
     stats.greetings ? `${stats.greetings} greet` : null,
     stats.lore ? `${stats.lore} lore` : null,
@@ -81,7 +82,7 @@ export function cardTile(c, { href = `#card-${c.slug}`, tag = 'a', eager = false
     <span class="tile-lift">
       <span class="tile-art">${media}<span class="tile-glare"></span>${c.nsfw ? '<span class="veil-label">Mature · tap to view</span>' : ''}</span>
       <span class="tile-body">
-        ${c.world ? `<span class="tile-world">${esc(c.world)}</span>` : ''}
+        ${c.eyebrow || c.world ? `<span class="tile-world">${esc(c.eyebrow || c.world)}</span>` : ''}
         <span class="tile-name">${esc(c.name)}</span>
         ${c.tagline ? `<span class="tile-tagline">${esc(c.tagline)}</span>` : ''}
         ${statBits.length ? `<span class="tile-stats">${statBits.map(esc).join('<i>·</i>')}</span>` : ''}

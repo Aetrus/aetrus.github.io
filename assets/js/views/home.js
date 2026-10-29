@@ -1,5 +1,6 @@
 import { esc, cardTile, liftTiles, starSvg, flourish, STAR } from '../ui.js';
 import { loadCards, loadCreators, loadSite, loadWorks, loadPresets } from '../data.js';
+import { folioTile } from './gallery.js';
 
 /** An original astrolabe: graduated limb, a turning rete with star pointers, and the house star at the pole. */
 function astrolabe() {
@@ -86,6 +87,8 @@ export async function render(main, _arg, { setTitle }) {
   const presetCount = (presetData.presets || []).length;
   const workCount = cards.length + works.length;
   const shelf = [...cards].sort((a, b) => (b.featured - a.featured) || String(b.added).localeCompare(String(a.added))).slice(0, 10);
+  // The featured lorebooks, presets and worlds join the cards on the table (the starter set is all five).
+  const shelfWorks = works.filter((w) => w.featured).slice(0, 6);
   const worlds = new Set(cards.map((c) => c.world).filter(Boolean));
   const kin = (creators.kindred || []).length;
 
@@ -104,9 +107,9 @@ export async function render(main, _arg, { setTitle }) {
       <div class="astrolabe" aria-hidden="false">${astrolabe()}</div>
     </section>
 
-    ${shelf.length ? `<section class="rise rise-3" aria-labelledby="shelf-title">
+    ${shelf.length || shelfWorks.length ? `<section class="rise rise-3" aria-labelledby="shelf-title">
       <div class="section-head"><h2 class="section-title" id="shelf-title">On the table</h2><a class="section-link" href="#works">All works →</a></div>
-      <div class="shelf" id="shelf">${shelf.map((c) => cardTile(c)).join('')}</div>
+      <div class="shelf" id="shelf">${shelf.map((c) => cardTile(c)).join('')}${shelfWorks.map(folioTile).join('')}</div>
     </section>` : ''}
 
     <section class="epigraph" aria-label="From Aetheria's Direction">

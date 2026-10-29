@@ -2,6 +2,7 @@
 // handoff.lens = { file } | { data, bytes, name }
 // handoff.forge = { file } | { data, imageBytes }
 // handoff.binder = { json, name }
+// handoff.world = { text, name }   an .aetheria-age package, opened for review in the World builder
 export const handoff = {};
 
 export function take(key) {

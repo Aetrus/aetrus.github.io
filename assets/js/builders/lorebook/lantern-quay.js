@@ -1,5 +1,5 @@
-// Aetheria's starter lorebook, Lantern Quay, generated from aesrc/starter/lanternQuay.js (STARTER_LOREBOOK).
-// Regenerate with /home/claude/build/tests-lorebook/make-starter.sh. Do not edit by hand.
+// Aetheria's starter lorebook, Lantern Quay, as it comes with the app (src/starter/lanternQuay.js, STARTER_LOREBOOK).
+// Written by tools/starter-set (node generate.mjs). Do not edit by hand.
 export default {
  "name": "Lantern Quay",
  "description": "What is true in Lantern Quay: the Works, the Tideright, the wreck of the Constance and the people of the town. Comes with Aetheria.",

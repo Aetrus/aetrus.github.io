@@ -1,0 +1,107 @@
+/* ==========================================================================
+   The builders, bound as Aetheria's rooms are: loaded after the builders'
+   own sheets, so it squares what they round. A chosen section is a lit
+   thread, a choice of a few is words on a rule, and a box is a ruled leaf
+   rather than a rounded card. The marks and masks come from archive.css.
+   ========================================================================== */
+
+/* The index: the chosen section is a lit thread, never a framed box. */
+.sheet-index-item { border: 0; border-radius: 0; }
+.sheet-index-item[aria-selected="true"] {
+  border-color: transparent; box-shadow: inset 2px 0 0 var(--accent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent 85%);
+}
+.sheet-toolbar, .sheet-draft, .cb-media-badge { border-radius: 0; }
+#character-sheet .cb-live-portrait { border-radius: var(--r-control); }
+
+/* The filters over a list: words on a rule, as a segmented choice. */
+.lb-filters { gap: 0; border-bottom: 1px solid var(--line-soft); }
+.lb-filters .chip::before, .lb-filters .chip::after { display: none; }
+:root[data-mode] .lb-filters .chip[aria-pressed="true"] {
+  text-shadow: 0 0 18px var(--glow);
+  background: linear-gradient(90deg, transparent, var(--accent) 22%, var(--accent) 78%, transparent) center bottom / 100% 1.5px no-repeat;
+}
+
+/* The doors into a builder: square leaves, the Binding's mark at the head,
+   all four corners marked under the hand. */
+#world-sheet .ww-door, #preset-sheet .ps-start-card { position: relative; border-radius: 0; }
+#world-sheet .ww-door::after, #preset-sheet .ps-start-card::after {
+  content: ''; position: absolute; inset: 4px; pointer-events: none;
+  background: var(--mark-ink); opacity: 0; transition: opacity 0.25s;
+  -webkit-mask: var(--mask-leaf-marks); mask: var(--mask-leaf-marks);
+}
+#world-sheet .ww-door:hover::after, #preset-sheet .ps-start-card:hover::after { opacity: 0.85; }
+#world-sheet .ww-door-mark {
+  display: block; width: 12px; height: 12px; font-size: 0; color: transparent;
+  background: var(--mark-ink); -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+}
+#world-sheet .ww-picture { border-radius: var(--r-control); }
+.repeat-item {
+  border: 0; border-radius: 0; background: transparent;
+  border-bottom: 1px solid var(--line-soft); box-shadow: inset 1px 0 0 var(--line-strong);
+}
+
+/* A box of its own (an empty start, a test, a result) is a square leaf
+   with the Binding's mark inside each corner. */
+.lb-begin, .lb-insp-test, .lb-turn, .lb-out, .lb-status, .lb-danger,
+#preset-sheet .ps-card, #preset-sheet .ps-fold, #preset-sheet .ps-meter, #preset-sheet .ps-editor,
+#preset-sheet .ps-when, #preset-sheet .ps-try-box, #preset-sheet .ps-empty, #preset-sheet .ps-start-card,
+#preset-sheet .ps-confirm, #preset-sheet .ps-pre, #preset-sheet .ps-var-full, #preset-sheet .ps-passage details,
+#character-sheet .cb-dormant, #character-sheet .cb-lore, #character-sheet .cb-voice-choice.is-lead, #character-sheet .cb-fold,
+#world-sheet .wb-row, #world-sheet .wb-choice, .sheet-inspector .glass {
+  border-radius: 0;
+}
+.lb-begin, #preset-sheet .ps-empty, #character-sheet .cb-dormant {
+  position: relative; border-style: solid; border-color: var(--line-soft);
+}
+.lb-begin::after, #preset-sheet .ps-empty::after, #character-sheet .cb-dormant::after {
+  content: ''; position: absolute; inset: 4px; pointer-events: none;
+  background: var(--mark-ink); opacity: 0.75;
+  -webkit-mask: var(--mask-leaf-marks); mask: var(--mask-leaf-marks);
+}
+#preset-sheet .ps-editor { border-left-width: 2px; }
+.lb-note, #world-sheet .wrv-line { border-radius: 0; }
+.lb-tok, .lb-chip, #preset-sheet .req-slot, #preset-sheet .req-msg { border-radius: 0; }
+
+/* A choice of a few: words on a hairline, the Binding's mark between them,
+   the chosen one lit by the rule beneath, as the app's segmented choice. */
+#preset-sheet .ps-seg {
+  gap: 0; padding: 0; border: 0; border-radius: 0; background: none;
+  border-bottom: 1px solid var(--line-soft);
+}
+#preset-sheet .ps-seg-opt {
+  position: relative; border: 0; border-radius: 0; background: none;
+}
+#preset-sheet .ps-seg-opt + .ps-seg-opt::before {
+  content: ''; position: absolute; left: -3px; top: calc(50% - 3px); width: 6px; height: 6px;
+  background: var(--mark-ink); opacity: 0.55; -webkit-mask: var(--mask-mark); mask: var(--mask-mark);
+}
+#preset-sheet .ps-seg-opt:hover { color: var(--text); background: none; }
+#preset-sheet .ps-seg-opt[aria-checked="true"] {
+  color: var(--accent); background: none; border-color: transparent; text-shadow: 0 0 18px var(--glow);
+}
+#preset-sheet .ps-seg-opt[aria-checked="true"]::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent) 22%, var(--accent) 78%, transparent);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+/* The world builder's choices: the chosen one lit by its thread. */
+#world-sheet .wb-choice { border-color: transparent; border-bottom-color: var(--line-soft); background: transparent; }
+#world-sheet .wb-choice[aria-checked="true"] {
+  border-color: transparent; box-shadow: inset 2px 0 0 var(--accent);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent 85%);
+}
+
+/* The map's instruments keep their glass but square off. */
+#world-sheet .wmap-tool, #world-sheet .wmap-find, #world-sheet .wmap-results, #world-sheet .wmap-layers,
+#world-sheet .wmap-edit, #world-sheet .wmap-legend, #world-sheet .wmap-compass, #world-sheet .wmap-scale,
+#world-sheet .wmap-result { border-radius: 0; }
+
+/* On a phone the index runs across: the chosen one is lit from beneath. */
+@media (max-width: 900px) {
+  .sheet-index-item[aria-selected="true"] {
+    box-shadow: none;
+    background: linear-gradient(90deg, transparent, var(--accent) 22%, var(--accent) 78%, transparent) center bottom / 100% 1.5px no-repeat;
+  }
+}

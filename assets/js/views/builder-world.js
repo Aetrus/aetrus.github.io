@@ -4,6 +4,7 @@
 // shaped and kept by the engine itself (vendor/aetheria/world.js), running in
 // this browser. Rooms after Aetheria's world pane (components/ages/AgesPanel.js).
 import { esc, toast, download, confirmButton, dropZone, store } from '../ui.js';
+import { take } from '../handoff.js';
 import { sheetFrame, indexItem, sheetSection, group, wireIndex, showSection, setBadge, bindSheet, kv, sayError, plural, pickFile } from '../builders/sheet.js';
 import {
   loadCore, loadStarter, TIMELINE, DETAILS, detail, withEngine, progress, nextPaint, buildWorld, previewBook, exportWorld, sizeWord, onMainThread, northUp, relayAtlas,
@@ -946,6 +947,8 @@ export async function render(main, _arg, { setTitle }) {
   wireIndex(root, { remember: 'aetheria.world.room', onShow });
 
   // ── Begin ────────────────────────────────────────────────────────────────
+  // A world package handed over from its page in Works (work.js): { text, name }.
+  const handed = take('world');
   try {
     await refreshWorlds();
   } catch (e) { sayError(e, 'The worlds in this browser could not be read.'); }
@@ -955,6 +958,11 @@ export async function render(main, _arg, { setTitle }) {
   else if (S.worlds.length) await openWorld(S.worlds[0].world_id);
   else await newWorld({ room: startRoom === 'files' ? 'files' : 'world' });
   if (S.room) go(S.room);
+  // It is checked as any package brought in is, and waits in Files for review before anything is added.
+  if (handed?.text) {
+    go('files');
+    await stageImport(new File([handed.text], handed.name || 'world.aetheria-age', { type: 'application/json' }));
+  }
 
   return () => {
     alive = false;
