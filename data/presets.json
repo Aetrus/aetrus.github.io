@@ -200,10 +200,11 @@
       "name": "Deus Ex Machina",
       "creator": "lsennn",
       "creatorUrl": "https://github.com/lsennn",
-      "version": "v2.5",
-      "updated": "2026-09-19",
+      "version": "v3.0",
+      "updated": "2026-10-26",
       "models": [
         "Claude",
+        "Gemini",
         "GLM",
         "Kimi",
         "DeepSeek",
@@ -215,13 +216,14 @@
         "Cinematic narration",
         "Beginner-friendly"
       ],
-      "summary": "A modular, story-first preset meant to work with nearly any card. Modules cover user agency and CYOA choices, a Momentum Engine that keeps events moving, story threads, tracker panels, and rules against positivity bias, omniscient characters and repetition. About 4,100 tokens by default, trimmable below 1,800.",
+      "summary": "A modular, story-first preset meant to work with nearly any card, narrated by Phi, its Story Master. Modules cover user agency and CYOA choices, story threads, Undercurrents (now the default over the Momentum Engine), Meanwhile for off-scene events, Hidden Truths for who knows what, Relationships, Companions who react to the story, and rules against positivity bias, omniscient characters and repetition. Version 3 gathers the trackers into one Active Modules tray with a tab for each module.",
       "notes": [
-        "Needs SillyTavern 1.17+, the experimental macro engine, and its embedded regex allowed on import.",
-        "Narration and dialogue style selectors (Cinematic, Literary, Dry; Naturalistic, Lean, Heightened).",
-        "Adult options exist but are off by default."
+        "Needs SillyTavern's experimental macro engine; if it is off, a card in the chat says how to switch it on.",
+        "Its regex scripts come inside the preset and again as a separate file. A setup page walks through every section.",
+        "Narration styles now include Intimate, Melancholic and Suspenseful, with an Anime dialogue option and an Extra Long length (700 to 1,000 words). Adult options exist but are off by default.",
+        "Imports into Aetheria (1.6.9 and later) whole, module tabs and all."
       ],
-      "home": "https://github.com/lsennn/Deus-ex-machina/releases",
+      "home": "https://github.com/lsennn/Deus-ex-machina/releases/tag/v3.0",
       "homeLabel": "GitHub",
       "variants": [],
       "basedOn": [],
@@ -452,12 +454,13 @@
       "name": "Sola",
       "creator": "Pyrxpia",
       "creatorUrl": "https://github.com/Pyrxpia",
-      "version": "v3",
-      "updated": "2026-10-13",
+      "version": "v4",
+      "updated": "2026-10-29",
       "variants": [
-        "Flame V3 (full)",
-        "Kindling V1 (compact)",
-        "Flame V3 Lumi"
+        "Flame V4 Complete (regex attached)",
+        "Flame V4 (with the Full or Lite regex pack)",
+        "Kindling V2 (compact)",
+        "Lumiverse and Tavo editions"
       ],
       "models": [
         "Gemini",
@@ -470,13 +473,14 @@
         "Anti-echo prose",
         "Tracker HUD"
       ],
-      "summary": "Casts the model as an eager co-author who narrates the outcome of your actions while you keep control of your character, with an OOC command for pausing to brainstorm or adjust pacing. It pushes NPCs to act on their own and bans repetitive phrasing. The full Flame build adds a Showrunner HUD, a feeling engine, a character matrix and a story review step.",
+      "summary": "Casts the model as an eager co-author who narrates the outcome of your actions while you keep control of your character, with an OOC line for pausing to brainstorm or adjust pacing. It pushes NPCs to act on their own and bans repetitive phrasing. Flame V4 lets you pick one of five minds for Sola's voice (Riot, Gremlin, Velvet, Mystic, Scholar) or keep her Golden voice, and its full build adds a Showrunner HUD: a bond radar, feeling, thought and heart engines, a character matrix and the Easel story review. Kindling V2 is the compact, scene-focused Sola in her Golden voice.",
       "notes": [
-        "The regex pack is required for the tracker cards.",
-        "A minimalist core-only setup runs about 1.2k tokens for local models."
+        "Flame V4 Complete has its Full regex pack attached. Plain Flame V4 needs the matching Full or Lite pack; import one pack, not both.",
+        "Kindling V2 carries its own regex scripts; its Feeling Engine and Easel are optional.",
+        "Imports into Aetheria (1.6.9 and later) whole, the Lumiverse edition too: its HUD cards, drawings and coloured voices show as they do in SillyTavern."
       ],
       "home": "https://pyrxpia.github.io/sola-hub/",
-      "homeLabel": "Website",
+      "homeLabel": "Sola Hub",
       "basedOn": [],
       "nsfw": false,
       "aka": "",
