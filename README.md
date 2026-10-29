@@ -7,9 +7,12 @@ Live at **https://aetrus.github.io** once Pages is on. Plain HTML, CSS and ES mo
 ```
 index.html            the shell (header, footer, mobile dock)
 404.html              sends stray paths home
-data/site.json        tagline, footer links, Aetheria release status
-data/cards.json       the gallery manifest
-data/creators.json    Kindred (creators) and Lodestars (resources)
+data/site.json        tagline, footer links, release repo, board connection
+data/cards.json       card manifest (the Cards shelf of Works)
+data/works.json       everything else you post: lorebooks, presets, themes, guides
+data/presets.json     the community Preset Archive
+data/creators.json    Kindred (creators) and Lodestars (open card libraries, specs)
+works/                files for works.json entries
 cards/                card PNGs (chara + ccv3 chunks inside)
 covers/               small thumbnails for the gallery (optional)
 assets/css/archive.css   the Bindings and every style
@@ -21,7 +24,7 @@ assets/js/            app shell, router, views, and the format libraries
   lib/blueprints.js   [[slot]] blueprints (port of BlueprintSlots.kt)
 ```
 
-## Add a card to the gallery
+## Add a card to Works
 
 1. Drop the card PNG into `cards/`.
 2. Open the site's **Workshop → Card Lens**, drop the same PNG in, and press **Copy gallery entry**.
@@ -31,7 +34,54 @@ assets/js/            app shell, router, views, and the format libraries
 
 The shortest entry that works is `{ "file": "cards/name.png" }`. The gallery then reads name, tags and stats out of the PNG itself, which costs a full download per card on every visit, so the copied entry is better.
 
-Cards in the same `world` are joined by starlines when you hover one in the gallery, and listed together under "Also from …" on the card page.
+Cards in the same `world` are joined by starlines when you hover one in Works, and listed together under "Also from …" on the card page.
+
+## Add anything else to Works
+
+Lorebooks, presets, themes, guides and tools go in `data/works.json`, with their files in `works/`:
+
+```json
+{
+  "slug": "my-preset",
+  "type": "preset",
+  "name": "My Preset",
+  "tagline": "One line for the shelf",
+  "world": "",
+  "tags": ["Claude", "Slow burn"],
+  "version": "1.0",
+  "updated": "2026-11-02",
+  "description": "Markdown is fine here.\n\n- What it does\n- What it needs",
+  "files": [{ "label": "Preset JSON", "url": "works/my-preset.json" }],
+  "links": [{ "label": "Chub", "url": "https://chub.ai/..." }]
+}
+```
+
+`type` is one of `lorebook`, `preset`, `theme`, `guide`, `tool`, `other`; Works groups them and gives each its own tab. A lorebook with a `.json` file gets an **Open in Binder** button. Give a work the same `world` as some cards and they're shown together.
+
+## The Preset Archive
+
+`data/presets.json` holds the community presets: creator credit, the version, what models it's built for, a summary, and a link to where the creator posted it. Nothing is re-hosted. Entries with `"catalogued": false` are on the community list but had no page outside Reddit to read, so they're credited without a summary; `"honorable": true` puts an entry under Honourable mentions. The list itself comes from the regularly updated post on r/SillyTavernAI; re-check it now and then and add new versions.
+
+## Aetheria downloads and patch notes
+
+Builds live as GitHub releases on **Aetrus/aetheria-releases** (cloned at `Desktop\Claude Creations\aetheria-releases`). The Downloads page and the Aetheria page read them live from GitHub, newest first, with the release text as patch notes. To publish:
+
+```powershell
+cd "$env:USERPROFILE\Desktop\Claude Creations\aetheria-releases"
+.\publish-release.ps1 -Version 1.6.6
+```
+
+It finds the installer and APK in `OneDrive\Aetheria`, opens a patch-notes template, scans the APK for bundled secrets, and asks before publishing. The installer can't be scanned, so make sure `.env` and API keys aren't packed into the Electron build.
+
+## Feature requests and bug reports
+
+The boards (`#board` and `#bugs`) store posts in the Supabase project **aetheria-board** (org: Aetheria). Anyone can post and vote without an account; nobody but you can edit. To triage, open Supabase → aetheria-board → Table Editor → `board_items`:
+
+- `status`: `new`, `planned`, `in_progress`, `done`, `wont_fix`, `duplicate`
+- `reply`: your public answer, shown under the post
+- `hidden`: tick it to remove spam or anything that shouldn't be public
+
+Free Supabase projects pause after about a week with no traffic. If the board says it's resting, restore the project from the Supabase dashboard.
 
 ## Mature cards
 
@@ -51,11 +101,11 @@ GitHub's Acceptable Use Policies don't allow sexually explicit content in reposi
 }
 ```
 
-No `file`, so nothing explicit is hosted. The cover should itself be non-explicit; it is still blurred until the visitor taps it or switches on **Unveil mature covers** in the gallery.
+No `file`, so nothing explicit is hosted. The cover should itself be non-explicit; it is still blurred until the visitor taps it or switches on **Unveil mature covers** in Works.
 
 ## Creators
 
-`data/creators.json` has two lists.
+`data/creators.json` has two lists. Lodestars are kept to open sites where cards can actually be downloaded, plus the specs and docs.
 
 - `kindred`: people. Fields: `name`, `role`, `blurb`, `tags`, `links` (`[{ "label", "url" }]`), optional `avatar` (image URL; otherwise a constellation sigil is drawn from the name), optional `house: true` for the centre star (you). Creators who share a tag are linked on the chart.
 - `lodestars`: resources. Fields: `name`, `kind`, `blurb`, `url`.
@@ -64,7 +114,7 @@ Stars place themselves. To pin one, give it `"x"` and `"y"` as percentages of th
 
 ## Site text and the Aetheria page
 
-`data/site.json`: the home tagline, footer links, and `aetheria.status` / `aetheria.note` / `aetheria.links`. Add release links there (`[{ "label": "Download for Windows", "url": "…" }]`) and the Aetheria page shows them.
+`data/site.json`: the home tagline, footer links, `aetheria.status` and `aetheria.note` (shown until the first release exists), `releases.repo` (where builds are read from) and `board` (the Supabase URL and its publishable key, which is safe to be public because the database only allows posting and voting).
 
 ## Bindings
 

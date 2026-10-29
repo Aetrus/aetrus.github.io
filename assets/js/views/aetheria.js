@@ -1,5 +1,6 @@
 import { esc, pageHead, starSvg } from '../ui.js';
-import { loadSite } from '../data.js';
+import { loadSite, loadReleases } from '../data.js';
+import { assetButtons, relDate } from './releases.js';
 import { BINDINGS, applyBinding } from '../app.js';
 
 export async function render(main, _arg, { setTitle }) {
@@ -12,10 +13,23 @@ export async function render(main, _arg, { setTitle }) {
     ${pageHead({ eyebrow: 'Aetheria', title: 'A library you <em>handle</em>' })}
     <p class="manifesto">A physical, magical library where you craft stories by moving things around by hand. <em>Not a sterile chat window.</em></p>
 
+    <section class="split">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <p class="eyebrow">${starSvg('eyebrow-star')}Get Aetheria</p>
+        <h2 class="section-title">Windows &amp; Android</h2>
+        <p class="dim" style="max-width:52ch">${esc(a.note || 'Builds are published as GitHub releases.')}</p>
+        <div class="btn-row"><a class="btn" href="#releases">All builds &amp; patch notes</a></div>
+      </div>
+      <div class="panel glass" style="gap:14px" id="a-release">
+        <p class="panel-sub">Downloads</p>
+        <p class="dim">Checking for the newest build…</p>
+      </div>
+    </section>
+
     <section class="kinds" aria-label="The three kinds of thing">
       <div class="kind glass">
         <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="11" y="6" width="22" height="32" rx="2"/><circle cx="22" cy="18" r="5"/><path d="M15 32c1.5-4 4-6 7-6s5.5 2 7 6"/></svg>
-        <h3>Characters</h3><p>Cards you riffle through on a shelf, pull out, and set on the table. Every card in the Gallery opens in Aetheria as-is.</p>
+        <h3>Characters</h3><p>Cards you riffle through on a shelf, pull out, and set on the table. Every card in Works opens in Aetheria as-is.</p>
       </div>
       <div class="kind glass">
         <svg viewBox="0 0 44 44" aria-hidden="true"><path d="M22 10c-3.5-2.5-8-3-12.5-2.2v25c4.5-.8 9-.3 12.5 2.2 3.5-2.5 8-3 12.5-2.2v-25C30 7 25.5 7.5 22 10Zm0 0v25"/></svg>
@@ -41,20 +55,32 @@ export async function render(main, _arg, { setTitle }) {
       </div>
     </section>
 
-    <section class="split">
+    <section class="board-cta glass">
+      <div><p class="panel-sub">Shape what comes next</p><h2 class="section-title">Requests &amp; bug reports</h2>
+        <p class="dim" style="max-width:52ch">Ask for features, vote on what matters to you, and report what broke. Everything is read.</p></div>
+      <div class="btn-row"><a class="btn btn-gilt" href="#board">Feature requests</a><a class="btn" href="#bugs">Bug reports</a></div>
+    </section>
+
+    <section style="display:flex;flex-direction:column;gap:16px">
       <div style="display:flex;flex-direction:column;gap:16px">
         <p class="eyebrow">${starSvg('eyebrow-star')}The Grimoire</p>
         <h2 class="section-title">Aetheria's companion</h2>
         <p class="dim" style="max-width:56ch">The Aetheria Grimoire is where cards get made: characters, standalone lorebooks and worldbuilding notes, cross-linked, with exports byte-compatible with SillyTavern V2. The Workshop on this site is its browser wing.</p>
         <div class="btn-row"><a class="btn" href="#workshop">Open the Workshop</a></div>
       </div>
-      <div class="panel glass" style="gap:12px">
-        <span class="status-pill">${esc(a.status || 'In the workshop')}</span>
-        <p class="dim">${esc(a.note || 'Release links will appear here.')}</p>
-        ${(a.links || []).length ? `<div class="btn-row">${a.links.map((l, i) => `<a class="btn ${i === 0 ? 'btn-gilt' : ''}" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('')}</div>` : ''}
-      </div>
     </section>
   </div>`;
+
+  const box = main.querySelector('#a-release');
+  const repo = site.releases && site.releases.repo;
+  (async () => {
+    let rels = [];
+    try { rels = repo ? await loadReleases(repo) : []; } catch { rels = null; }
+    const latest = rels && (rels.find((r) => !r.prerelease) || rels[0]);
+    box.innerHTML = latest
+      ? `<p class="panel-sub">Latest build</p><h3 class="panel-title">${esc(latest.name || latest.tag_name)}</h3><p class="mono faint">${relDate(latest.published_at)}</p>${assetButtons(latest)}<a class="linkish" href="#releases">Patch notes and earlier builds →</a>`
+      : `<span class="status-pill">${esc(a.status || 'In the workshop')}</span><p class="dim">${rels === null ? 'GitHub could not be reached just now.' : 'No public build yet. When one is released it appears here and on the downloads page, with its patch notes.'}</p><a class="linkish" href="#releases">Downloads page →</a>`;
+  })();
 
   const row = main.querySelector('.bindings-row');
   row.addEventListener('click', (e) => {

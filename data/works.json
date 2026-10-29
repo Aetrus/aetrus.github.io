@@ -1,0 +1,26 @@
+{
+  "works": [
+    {
+      "slug": "lowmere-lore-spine",
+      "type": "lorebook",
+      "name": "Lowmere: The Lore Spine",
+      "tagline": "The shared world behind Wren, Isolde and Pell",
+      "world": "Lowmere",
+      "tags": [
+        "Lowmere",
+        "World Info",
+        "SFW"
+      ],
+      "version": "1.0",
+      "updated": "2026-10-29",
+      "description": "Eight World Info entries for the last town before the map runs out: Lowmere itself, the Archive of Lost and Found, Mr. Aske's rule, the Farlight, the White, the Low Tide Market, Mother Gannet and the Lantern Boy.\n\nImport it as a standalone lorebook in SillyTavern or Aetheria and attach it to any card set on the coast. The town entry is constant; everything else is keyed.",
+      "files": [
+        {
+          "label": "World Info JSON",
+          "url": "works/lowmere-lore-spine.json"
+        }
+      ],
+      "links": []
+    }
+  ]
+}

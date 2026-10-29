@@ -1,5 +1,6 @@
 import { esc, cardTile, liftTiles, richText, starSvg, download, sigilSvg, slugify } from '../ui.js';
-import { loadCards, loadCardFile } from '../data.js';
+import { loadCards, loadCardFile, loadWorks } from '../data.js';
+import { folioTile } from './gallery.js';
 import { handoff } from '../handoff.js';
 import { toV2, cardStats, fmtTokens, bookEntries } from '../lib/card.js';
 
@@ -10,7 +11,7 @@ export async function render(main, slug, { setTitle }) {
     setTitle('Card not found');
     main.innerHTML = `<div class="page"><div class="empty-state glass">${sigilSvg(slug || '?', { size: 90 })}
       <h1 class="section-title">That card isn't on the table</h1>
-      <p>It may have been renamed or taken down.</p><a class="btn" href="#gallery">Back to the gallery</a></div></div>`;
+      <p>It may have been renamed or taken down.</p><a class="btn" href="#works">Back to Works</a></div></div>`;
     return;
   }
   setTitle(entry.name);
@@ -24,7 +25,8 @@ export async function render(main, slug, { setTitle }) {
   const stats = d ? cardStats(d) : entry.stats || {};
   const greetings = d ? [d.first_mes, ...(d.alternate_greetings || [])].filter((g) => g && g.trim()) : [];
   const lore = d ? bookEntries(d) : [];
-  const siblings = cards.filter((c) => c !== entry && entry.world && c.world === entry.world);
+  const works = await loadWorks();
+  const siblings = entry.world ? [...cards.filter((c) => c !== entry && c.world === entry.world), ...works.filter((w) => w.world === entry.world)] : [];
   const extLinks = [...(entry.link ? [entry.link] : []), ...(entry.links || [])];
 
   const tabs = d ? [
@@ -35,7 +37,7 @@ export async function render(main, slug, { setTitle }) {
   ] : [];
 
   main.innerHTML = `<div class="page">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="#gallery">Gallery</a><span aria-hidden="true">${starSvg('star')}</span><span>${esc(entry.name)}</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#works">Works</a><span aria-hidden="true">${starSvg('star')}</span><span>${esc(entry.name)}</span></nav>
     <article class="reader">
       <div class="reader-art">
         ${cardTile({ ...entry, thumb: entry.file || entry.cover || entry.thumb }, { tag: 'div', eager: true })}
@@ -82,7 +84,7 @@ export async function render(main, slug, { setTitle }) {
       </div>
     </article>
     ${siblings.length ? `<section aria-labelledby="sib-title"><div class="section-head"><h2 class="section-title" id="sib-title">Also from ${esc(entry.world)}</h2></div>
-      <div class="shelf">${siblings.map((c) => cardTile(c)).join('')}</div></section>` : ''}
+      <div class="shelf">${siblings.map((c) => (c.type ? folioTile(c) : cardTile(c))).join('')}</div></section>` : ''}
   </div>`;
 
   liftTiles(main);

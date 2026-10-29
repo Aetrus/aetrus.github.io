@@ -50,7 +50,7 @@
     {
       "name": "Chub",
       "kind": "Library",
-      "blurb": "An open library of character cards and lorebooks.",
+      "blurb": "An open library of downloadable character cards and lorebooks.",
       "url": "https://chub.ai/"
     },
     {
@@ -62,25 +62,13 @@
     {
       "name": "Character Tavern",
       "kind": "Library",
-      "blurb": "A public library of character cards.",
+      "blurb": "An open library of character cards to download.",
       "url": "https://character-tavern.com/"
-    },
-    {
-      "name": "Saucepan",
-      "kind": "Library",
-      "blurb": "A character platform with creator profiles and public cards.",
-      "url": "https://saucepan.ai/"
-    },
-    {
-      "name": "JanitorAI",
-      "kind": "Library",
-      "blurb": "A large character chat platform and card community.",
-      "url": "https://janitorai.com/"
     },
     {
       "name": "Botbooru",
       "kind": "Library",
-      "blurb": "A tag-searchable gallery of character cards.",
+      "blurb": "A tag-searchable gallery of downloadable character cards.",
       "url": "https://botbooru.com/"
     }
   ]

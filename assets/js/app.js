@@ -55,8 +55,12 @@ function bindingMenu() {
 // ── Router ────────────────────────────────────────────────────────────────
 const VIEWS = {
   home: () => import('./views/home.js'),
-  gallery: () => import('./views/gallery.js'),
+  works: () => import('./views/gallery.js'),
   card: () => import('./views/card.js'),
+  work: () => import('./views/work.js'),
+  presets: () => import('./views/presets.js'),
+  releases: () => import('./views/releases.js'),
+  board: () => import('./views/board.js'),
   kindred: () => import('./views/kindred.js'),
   workshop: () => import('./views/workshop.js'),
   forge: () => import('./views/forge.js'),
@@ -66,11 +70,14 @@ const VIEWS = {
   codex: () => import('./views/codex.js'),
   aetheria: () => import('./views/aetheria.js'),
 };
-const SECTION = { card: 'gallery', forge: 'workshop', lens: 'workshop', blueprints: 'workshop', binder: 'workshop', codex: 'workshop' };
+const SECTION = { card: 'works', work: 'works', forge: 'workshop', lens: 'workshop', blueprints: 'workshop', binder: 'workshop', codex: 'workshop', releases: 'aetheria', board: 'aetheria' };
 
 function parseHash() {
   const name = decodeURIComponent(location.hash.replace(/^#/, ''));
   if (name.startsWith('card-')) return { view: 'card', arg: name.slice(5) };
+  if (name.startsWith('work-')) return { view: 'work', arg: name.slice(5) };
+  if (name === 'gallery' || name === 'cards') return { view: 'works', arg: 'card' };
+  if (name === 'bugs') return { view: 'board', arg: 'bug' };
   if (VIEWS[name]) return { view: name, arg: null };
   return { view: 'home', arg: null };
 }

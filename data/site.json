@@ -3,12 +3,25 @@
   "keeper": "Atrus",
   "tagline": "Cards from the workshop, the makers worth following, and the Grimoire’s card-making tools, open right here in your browser.",
   "links": [
-    { "label": "Chub", "url": "https://chub.ai/users/Atrus" },
-    { "label": "GitHub", "url": "https://github.com/Aetrus" }
+    {
+      "label": "Chub",
+      "url": "https://chub.ai/users/Atrus"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Aetrus"
+    }
   ],
   "aetheria": {
     "status": "In the workshop",
-    "note": "Aetheria isn't released yet. When it is, the download links will appear here.",
+    "note": "Builds are published as GitHub releases. The newest one is always at the top of the downloads page, with its patch notes.",
     "links": []
+  },
+  "releases": {
+    "repo": "Aetrus/aetheria-releases"
+  },
+  "board": {
+    "url": "https://pqndrdqbsqtyhkhulepj.supabase.co",
+    "key": "sb_publishable_3LOilB6biKb-3L1c8LfASA_o85sTamO"
   }
 }

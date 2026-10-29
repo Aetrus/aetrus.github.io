@@ -1,0 +1,1317 @@
+{
+  "source": {
+    "title": "the community preset list on r/SillyTavernAI",
+    "url": "https://www.reddit.com/r/SillyTavernAI/s/KoCJ5OMb4w",
+    "curator": "",
+    "checked": "2026-10-29"
+  },
+  "presets": [
+    {
+      "slug": "ancient-access",
+      "name": "Ancient Access",
+      "creator": "-Ancient-Access-",
+      "creatorUrl": "https://ancientaccess.weebly.com/",
+      "version": "v2.2.3",
+      "models": [
+        "Kimi",
+        "GLM"
+      ],
+      "style": [
+        "First-person character voice",
+        "Psychology-driven",
+        "Literary prose",
+        "Compact"
+      ],
+      "summary": "The model plays {{char}} in first-person present tense, with the character's psychology steering every reply, while it runs the plot and NPCs and leaves your choices alone. It reaches for characters that feel like minds: intrusive thoughts, emotional pressure, limits on what they know, literary prose. Built for one-on-one or multi-character cards rather than world sims or RPG systems.",
+      "notes": [
+        "Fill in the Genre and Tone placeholders before use. Optional Plot Driver, NPC Dynamic and multi-character POV modules (the last two conflict).",
+        "The adult-content prompt is on by default; a companion Recall summary extension is offered on the same site.",
+        "The community list says v2.3.3; the creator's site and GitHub offer V2.2.3."
+      ],
+      "home": "https://ancientaccess.weebly.com/prompts.html",
+      "homeLabel": "Website",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "atelier",
+      "name": "Atelier",
+      "creator": "Head-Mousse6943",
+      "aka": "NemoVonNirgend",
+      "creatorUrl": "https://github.com/NemoVonNirgend",
+      "version": "v2.1",
+      "style": [
+        "Guided setup",
+        "Preference dials",
+        "Approachable",
+        "Prose-focused"
+      ],
+      "summary": "The guided member of the Nemo Engine family, for people who would rather set creative dials than browse a huge prompt catalogue. You choose stakes, romance, violence, humour, pacing, POV, length, sensory detail, world logic and agency, and a core pack assembles them into the system prompt, with anti-cliche prose checks and a databank for card and persona details.",
+      "notes": [
+        "33 embedded regex scripts, mostly animated emoji effects and think-tag cleanup.",
+        "An 18+ toggle ships disabled.",
+        "Download the JSON from the Atelier folder of the NemoEngine repo."
+      ],
+      "home": "https://github.com/NemoVonNirgend/NemoEngine/blob/main/Atelier/Atelier%202.1.json",
+      "homeLabel": "GitHub",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "magpie",
+      "name": "Magpie",
+      "creator": "Head-Mousse6943",
+      "aka": "NemoVonNirgend",
+      "creatorUrl": "https://github.com/NemoVonNirgend",
+      "version": "v1 (Beta 2.1)",
+      "style": [
+        "Ensemble casts",
+        "Continuity",
+        "Consequence-driven",
+        "Modular"
+      ],
+      "summary": "An ensemble-first preset for long-form roleplay where several characters matter at once and earlier choices keep paying off. Each character keeps their own voice, motives, knowledge and off-screen life, backed by dossiers, location files, item tracking and ledgers. Most alternatives ship disabled; the author suggests starting from the defaults and changing one setting at a time.",
+      "notes": [
+        "Several failure and death models, from permanent consequences to Return by Death.",
+        "Controls for interiority, tense, length and maturity."
+      ],
+      "home": "https://github.com/NemoVonNirgend/NemoEngine/blob/main/Magpie/README.md",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "nemo-engine",
+      "name": "Nemo Engine",
+      "creator": "Head-Mousse6943",
+      "aka": "NemoVonNirgend",
+      "creatorUrl": "https://github.com/NemoVonNirgend",
+      "version": "v12.1",
+      "updated": "2026-10-15",
+      "variants": [
+        "Standard",
+        "Full",
+        "Braille-space editions",
+        "v11.5.1 General RP"
+      ],
+      "style": [
+        "Toggle-heavy",
+        "Modular",
+        "Tracker-rich",
+        "RPG-capable",
+        "Heavyweight"
+      ],
+      "summary": "A very large modular preset for general roleplay, collaborative fiction and RPG scenes: the v11.5.1 General RP build alone carries 451 prompts and 91 regex scripts. You pick one option per family across craft cores, 31 narrator personalities, planning modes, world logic, difficulty, POV and length, with optional HTML or ASCII trackers. Powerful and complex; keep the shipped defaults first.",
+      "notes": [
+        "NemoPresetExt is strongly recommended and installs v12.1 in one click.",
+        "The community list names v10; the repo hosts v11.5.1 with older builds archived.",
+        "The shipped General RP profile has NSFW Core on; switch it off for SFW play."
+      ],
+      "home": "https://github.com/NemoVonNirgend/NemoEngine",
+      "homeLabel": "GitHub",
+      "basedOn": [],
+      "models": [],
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "vivarium",
+      "name": "Vivarium",
+      "creator": "Head-Mousse6943",
+      "aka": "NemoVonNirgend",
+      "creatorUrl": "https://github.com/NemoVonNirgend",
+      "version": "v1.0 Beta",
+      "style": [
+        "Lightweight",
+        "Slice of life",
+        "Plain-language",
+        "No visible trackers"
+      ],
+      "summary": "A compact preset for character-driven roleplay, slice of life and lower-stakes stories with small casts. NPCs keep their own wants and routines, it never writes your actions or feelings, and it uses plain-language instructions with no visible trackers or big menus. Lighter than Magpie, less configurable than Nemo Engine.",
+      "notes": [
+        "Optional anti-slop prompt, off by default.",
+        "Readable split prompt files and an archive of older releases in the repo."
+      ],
+      "home": "https://github.com/NemoVonNirgend/NemoEngine/blob/main/Vivarium/README.md",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "celia",
+      "name": "Celia",
+      "creator": "Leafcanfly",
+      "creatorUrl": "https://leafcanfly.neocities.org/",
+      "version": "v5.4",
+      "models": [
+        "Claude"
+      ],
+      "style": [
+        "Narrator persona",
+        "Genre and tone modules",
+        "CYOA",
+        "Claude-tuned"
+      ],
+      "summary": "Casts the model as Celia, a cheerful, witty narrator who runs the story as narrator, game master or co-author and speaks out of character in kaomoji. Genre and tone toggles (comedy, fluff, romance, angst and more), CYOA choices with d20 checks, HTML and visual-novel helpers, and optional reasoning blocks. Built for Claude.",
+      "notes": [
+        "The creator's site is at V5.4, newer than the v5.3 on the list.",
+        "Typing Reality Over ends the roleplay with an epilogue.",
+        "GLM and DeepSeek are unsupported but may work."
+      ],
+      "home": "https://leafcanfly.neocities.org/presets.html",
+      "homeLabel": "Website",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "deus-ex-machina",
+      "name": "Deus Ex Machina",
+      "creator": "lsennn",
+      "creatorUrl": "https://github.com/lsennn",
+      "version": "v2.5",
+      "updated": "2026-09-19",
+      "models": [
+        "Claude",
+        "GLM",
+        "Kimi",
+        "DeepSeek",
+        "Local"
+      ],
+      "style": [
+        "Story-first",
+        "Modular",
+        "Cinematic narration",
+        "Beginner-friendly"
+      ],
+      "summary": "A modular, story-first preset meant to work with nearly any card. Modules cover user agency and CYOA choices, a Momentum Engine that keeps events moving, story threads, tracker panels, and rules against positivity bias, omniscient characters and repetition. About 4,100 tokens by default, trimmable below 1,800.",
+      "notes": [
+        "Needs SillyTavern 1.17+, the experimental macro engine, and its embedded regex allowed on import.",
+        "Narration and dialogue style selectors (Cinematic, Literary, Dry; Naturalistic, Lean, Heightened).",
+        "Adult options exist but are off by default."
+      ],
+      "home": "https://github.com/lsennn/Deus-ex-machina/releases",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "voyage",
+      "name": "Voyage",
+      "creator": "Kahvana",
+      "aka": "nohurry",
+      "creatorUrl": "https://www.reddit.com/user/Kahvana/",
+      "version": "v6",
+      "updated": "2026-10",
+      "variants": [
+        "v5.1",
+        "v4 exp"
+      ],
+      "basedOn": [
+        "Moonlight v1",
+        "Eval v1"
+      ],
+      "models": [
+        "Local",
+        "Mistral",
+        "DeepSeek",
+        "GLM",
+        "Gemini"
+      ],
+      "style": [
+        "PbtA-lite game master",
+        "Interaction-driven",
+        "Lightweight",
+        "NPC-focused"
+      ],
+      "summary": "A lean game-master preset that runs roleplay as a light Powered by the Apocalypse game, aimed at interaction-driven stories with better dialogue and NPC-to-NPC scenes. The GM is bound to the assistant role so it doesn't speak for you, builds NPCs and places from tags, and calls skill checks. Born on local Gemma 4; model-agnostic from v5.",
+      "notes": [
+        "Hugging Face hosts v1 to v5.1; v6 had not been uploaded there when checked.",
+        "Pitched at slice of life, action, adventure and exploration."
+      ],
+      "home": "https://huggingface.co/nohurry/sillytavern",
+      "homeLabel": "Hugging Face",
+      "confidence": "medium",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "moonlight",
+      "name": "Moonlight",
+      "creator": "Kahvana",
+      "aka": "nohurry",
+      "creatorUrl": "https://www.reddit.com/user/Kahvana/",
+      "version": "v1",
+      "basedOn": [
+        "Sukino's Game Master"
+      ],
+      "models": [
+        "Local"
+      ],
+      "style": [
+        "Simple",
+        "Prose-focused",
+        "Swipe variety"
+      ],
+      "summary": "A small preset that improves the prose of local Gemma 4 31B and adds randomness so swipes come out more varied. It is the seed that grew into Voyage.",
+      "home": "https://huggingface.co/nohurry/sillytavern",
+      "homeLabel": "Hugging Face",
+      "confidence": "medium",
+      "variants": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "eval",
+      "name": "Eval",
+      "creator": "Kahvana",
+      "aka": "nohurry",
+      "creatorUrl": "https://www.reddit.com/user/Kahvana/",
+      "version": "v1",
+      "basedOn": [
+        "Voyage v3",
+        "Chatfill Classic",
+        "Chibi Gram Pacer Test Lap1"
+      ],
+      "models": [
+        "Local"
+      ],
+      "style": [
+        "Experimental",
+        "Rules sandbox",
+        "For preset makers"
+      ],
+      "summary": "An experimental playground of rules offered as a resource for preset makers rather than for everyday play. It sits between Voyage v3 and the Voyage v4 experiments and was tested on local Gemma 4 31B.",
+      "home": "https://huggingface.co/nohurry/sillytavern",
+      "homeLabel": "Hugging Face",
+      "confidence": "medium",
+      "variants": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "freaky-frankenstein",
+      "name": "Freaky Frankenstein",
+      "creator": "dptgreg",
+      "creatorUrl": "https://www.reddit.com/user/dptgreg/",
+      "version": "v5.4",
+      "updated": "2026-09-01",
+      "variants": [
+        "Micro",
+        "BOLT",
+        "MAX",
+        "FR (forced reasoning)",
+        "FranKIMstein (Kimi)"
+      ],
+      "models": [
+        "Claude",
+        "Kimi",
+        "GLM",
+        "Gemini",
+        "DeepSeek",
+        "Qwen",
+        "Local"
+      ],
+      "style": [
+        "Anti-slop",
+        "Cinematic",
+        "NPC agency",
+        "Low positivity bias"
+      ],
+      "summary": "A long-running family built to strip out AI slop and positivity bias, aiming for cinematic prose, blunt human dialogue and NPCs who chase their own goals off-screen. The 5.x Internal States line tracks NPC locations, relationships, inventory and status, and feeds dice into outcomes. Micro, BOLT and MAX trade speed and creativity against strict rule-following; BOLT is the default.",
+      "notes": [
+        "The matching regex pack is required (Regex 3.0 for 5.4).",
+        "A Freaky Deepy toggle is needed for DeepSeek and breaks other models.",
+        "Files are on MediaFire, linked from the Rentry archive, which carries a content warning."
+      ],
+      "home": "https://rentry.org/freaky-frankenstein-presets",
+      "homeLabel": "Rentry",
+      "basedOn": [],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "freaky-frankensim",
+      "name": "Freaky Frankensim",
+      "creator": "Ok_Strategy_2420",
+      "aka": "Ryah",
+      "creatorUrl": "https://github.com/Ryah",
+      "version": "v3",
+      "updated": "2026-08-18",
+      "basedOn": [
+        "Freaky Frankenstein v5"
+      ],
+      "models": [
+        "GLM",
+        "DeepSeek",
+        "Claude"
+      ],
+      "style": [
+        "Dice-driven",
+        "Simulation",
+        "NPC free will",
+        "Token-heavy"
+      ],
+      "nsfw": true,
+      "summary": "A dice-driven simulation take on Freaky Frankenstein: rolls decide outcomes and NPCs act on their own, off-screen too. It tracks bonds, mood, injuries, clothing and planted plot threads, and paces stories with a phase-based arc engine you can switch off. GLM first; token-heavy.",
+      "notes": [
+        "Regex is optional but strongly recommended for 3.0.",
+        "Credited to Ryah, co-author of Freaky Frankenstein's RPG side."
+      ],
+      "home": "https://github.com/Ryah/ST-Freaky-D20-Preset/releases",
+      "homeLabel": "GitHub",
+      "confidence": "medium",
+      "variants": [],
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "frankengarage",
+      "name": "FrankenGarage",
+      "creator": "daddytorgo",
+      "creatorUrl": "https://github.com/daddytorgo-hash",
+      "version": "v0.7",
+      "basedOn": [
+        "Freaky Frankenstein v4"
+      ],
+      "models": [
+        "Claude",
+        "Gemini",
+        "DeepSeek",
+        "GLM"
+      ],
+      "style": [
+        "Persistent simulation",
+        "Modular",
+        "Tracker-heavy",
+        "Genre-agnostic"
+      ],
+      "summary": "A modular persistent-simulation engine grown out of Freaky Frankenstein, for anything from one-shots to long campaigns. Choose one reasoning mode, one prose mode (Realism, Freaky, Novel, Freaky Novel) and one of five POVs including a Director mode, then switch on the trackers you want. It still runs with none active.",
+      "notes": [
+        "13 optional trackers: cast, status, world, narrative, memory, decisions and more.",
+        "Includes a DeepSeek reinforcement patch; the download is named FrankenMashup v0.70."
+      ],
+      "home": "https://github.com/daddytorgo-hash/FrankenGarage",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "sola",
+      "name": "Sola",
+      "creator": "Pyrxpia",
+      "creatorUrl": "https://github.com/Pyrxpia",
+      "version": "v3",
+      "updated": "2026-10-13",
+      "variants": [
+        "Flame V3 (full)",
+        "Kindling V1 (compact)",
+        "Flame V3 Lumi"
+      ],
+      "models": [
+        "Gemini",
+        "GLM",
+        "Local"
+      ],
+      "style": [
+        "Co-author persona",
+        "NPC agency",
+        "Anti-echo prose",
+        "Tracker HUD"
+      ],
+      "summary": "Casts the model as an eager co-author who narrates the outcome of your actions while you keep control of your character, with an OOC command for pausing to brainstorm or adjust pacing. It pushes NPCs to act on their own and bans repetitive phrasing. The full Flame build adds a Showrunner HUD, a feeling engine, a character matrix and a story review step.",
+      "notes": [
+        "The regex pack is required for the tracker cards.",
+        "A minimalist core-only setup runs about 1.2k tokens for local models."
+      ],
+      "home": "https://pyrxpia.github.io/sola-hub/",
+      "homeLabel": "Website",
+      "basedOn": [],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "lucid-loom",
+      "name": "Lucid Loom",
+      "creator": "ProlixOCs",
+      "aka": "prolix-oc",
+      "creatorUrl": "https://github.com/prolix-oc",
+      "version": "v0.7",
+      "models": [
+        "Gemini",
+        "Claude",
+        "GLM",
+        "DeepSeek",
+        "Local"
+      ],
+      "style": [
+        "Narrator persona",
+        "Modular toggles",
+        "Reasoning options",
+        "Trackers"
+      ],
+      "summary": "Casts the model as Lumia, a storyteller with seven built-in personalities, and organises everything into toggle categories for directives, story and response options, reasoning and trackers. You decide whether you, the model, or a guided mix controls your character.",
+      "notes": [
+        "The SillyTavern line was deprecated in June 2026; new work moved to Prolix's Lumiverse frontend.",
+        "The archived guide covers 3.3 as the last full SillyTavern release and advises against GPT and Kimi."
+      ],
+      "home": "https://lucid.cards/chat-presets",
+      "homeLabel": "Website",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "megumin-suite",
+      "name": "Megumin Suite",
+      "creator": "CallMeOniisan",
+      "aka": "Kazuma",
+      "creatorUrl": "https://github.com/Arif-salah",
+      "version": "v11",
+      "updated": "2026-10",
+      "variants": [
+        "V11 Writers' Room",
+        "V11 DeepSeek",
+        "V10 legacy engines",
+        "Lumiverse build"
+      ],
+      "basedOn": [
+        "Kazuma Secret Sauce v6"
+      ],
+      "models": [
+        "Gemini",
+        "Claude",
+        "GLM",
+        "DeepSeek"
+      ],
+      "style": [
+        "Extension-driven",
+        "State tracking",
+        "Slow-burn secrets",
+        "Natural dialogue"
+      ],
+      "summary": "A SillyTavern extension paired with one preset file that rebuilds the prompt every turn, adding only what that turn needs. It tracks locations, outfits, relationships, inventory and hidden plot threads in the background so long roleplays keep continuity. V11 adds a Notebook where the story sets hidden truths early, plants clues and holds the reveal until it fits.",
+      "notes": [
+        "Install the extension, import Megumin Suite V11 Universal.json and enable its bundled regex.",
+        "Optional secondary model for tracker blocks and optional ComfyUI inline images.",
+        "The earlier Kazuma Secret Sauce style lives on as a balance mode."
+      ],
+      "home": "https://github.com/Arif-salah/Megumin-Suite",
+      "homeLabel": "GitHub",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "marinara",
+      "name": "Marinara's Spaghetti Recipe",
+      "creator": "Meryiel",
+      "creatorUrl": "https://spicymarinara.github.io/",
+      "version": "v10",
+      "updated": "2026-01-29",
+      "variants": [
+        "Marinara's Essentials bundle"
+      ],
+      "models": [
+        "Claude",
+        "Gemini",
+        "GPT",
+        "GLM"
+      ],
+      "style": [
+        "Universal",
+        "Role modes",
+        "Plot-driving",
+        "Fair consequences"
+      ],
+      "summary": "A universal preset where you pick the model's role (Game Master, Roleplayer or Writer) and set tense, person, POV and length with toggles. Its core rules ask for autonomous, morally complex characters, proactive plot movement, fair success or failure on your actions, and never writing for your character.",
+      "notes": [
+        "Optional stats, info box, mind reading and immersive HTML toggles need the bundled regex.",
+        "The read-me suggests max context, 4096+ response length and temperature 1.0."
+      ],
+      "home": "https://github.com/SpicyMarinara/SillyTavern-Settings",
+      "homeLabel": "GitHub",
+      "basedOn": [],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "puras-director",
+      "name": "Pura's Director",
+      "creator": "purachina999",
+      "creatorUrl": "https://platberlitz.github.io/",
+      "version": "v16",
+      "variants": [
+        "SillyTavern build",
+        "Neconyan build"
+      ],
+      "models": [
+        "Claude",
+        "Gemini",
+        "GPT",
+        "GLM",
+        "Kimi",
+        "Qwen",
+        "Local"
+      ],
+      "style": [
+        "Grounded prose",
+        "User-led pacing",
+        "Tracker-heavy",
+        "Highly modular"
+      ],
+      "summary": "A general-purpose roleplay preset for grounded, lively prose that leaves room for you to act. Version 16 stops forcing a plot development every reply, ends each turn on a clear handoff, and keeps OOC notes out of the scene. Many optional toggles: length and narration voice, difficulty and friction, CYOA choices, and a large set of relationship, scene, time, item and secret trackers.",
+      "notes": [
+        "Needs its matching regex set; the dialogue-colours line needs the Dialogue Colours extension.",
+        "The creator suggests switching Post-History Instructions off for small local models.",
+        "Older versions back to 5.7 on the creator's site."
+      ],
+      "home": "https://platberlitz.github.io/",
+      "homeLabel": "Website",
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "the-ethereality-express",
+      "name": "The Ethereality Express",
+      "creator": "purachina999",
+      "creatorUrl": "https://platberlitz.github.io/",
+      "version": "v1.1",
+      "models": [
+        "Kimi",
+        "GLM",
+        "DeepSeek",
+        "Gemini",
+        "Claude",
+        "Local"
+      ],
+      "style": [
+        "Magical realism",
+        "Deadpan prose",
+        "Surreal trackers",
+        "Modular"
+      ],
+      "summary": "The magical-realism sibling of Pura's Director: impossible things narrated as ordinary, in flat and direct prose. It adds Veil Modes, chance events, scene dice and pressure modules on top of a main prompt of about 1,300 tokens, with features such as a Thought Cabinet that borrow from Disco Elysium.",
+      "notes": [
+        "The regex set is required or trackers show as raw brackets.",
+        "Only one Veil Mode at a time; pressure modules stack with any of them."
+      ],
+      "home": "https://platberlitz.github.io/",
+      "homeLabel": "Website",
+      "variants": [],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "stabs-directives",
+      "name": "Stab's Directives",
+      "creator": "Diecron",
+      "aka": "Zorgonatis",
+      "creatorUrl": "https://www.reddit.com/user/Diecron/",
+      "version": "v3.0.1",
+      "updated": "2026-05-21",
+      "basedOn": [
+        "Lucid Loom",
+        "Marinara's Universal"
+      ],
+      "models": [
+        "GLM",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "style": [
+        "Living world",
+        "Autonomous NPCs",
+        "HTML visuals",
+        "Toggle-driven"
+      ],
+      "summary": "A heavily structured preset (full name Stab's Directive Hierarchy) that treats the world as moving on its own: NPCs act on their own impulses and knowledge, and conflicts aren't tidied up. Replies carry HTML visual flourishes, a time, place and weather header, per-NPC dialogue colours and a behind-the-scenes block tracking relationships, inventory and off-screen events. AI roles include Director, Writer, Simulator and Sitcom.",
+      "notes": [
+        "Needs Chat Completion with the Experimental Macro Engine on; import its regex and turn other regex off.",
+        "Tuned for GLM with maximum reasoning; the README warns pacing can feel slow.",
+        "Hosted on the GitHub account Zorgonatis, matched to u/Diecron by version history."
+      ],
+      "home": "https://github.com/Zorgonatis/Stabs-EDH",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "writers-block",
+      "name": "Writer's Block",
+      "creator": "Deiomo",
+      "creatorUrl": "https://deiomo.github.io/",
+      "version": "Unlimited v2",
+      "variants": [
+        "Writer's Block 5"
+      ],
+      "models": [
+        "GLM",
+        "Claude",
+        "Kimi"
+      ],
+      "style": [
+        "Highly modular",
+        "Director and co-writing modes",
+        "Tone mixing",
+        "Custom reasoning"
+      ],
+      "summary": "A large, toggle-driven preset for roleplay and co-writing. Always-on writing rules sit underneath; on top you switch on narrative modes (Roleplay, Director, Active Persona), how hard the plot pushes, 30+ combinable tones, and controls for rhythm, POV, tense, length and violence. Includes trackers, a brainstormer, trope spotter and plot-thread tracker.",
+      "notes": [
+        "Unlimited v2 keeps the universal rules from Writer's Block 5.",
+        "The optional 18+ section is off by default."
+      ],
+      "home": "https://github.com/deiomo/Writer-s-Block-Unlimited",
+      "homeLabel": "GitHub",
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "wandlight",
+      "name": "Wandlight",
+      "creator": "MentallyQuill",
+      "creatorUrl": "https://github.com/MentallyQuill",
+      "version": "v1",
+      "models": [
+        "Claude",
+        "GLM",
+        "DeepSeek"
+      ],
+      "style": [
+        "Harry Potter",
+        "Lightweight",
+        "Canon-aware",
+        "Anti-cliche"
+      ],
+      "summary": "A small preset for Harry Potter roleplay and fanfiction. Modules for length, tense, POV and which part of the cast appears; an optional timestamp header; and characters limited to what they'd know at that point in canon. Anti-cliche rules and an optional logit-bias list target stock fantasy phrasing.",
+      "notes": [
+        "Meant for a blank story card plus one of the included openers.",
+        "The creator also runs the Tavernary catalogue of SillyTavern tools."
+      ],
+      "home": "https://github.com/MentallyQuill/ST-Wandlight",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "white-lotus",
+      "name": "White Lotus",
+      "creator": "Friendly-Ad-1996",
+      "aka": "Moki",
+      "creatorUrl": "https://www.reddit.com/user/Friendly-Ad-1996/",
+      "version": "v4.3.0",
+      "variants": [
+        "Chrysanthemum 2.0.0",
+        "Plum Blossom"
+      ],
+      "models": [
+        "GLM",
+        "Kimi",
+        "DeepSeek"
+      ],
+      "style": [
+        "Character-driven",
+        "Proactive NPCs",
+        "Genre presets",
+        "Trackers"
+      ],
+      "summary": "For character-driven, plot-focused roleplay that gets the model to take initiative instead of stalling. Characters follow their own goals, can lie, and only know what they plausibly would, while your agency is protected. Narrator modes, genre presets, optional anti-slop and better-NPC modules, and relationship, time and status trackers.",
+      "notes": [
+        "The list cites v1; the site matched to it is at v4.3.0 with older versions kept.",
+        "Attribution to the site owner Moki is inferred from the name.",
+        "Has an optional companion extension."
+      ],
+      "home": "https://mokimoko.github.io/pages/presets/white-lotus.html",
+      "homeLabel": "Website",
+      "confidence": "medium",
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "worldhopper",
+      "name": "Worldhopper",
+      "creator": "goonerpos",
+      "aka": "Coz",
+      "creatorUrl": "https://www.reddit.com/user/goonerpos/",
+      "version": "v1.3",
+      "updated": "2026-10",
+      "variants": [
+        "Shifter (Claude)",
+        "Planeswalker (Gemini)",
+        "Delver (DeepSeek)",
+        "Nomad (GLM)",
+        "Pilgrim (Kimi)"
+      ],
+      "models": [
+        "Claude",
+        "Gemini",
+        "DeepSeek",
+        "GLM",
+        "Kimi"
+      ],
+      "style": [
+        "Supernatural scenarios",
+        "Prose-first",
+        "Per-model variants",
+        "State tracking"
+      ],
+      "nsfw": true,
+      "summary": "A modular, prose-focused preset built around supernatural and metaphysical scenarios: possession, body swaps, mind control, hive minds. The main 1.3 preset has per-chat toggles, with slimmer builds for each model family. 1.3 adds voice consistency, optional co-writing of your character, hard limits, and length and ending controls.",
+      "notes": [
+        "Pairs with the optional Worldhopper Engine extension, which tracks who is in which body.",
+        "Published under the name Coz; matched to this creator by name and version history.",
+        "The site is labelled 18+."
+      ],
+      "home": "https://coz-rp.github.io/",
+      "homeLabel": "Website",
+      "confidence": "medium",
+      "basedOn": [],
+      "honorable": false,
+      "catalogued": true
+    },
+    {
+      "slug": "sukino",
+      "name": "Sukino's presets and guides",
+      "creator": "Sukino",
+      "noU": true,
+      "creatorUrl": "https://sukinocreates.neocities.org/",
+      "version": "",
+      "honorable": true,
+      "variants": [
+        "Game Master Oneshot",
+        "Game Master Legacy",
+        "Anti-Slop banned strings"
+      ],
+      "models": [
+        "DeepSeek",
+        "Mistral",
+        "Local"
+      ],
+      "style": [
+        "Guides",
+        "Game master",
+        "Anti-slop",
+        "Local-friendly"
+      ],
+      "summary": "Practical SillyTavern guides plus a few presets and settings files. The Game Master presets frame the chat as a simulation the AI runs as GM; the banned-strings list blocks common AI cliches on local backends; the guides cover getting more from smaller models, steering replies and writing better bots.",
+      "notes": [
+        "Banned strings work with KoboldCPP and TabbyAPI, not online APIs.",
+        "Guides on Rentry (Sukino-Guides) and a resource index (Sukino-Findings)."
+      ],
+      "home": "https://sukinocreates.neocities.org/",
+      "homeLabel": "Website",
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "evening-truth",
+      "name": "Evening Truth's prompt library",
+      "creator": "Evening-Truth3308",
+      "creatorUrl": "https://evening-truth.carrd.co/",
+      "version": "",
+      "updated": "2026-10-28",
+      "honorable": true,
+      "models": [
+        "GLM",
+        "Kimi",
+        "DeepSeek",
+        "Grok",
+        "Qwen",
+        "Mistral"
+      ],
+      "style": [
+        "Per-model prompts",
+        "Minimal",
+        "Candid ratings",
+        "Beginner-friendly"
+      ],
+      "summary": "A library of short roleplay prompts, each written for a specific model, with the creator's own rating and blunt notes on where that model shines or falls short. Good if you want something model-specific and small rather than a big toggle preset.",
+      "notes": [
+        "Also covers MiMo, MiniMax and Gemma.",
+        "Some entries are dark or explicit variants; the library page is age-gated."
+      ],
+      "home": "https://rentry.org/Evening-Truth-Roleplay-Prompts",
+      "homeLabel": "Rentry",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "nsfw": false,
+      "aka": "",
+      "catalogued": true
+    },
+    {
+      "slug": "sphiratrioth",
+      "name": "Sphiratrioth's presets and guides",
+      "creator": "Nicholas_Matt_Quail",
+      "aka": "sphiratrioth666",
+      "creatorUrl": "https://www.reddit.com/user/Nicholas_Matt_Quail/",
+      "version": "",
+      "honorable": true,
+      "variants": [
+        "Roleplay 150T",
+        "Storytelling 350T",
+        "GM preset"
+      ],
+      "models": [
+        "Mistral",
+        "Qwen",
+        "Local"
+      ],
+      "style": [
+        "Text completion",
+        "Local models",
+        "Simple",
+        "Roleplay and GM"
+      ],
+      "summary": "Simple, general-purpose presets for local models using text completion, with context and instruct templates for Mistral, ChatML, Llama 3 and Alpaca, plus system prompts, samplers and cleanup regex. Pick short conversational or longer storytelling replies, a creativity level, first or third person, or a GM mode.",
+      "notes": [
+        "Not meant for API roleplay.",
+        "Also writes guides, including one on steering scenes with lorebooks."
+      ],
+      "home": "https://huggingface.co/sphiratrioth666/SillyTavern-Presets-Sphiratrioth",
+      "homeLabel": "Hugging Face",
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "chatfill",
+      "name": "Chatfill",
+      "creator": "eteitaxiv",
+      "creatorUrl": "https://github.com/eteitaxiv",
+      "version": "v3",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "Built around switches: rule groups you enable in the system prompt, with one short reminder after the chat history instead of a pile of instructions. The same creator maintains a Genres extension made for it.",
+      "home": "https://www.reddit.com/user/eteitaxiv/",
+      "homeLabel": "Reddit",
+      "variants": [
+        "Chatfill Classic"
+      ],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "chatstream",
+      "name": "Chatstream",
+      "creator": "eteitaxiv",
+      "creatorUrl": "https://github.com/eteitaxiv",
+      "version": "v3",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "A sibling to Chatfill by the same creator.",
+      "home": "https://www.reddit.com/user/eteitaxiv/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "moon",
+      "name": "Moon",
+      "creator": "eteitaxiv",
+      "creatorUrl": "https://github.com/eteitaxiv",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "Listed with a Moon Tamer variant.",
+      "home": "https://www.reddit.com/user/eteitaxiv/",
+      "homeLabel": "Reddit",
+      "variants": [
+        "Moon Tamer"
+      ],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "dice-of-the-lady",
+      "name": "Dice of the Lady",
+      "creator": "ValiantNightshade",
+      "creatorUrl": "https://www.reddit.com/user/ValiantNightshade/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/ValiantNightshade/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "realistic-frankenstein",
+      "name": "Realistic Frankenstein",
+      "creator": "kinkyalt_02",
+      "creatorUrl": "https://www.reddit.com/user/kinkyalt_02/",
+      "version": "v2.2.1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "A realism-leaning derivative of Freaky Frankenstein with a Fate system.",
+      "home": "https://www.reddit.com/user/kinkyalt_02/",
+      "homeLabel": "Reddit",
+      "basedOn": [
+        "Freaky Frankenstein"
+      ],
+      "variants": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "floris",
+      "name": "Floris",
+      "creator": "knoxarium",
+      "creatorUrl": "https://www.reddit.com/user/knoxarium/",
+      "version": "v0.2",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "Its first version was built on Sola v2.",
+      "home": "https://www.reddit.com/user/knoxarium/",
+      "homeLabel": "Reddit",
+      "basedOn": [
+        "Sola v2"
+      ],
+      "variants": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "le-emotionalism",
+      "name": "LE_EMOTIONALISM",
+      "creator": "HippoFuzzy5815",
+      "creatorUrl": "https://www.reddit.com/user/HippoFuzzy5815/",
+      "version": "v1.1.5",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "Described by its creator as an emotion-based preset.",
+      "home": "https://www.reddit.com/r/SillyTavernAI/comments/1v46vqe/le_emotionalism_version_115_emotionalbased_preset/",
+      "homeLabel": "Reddit",
+      "updated": "2026-07",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "kazuma-secret-sauce",
+      "name": "Kazuma Secret Sauce",
+      "creator": "CallMeOniisan",
+      "creatorUrl": "https://github.com/Arif-salah",
+      "version": "v6",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "The standalone predecessor of Megumin Suite; its v6 became Megumin Alpha, and its style lives on there as a balance mode.",
+      "home": "https://github.com/Arif-salah/Megumin-Suite",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "mimo-needs-to-calm-down",
+      "name": "Mimo Needs To Calm Down!",
+      "creator": "Probablynottoocool",
+      "creatorUrl": "https://www.reddit.com/user/Probablynottoocool/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/Probablynottoocool/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "natural-20",
+      "name": "Natural 20",
+      "creator": "Balance-United",
+      "creatorUrl": "https://www.reddit.com/user/Balance-United/",
+      "version": "v3",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/Balance-United/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "nopussyfooting",
+      "name": "NoPussyFooting",
+      "creator": "Cynthia2006",
+      "creatorUrl": "https://www.reddit.com/user/Cynthia2006/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/Cynthia2006/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "simulator-engine",
+      "name": "Simulator Engine",
+      "creator": "xwsc",
+      "creatorUrl": "https://www.reddit.com/user/xwsc/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/xwsc/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "purrfect-logic",
+      "name": "Purrfect Logic",
+      "creator": "No-Bus-3618",
+      "creatorUrl": "https://www.reddit.com/user/No-Bus-3618/",
+      "version": "v4.1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/No-Bus-3618/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "rice",
+      "name": "Rice",
+      "creator": "Acceptable-Ruin-2778",
+      "creatorUrl": "https://www.reddit.com/user/Acceptable-Ruin-2778/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/Acceptable-Ruin-2778/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "sun-rider",
+      "name": "Sun Rider",
+      "creator": "biotechie73",
+      "creatorUrl": "https://www.reddit.com/user/biotechie73/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "",
+      "home": "https://www.reddit.com/user/biotechie73/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    },
+    {
+      "slug": "therefore",
+      "name": "THEREFORE",
+      "creator": "Deiomo",
+      "creatorUrl": "https://deiomo.github.io/",
+      "version": "v1",
+      "catalogued": false,
+      "confidence": "low",
+      "summary": "By the creator of Writer's Block.",
+      "home": "https://www.reddit.com/user/Deiomo/",
+      "homeLabel": "Reddit",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "style": [],
+      "notes": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false
+    }
+  ]
+}

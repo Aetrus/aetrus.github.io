@@ -19,6 +19,23 @@ export async function getBytes(path) {
 
 export const loadSite = () => once('site', () => getJSON('data/site.json'));
 export const loadCreators = () => once('creators', () => getJSON('data/creators.json'));
+export const loadWorks = () => once('works', () => getJSON('data/works.json').then((d) => d.works || []).catch(() => []));
+export const loadPresets = () => once('presets', () => getJSON('data/presets.json'));
+
+/** Public releases from GitHub, cached for ten minutes per visitor to spare the API limit. */
+export const loadReleases = (repo) => once(`releases:${repo}`, async () => {
+  const key = `aetheria.releases.${repo}`;
+  try {
+    const hit = JSON.parse(sessionStorage.getItem(key) || 'null');
+    if (hit && Date.now() - hit.at < 600000) return hit.data;
+  } catch { /* no cache */ }
+  const r = await fetch(`https://api.github.com/repos/${repo}/releases?per_page=30`, { headers: { Accept: 'application/vnd.github+json' } });
+  if (r.status === 404) return [];
+  if (!r.ok) throw new Error(r.status === 403 ? 'GitHub is rate-limiting this browser for a few minutes.' : `GitHub answered ${r.status}.`);
+  const data = (await r.json()).filter((x) => !x.draft);
+  try { sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), data })); } catch { /* full */ }
+  return data;
+});
 
 function firstSentence(s) {
   const m = String(s || '').replace(/\s+/g, ' ').match(/^(.{12,140}?[.!?])(\s|$)/);
