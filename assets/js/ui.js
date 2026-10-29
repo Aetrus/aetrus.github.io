@@ -2,6 +2,7 @@
 import { fmtTokens } from './lib/card.js';
 
 export const STAR = 'M12 0 C12.9 7.6 16.4 11.1 24 12 C16.4 12.9 12.9 16.4 12 24 C11.1 16.4 7.6 12.9 0 12 C7.6 11.1 11.1 7.6 12 0 Z';
+export const flourish = (cls = '') => `<div class="flourish ${cls}" aria-hidden="true"><i></i><svg viewBox="0 0 24 24"><path d="${STAR}"/></svg><i></i></div>`;
 export const starSvg = (cls = 'star') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${STAR}"/></svg>`;
 
 const ESC = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };

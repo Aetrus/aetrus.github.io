@@ -5,10 +5,20 @@
       "house": true,
       "role": "Keeper of this archive",
       "blurb": "Builds Aetheria and the Grimoire, and writes character cards with their lore bound in.",
-      "tags": ["Romance", "Horror", "Worldbuilding"],
+      "tags": [
+        "Romance",
+        "Horror",
+        "Worldbuilding"
+      ],
       "links": [
-        { "label": "Chub", "url": "https://chub.ai/users/Atrus" },
-        { "label": "GitHub", "url": "https://github.com/Aetrus" }
+        {
+          "label": "Chub",
+          "url": "https://chub.ai/users/Atrus"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Aetrus"
+        }
       ]
     }
   ],
@@ -18,6 +28,12 @@
       "kind": "Frontend",
       "blurb": "The reference for macros, World Info and prompt order.",
       "url": "https://docs.sillytavern.app/"
+    },
+    {
+      "name": "World Info Guide",
+      "kind": "Frontend",
+      "blurb": "How lorebook keys, depth, recursion and budgets actually fire.",
+      "url": "https://docs.sillytavern.app/usage/core-concepts/worldinfo/"
     },
     {
       "name": "Character Card V2",
@@ -48,6 +64,24 @@
       "kind": "Library",
       "blurb": "A public library of character cards.",
       "url": "https://character-tavern.com/"
+    },
+    {
+      "name": "Saucepan",
+      "kind": "Library",
+      "blurb": "A character platform with creator profiles and public cards.",
+      "url": "https://saucepan.ai/"
+    },
+    {
+      "name": "JanitorAI",
+      "kind": "Library",
+      "blurb": "A large character chat platform and card community.",
+      "url": "https://janitorai.com/"
+    },
+    {
+      "name": "Botbooru",
+      "kind": "Library",
+      "blurb": "A tag-searchable gallery of character cards.",
+      "url": "https://botbooru.com/"
     }
   ]
 }

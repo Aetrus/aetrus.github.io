@@ -18,20 +18,20 @@ export async function render(main, _arg, { setTitle }) {
       title: 'Cards on the <em>table</em>',
       lede: 'Every card here carries its lorebook inside the image. Download the PNG and drop it into Aetheria or SillyTavern; nothing else to install.',
     })}
-    <section class="gallery-controls glass" aria-label="Filter cards">
+    <section class="gallery-controls" aria-label="Filter cards">
       <div class="gallery-controls-row">
         <label class="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
-          <input class="input" id="g-q" type="search" placeholder="Search names, worlds, tags" autocomplete="off" aria-label="Search cards">
+          <svg class="line-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+          <input class="input line" id="g-q" type="search" placeholder="Search names, worlds, tags" autocomplete="off" aria-label="Search cards">
         </label>
-        <select class="select" id="g-sort" aria-label="Sort">
+        <select class="select line" id="g-sort" aria-label="Sort">
           <option value="featured">Featured first</option>
           <option value="newest">Newest</option>
           <option value="name">By name</option>
         </select>
         ${hasMature ? `<label class="toggle"><input type="checkbox" id="g-mature" ${state.mature ? 'checked' : ''}> Unveil mature covers</label>` : ''}
       </div>
-      ${tags.length ? `<div class="chip-row" id="g-tags" role="group" aria-label="Tags">${tags.map((t) => `<button type="button" class="chip" aria-pressed="false" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : ''}
+      ${tags.length ? `<div class="chip-row" id="g-tags" role="group" aria-label="Tags"><span class="filter-label">Filter</span>${tags.map((t) => `<button type="button" class="chip" aria-pressed="false" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}</div>` : ''}
       <div class="gallery-controls-row" style="justify-content:space-between">
         <span class="gallery-count" id="g-count" aria-live="polite"></span>
         ${worlds.size ? `<span class="starlines-note"><svg viewBox="0 0 34 12" aria-hidden="true"><path d="M2 10 Q17 -4 32 10"/></svg>Hover a card to see which others share its world.</span>` : ''}

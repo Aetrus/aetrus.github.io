@@ -452,9 +452,6 @@ main { outline: none; min-height: 70vh; }
   text-decoration: none; color: var(--text); overflow: hidden; isolation: isolate;
   transition: transform 0.5s var(--ease), border-color 0.3s, box-shadow 0.5s var(--ease);
 }
-.door::before {
-  content: ''; position: absolute; inset: 6px; border: 1px solid var(--line-soft); border-radius: calc(var(--r-panel) - 4px); pointer-events: none;
-}
 .door:hover { transform: translateY(-8px); border-color: var(--line-strong); box-shadow: var(--shadow-far), var(--glow-soft); color: var(--text); }
 .door-num { font-family: var(--f-mono); font-size: 0.75rem; color: var(--text-faint); }
 .door-title { font-size: 2rem; font-weight: 500; }
@@ -823,6 +820,111 @@ table.data td.num { font-family: var(--f-mono); font-size: 0.8rem; font-variant-
 .rise-2 { animation-delay: 0.08s; } .rise-3 { animation-delay: 0.16s; } .rise-4 { animation-delay: 0.24s; }
 @keyframes rise { from { transform: translateY(14px); opacity: 0.55; } }
 
+/* ── Elegance: frames, knots, light ─────────────────────────────────────
+   Ornament stays at edges and joins (Aetheria Direction, ORNAMENT): every
+   pane gets a second hairline inside its frame and a star knotted at each
+   corner. Labels go quiet; the display face carries the voice. */
+:root {
+  --knot: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C12.9 7.6 16.4 11.1 24 12 16.4 12.9 12.9 16.4 12 24 11.1 16.4 7.6 12.9 0 12 7.6 11.1 11.1 7.6 12 0Z'/%3E%3C/svg%3E");
+}
+body {
+  background:
+    radial-gradient(70% 55% at 88% -8%, color-mix(in srgb, var(--lumen) 9%, transparent), transparent 70%),
+    radial-gradient(55% 45% at -6% 104%, color-mix(in srgb, var(--lapis-600) 10%, transparent), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+}
+.glass {
+  position: relative;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--ivory) 3.5%, transparent), transparent 140px),
+    var(--glass);
+}
+.glass::before {
+  content: ''; position: absolute; inset: 5px; pointer-events: none;
+  border: 1px solid var(--line-soft); border-radius: calc(var(--r-panel) * 0.4);
+}
+.glass::after {
+  content: ''; position: absolute; inset: 1px; pointer-events: none; z-index: 1;
+  background: var(--brass-300); opacity: 0.9;
+  -webkit-mask: var(--knot) top left / 9px 9px no-repeat, var(--knot) top right / 9px 9px no-repeat, var(--knot) bottom left / 9px 9px no-repeat, var(--knot) bottom right / 9px 9px no-repeat;
+  mask: var(--knot) top left / 9px 9px no-repeat, var(--knot) top right / 9px 9px no-repeat, var(--knot) bottom left / 9px 9px no-repeat, var(--knot) bottom right / 9px 9px no-repeat;
+}
+.macro-bar.glass::before, .macro-bar.glass::after, .search.glass::before, .search.glass::after { display: none; }
+
+.masthead { border-bottom: 0; }
+.masthead::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, var(--line) 18%, var(--line-strong) 50%, var(--line) 82%, transparent);
+}
+
+/* Buttons speak in the display face, not in tracked capitals */
+.btn {
+  font-family: var(--f-display); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.015em; text-transform: none;
+  padding: 0.5em 1.25em;
+}
+.btn-sm { font-size: 1rem; padding: 0.3em 0.9em; }
+.btn-gilt { font-weight: 700; }
+
+/* Chips: quiet italic words that only take a frame when chosen */
+.chip { background: transparent; border-color: transparent; font-style: italic; font-size: 1.02rem; padding: 2px 11px; }
+.chip:hover { border-color: var(--line-soft); background: var(--glass-inset); }
+.chip[aria-pressed="true"] { color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); border-color: var(--line-strong); }
+:root[data-mode="light"] .chip[aria-pressed="true"] { color: var(--accent); }
+.chip-static.tagline-chip { border: 0; padding: 0; min-height: 0; background: none; font-style: normal; font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-dim); }
+.chip-row .tagline-chip + .tagline-chip::before { content: '✦'; font-size: 0.6em; margin-right: 8px; color: var(--accent-deep); vertical-align: 0.2em; }
+.chip-row:has(.tagline-chip) { gap: 6px 8px; }
+
+/* A flourish: hairlines that thin to nothing either side of a star */
+.flourish { display: flex; align-items: center; gap: 16px; color: var(--accent); }
+.flourish i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--line-strong)); }
+.flourish i:last-child { background: linear-gradient(270deg, transparent, var(--line-strong)); }
+.flourish svg { width: 13px; height: 13px; fill: var(--accent); filter: drop-shadow(0 0 6px var(--glow)); }
+.flourish.narrow { width: min(320px, 70%); margin: 0 auto; }
+
+/* The epigraph: one line from the Direction, set like a frontispiece */
+.epigraph { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; padding-block: 12px; }
+.epigraph blockquote { margin: 0; max-width: 30ch; font-family: var(--f-display); font-size: clamp(1.6rem, 1.1rem + 1.8vw, 2.5rem); font-weight: 400; font-style: italic; line-height: 1.25; text-wrap: balance; }
+.epigraph blockquote em { font-style: normal; color: var(--accent); }
+.epigraph cite { font-style: normal; font-family: var(--f-label); font-size: 0.72rem; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-faint); }
+
+/* Gallery controls: no box, just a ruled band */
+.gallery-controls { padding: 18px 0 16px; background: none; border: 0; border-block: 1px solid var(--line-soft); border-radius: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.gallery-controls::before, .gallery-controls::after { display: none; }
+.input.line { background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; font-family: var(--f-display); font-size: 1.35rem; font-style: italic; padding: 6px 4px 8px 34px; }
+.input.line:focus { box-shadow: 0 1px 0 0 var(--accent); }
+.search .input.line + svg, .search svg.line-icon { left: 4px; }
+.select.line { background-color: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; font-family: var(--f-display); font-size: 1.15rem; padding: 6px 30px 8px 4px; }
+.filter-label { font-family: var(--f-label); font-size: 0.7rem; letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-faint); align-self: center; margin-right: 4px; }
+
+/* Literary touches */
+.greeting .prose > p:first-child::first-letter {
+  float: left; font-family: var(--f-display); font-size: 3.6em; line-height: 0.82; font-weight: 500;
+  padding: 0.08em 0.1em 0 0; color: var(--accent); text-shadow: 0 0 18px var(--glow);
+}
+.page-title em, .hero-title .gilt { text-shadow: none; }
+.reader-name, .hero-title { text-shadow: 0 0 40px color-mix(in srgb, var(--lumen) 14%, transparent); }
+
+/* The astrolabe draws itself in once */
+.astrolabe .a-draw { stroke-dasharray: 1; animation: a-draw 2.4s var(--ease) backwards; }
+.astrolabe .a-tick, .astrolabe .a-num { animation: a-fade 1.4s 0.9s ease backwards; }
+.astrolabe .a-rete-wrap { animation: a-fade 1.6s 1.2s ease backwards; }
+@keyframes a-draw { from { stroke-dashoffset: 1; } }
+@keyframes a-fade { from { opacity: 0; } }
+
+/* Colophon, centred like the last page of a book */
+.colophon { border-top: 0; background: none; }
+.colophon-inner { flex-direction: column; align-items: center; text-align: center; gap: 14px; padding-block: 24px 56px; }
+.colophon-inner .flourish { width: min(420px, 80%); }
+.colophon-mark { font-size: 1.3rem; font-style: italic; }
+.colophon-note { flex: none; max-width: 52ch; font-size: 0.95rem; }
+.colophon-links a { font-family: var(--f-display); font-size: 1.08rem; font-weight: 600; text-decoration: none; }
+.colophon-links a + a::before { content: '✦'; font-size: 0.55em; color: var(--accent-deep); margin-right: 16px; vertical-align: 0.25em; }
+
+/* More air between the big movements of a page */
+.page { gap: 64px; }
+.page-head + * { margin-top: -12px; }
+
 /* ── Responsive ────────────────────────────────────────────────────────── */
 @media (max-width: 1060px) {
   .bp-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
@@ -852,6 +954,10 @@ table.data td.num { font-family: var(--f-mono); font-size: 0.8rem; font-variant-
   .forge-grid .f-portrait .tile-body { padding: 0 10px 12px; margin-top: -40px; }
   .forge-grid .f-portrait .portrait-actions { flex-direction: column; align-items: stretch; }
   .forge-grid .f-anatomy, .forge-grid .f-export { order: 1; }
+}
+@media (max-width: 520px) {
+  .chart-star.is-lodestar .nm { display: none; }
+  .epigraph blockquote { font-size: 1.5rem; }
 }
 @media (max-width: 760px) {
   .primary, .orb-label { display: none; }

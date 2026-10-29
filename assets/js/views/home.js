@@ -1,4 +1,4 @@
-import { esc, cardTile, liftTiles, starSvg, STAR } from '../ui.js';
+import { esc, cardTile, liftTiles, starSvg, flourish, STAR } from '../ui.js';
 import { loadCards, loadCreators, loadSite } from '../data.js';
 
 /** An original astrolabe: graduated limb, a turning rete with star pointers, and the house star at the pole. */
@@ -55,13 +55,13 @@ function astrolabe() {
     <defs><radialGradient id="a-halo"><stop offset="0" stop-color="var(--lumen)" stop-opacity="0.22"/><stop offset="0.6" stop-color="var(--lumen)" stop-opacity="0.05"/><stop offset="1" stop-color="var(--lumen)" stop-opacity="0"/></radialGradient></defs>
     <circle class="a-halo" cx="${C}" cy="${C}" r="250"/>
     <circle class="a-plate" cx="${C}" cy="${C}" r="238"/>
-    <circle class="a-ring" cx="${C}" cy="${C}" r="243" stroke-width="1.6"/>
-    <circle class="a-ring a-faint" cx="${C}" cy="${C}" r="238" stroke-width="0.8"/>
+    <circle class="a-ring a-draw" pathLength="1" cx="${C}" cy="${C}" r="243" stroke-width="1.6"/>
+    <circle class="a-ring a-faint a-draw" pathLength="1" cx="${C}" cy="${C}" r="238" stroke-width="0.8"/>
     ${ticks}${nums}
-    <circle class="a-ring a-faint" cx="${C}" cy="${C}" r="198" stroke-width="0.8"/>
+    <circle class="a-ring a-faint a-draw" pathLength="1" cx="${C}" cy="${C}" r="198" stroke-width="0.8"/>
     ${plate}
-    <g class="a-rete">${rete}</g>
-    ${rule}
+    <g class="a-rete-wrap"><g class="a-rete">${rete}</g>
+    ${rule}</g>
     <circle class="a-ring" cx="${C}" cy="${C}" r="16" stroke-width="1"/>
     <g class="a-core"><path transform="translate(${C - 30} ${C - 30}) scale(2.5)" d="${STAR}"/></g>
   </svg>`;
@@ -103,6 +103,12 @@ export async function render(main, _arg, { setTitle }) {
       <div class="section-head"><h2 class="section-title" id="shelf-title">On the table</h2><a class="section-link" href="#gallery">The whole gallery →</a></div>
       <div class="shelf" id="shelf">${shelf.map((c) => cardTile(c)).join('')}</div>
     </section>` : ''}
+
+    <section class="epigraph" aria-label="From Aetheria's Direction">
+      ${flourish('narrow')}
+      <blockquote>The intuition is in handling things. <em>The table links what’s related with light.</em></blockquote>
+      <cite>Aetheria · Direction</cite>
+    </section>
 
     <section class="doors" aria-label="Sections">
       <a class="door glass" href="#gallery">${GLYPHS.gallery}
