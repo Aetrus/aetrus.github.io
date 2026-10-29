@@ -63,14 +63,18 @@ const VIEWS = {
   board: () => import('./views/board.js'),
   kindred: () => import('./views/kindred.js'),
   workshop: () => import('./views/workshop.js'),
-  forge: () => import('./views/forge.js'),
+  character: () => import('./views/builder-character.js'),
+  preset: () => import('./views/builder-preset.js'),
+  lorebook: () => import('./views/builder-lorebook.js'),
+  world: () => import('./views/builder-world.js'),
   lens: () => import('./views/lens.js'),
   blueprints: () => import('./views/blueprints.js'),
-  binder: () => import('./views/binder.js'),
   codex: () => import('./views/codex.js'),
   aetheria: () => import('./views/aetheria.js'),
 };
-const SECTION = { card: 'works', work: 'works', forge: 'workshop', lens: 'workshop', blueprints: 'workshop', binder: 'workshop', codex: 'workshop', releases: 'aetheria', board: 'aetheria' };
+const SECTION = { card: 'works', work: 'works', character: 'workshop', preset: 'workshop', lorebook: 'workshop', world: 'workshop', lens: 'workshop', blueprints: 'workshop', codex: 'workshop', releases: 'aetheria', board: 'aetheria' };
+// Old names still land somewhere sensible (the Forge and Binder became the Character and Lorebook builders).
+const ALIAS = { forge: 'character', binder: 'lorebook' };
 
 function parseHash() {
   const name = decodeURIComponent(location.hash.replace(/^#/, ''));
@@ -78,6 +82,7 @@ function parseHash() {
   if (name.startsWith('work-')) return { view: 'work', arg: name.slice(5) };
   if (name === 'gallery' || name === 'cards') return { view: 'works', arg: 'card' };
   if (name === 'bugs') return { view: 'board', arg: 'bug' };
+  if (ALIAS[name] && VIEWS[ALIAS[name]]) return { view: ALIAS[name], arg: null };
   if (VIEWS[name]) return { view: name, arg: null };
   return { view: 'home', arg: null };
 }

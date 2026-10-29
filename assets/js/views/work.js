@@ -43,7 +43,8 @@ export async function render(main, slug, { setTitle }) {
         </div>
         <div class="btn-row">
           ${files.map((f, i) => `<a class="btn ${i === 0 ? 'btn-gilt' : ''}" href="${esc(f.url)}" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>${esc(f.label || 'Download')}</a>`).join('')}
-          ${w.type === 'lorebook' && files.some((f) => /\.json$/i.test(f.url)) ? '<button type="button" class="btn btn-ghost" id="w-binder">Open in Binder</button>' : ''}
+          ${w.type === 'lorebook' && files.some((f) => /\.json$/i.test(f.url)) ? '<button type="button" class="btn btn-ghost" id="w-open" data-to="lorebook">Open in the Lorebook builder</button>' : ''}
+          ${w.type === 'preset' && files.some((f) => /\.json$/i.test(f.url)) ? '<button type="button" class="btn btn-ghost" id="w-open" data-to="preset">Open in the Preset builder</button>' : ''}
           ${links.map((l) => `<a class="btn btn-ghost" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join('')}
         </div>
         ${w.description ? `<div class="prose">${markdown(w.description)}</div>` : ''}
@@ -54,11 +55,12 @@ export async function render(main, slug, { setTitle }) {
   </div>`;
   liftTiles(main);
 
-  main.querySelector('#w-binder')?.addEventListener('click', async () => {
+  main.querySelector('#w-open')?.addEventListener('click', async (e) => {
+    const to = e.currentTarget.dataset.to;
     const f = files.find((x) => /\.json$/i.test(x.url));
     try {
-      handoff.binder = { json: await getJSON(f.url), name: w.name };
-      location.hash = 'binder';
-    } catch (e) { toast(e.message); }
+      handoff[to] = { json: await getJSON(f.url), name: w.name };
+      location.hash = to;
+    } catch (err) { toast(err.message); }
   });
 }

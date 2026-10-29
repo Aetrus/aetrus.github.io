@@ -42,7 +42,7 @@ export async function render(main, _arg, { setTitle }) {
         <div class="table-wrap" style="border:0"><table class="data" style="min-width:0"><tbody>
           ${POSITIONS.map((p, i) => `<tr><td class="num">${i}</td><td>${esc(p)}</td><td class="num">${i === 0 ? 'before_char' : i === 1 ? 'after_char' : 'extensions'}</td></tr>`).join('')}
         </tbody></table></div>
-        <p class="field-hint">V2 cards only name the first two. The Binder keeps positions 2 to 7 in <code>extensions.aetherbot_position</code> so they survive a round-trip.</p>
+        <p class="field-hint">V2 cards only name the first two. The Lorebook builder keeps the other positions in each entry's <code>extensions</code>, the way SillyTavern does, so they survive a round trip.</p>
       </div>
       <div class="panel glass">
         <p class="panel-sub">World Info</p><h3 class="panel-title">Selective logic</h3>

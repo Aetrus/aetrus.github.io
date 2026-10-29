@@ -1,0 +1,8 @@
+{
+  "name": "aetheria-core-bundles",
+  "private": true,
+  "description": "Builds the Workshop's Aetheria logic bundles from Aetheria Experimental's source.",
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "dependencies": { "esbuild": "0.24.0", "jszip": "3.10.1", "pako": "2.1.0", "uuid": "9.0.1" }
+}

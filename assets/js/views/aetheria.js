@@ -63,9 +63,9 @@ export async function render(main, _arg, { setTitle }) {
 
     <section style="display:flex;flex-direction:column;gap:16px">
       <div style="display:flex;flex-direction:column;gap:16px">
-        <p class="eyebrow">${starSvg('eyebrow-star')}The Grimoire</p>
-        <h2 class="section-title">Aetheria's companion</h2>
-        <p class="dim" style="max-width:56ch">The Aetheria Grimoire is where cards get made: characters, standalone lorebooks and worldbuilding notes, cross-linked, with exports byte-compatible with SillyTavern V2. The Workshop on this site is its browser wing.</p>
+        <p class="eyebrow">${starSvg('eyebrow-star')}The Workshop</p>
+        <h2 class="section-title">Aetheria’s builders, in the browser</h2>
+        <p class="dim" style="max-width:56ch">The character, preset, lorebook and world builders from Aetheria itself, running on its own logic with nothing to install. Start something here and finish it in the app: every export opens in Aetheria as it is. The parts that ask a model to write stay in Aetheria.</p>
         <div class="btn-row"><a class="btn" href="#workshop">Open the Workshop</a></div>
       </div>
     </section>

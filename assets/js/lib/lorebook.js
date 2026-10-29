@@ -6,8 +6,9 @@
 //   position 2..7 → stashed in extensions.aetherbot_position · everything else → extensions[name]
 
 export const POSITIONS = [
-  'Before character', 'After character', 'Before examples', 'After examples',
-  "Top of Author's Note", "Bottom of Author's Note", 'At depth', 'Outlet',
+  // SillyTavern's world_info_position numbering
+  'Before character', 'After character', "Top of Author's Note", "Bottom of Author's Note",
+  'At depth', 'Before examples', 'After examples', 'Outlet',
 ];
 export const SELECTIVE_LOGIC = ['AND ANY', 'AND ALL', 'NOT ANY', 'NOT ALL'];
 

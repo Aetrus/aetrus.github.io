@@ -59,7 +59,7 @@ export async function render(main, slug, { setTitle }) {
         </div>
         <div class="btn-row">
           ${entry.file ? `<a class="btn btn-gilt" href="${esc(entry.file)}" download="${esc(slugify(entry.name))}.png"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></svg>Download card</a>` : ''}
-          ${d ? '<button type="button" class="btn" id="dl-json">JSON</button><button type="button" class="btn" id="to-lens">Inspect in Lens</button><button type="button" class="btn btn-ghost" id="to-forge">Open in Forge</button>' : ''}
+          ${d ? '<button type="button" class="btn" id="dl-json">JSON</button><button type="button" class="btn" id="to-lens">Inspect in Lens</button><button type="button" class="btn btn-ghost" id="to-forge">Open in the Character builder</button>' : ''}
           ${extLinks.map((l) => `<a class="btn ${entry.file ? 'btn-ghost' : 'btn-gilt'}" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label || 'Visit')} ↗</a>`).join('')}
         </div>
         ${error ? `<p class="error-note">The card file couldn't be read: ${esc(error)}</p>` : ''}
@@ -114,6 +114,6 @@ export async function render(main, slug, { setTitle }) {
   if (d) {
     main.querySelector('#dl-json').addEventListener('click', () => download(JSON.stringify(toV2(d), null, 2), `${slugify(entry.name)}.json`, 'application/json'));
     main.querySelector('#to-lens').addEventListener('click', () => { handoff.lens = { file: entry.file }; location.hash = 'lens'; });
-    main.querySelector('#to-forge').addEventListener('click', () => { handoff.forge = { file: entry.file }; location.hash = 'forge'; });
+    main.querySelector('#to-forge').addEventListener('click', () => { handoff.character = { file: entry.file }; location.hash = 'character'; });
   }
 }

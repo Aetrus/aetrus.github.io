@@ -970,6 +970,61 @@
       "confidence": "high"
     },
     {
+      "slug": "therefore",
+      "name": "THEREFORE",
+      "creator": "Deiomo",
+      "creatorUrl": "https://deiomo.github.io/",
+      "version": "v1",
+      "style": [
+        "Art piece",
+        "Single prompt",
+        "Existential",
+        "Fourth-wall breaking"
+      ],
+      "summary": "Less a roleplay preset than an art piece: one prompt that turns the conversation existential and self-aware, with the story free to break the fourth wall and talk about what it is. Its creator, who also made Writer's Block, is clear that it isn't meant for general roleplay.",
+      "notes": [
+        "Ships with temperature 0.72."
+      ],
+      "home": "https://github.com/deiomo/THEREFORE-PRESET",
+      "homeLabel": "GitHub",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "high"
+    },
+    {
+      "slug": "nopussyfooting",
+      "name": "NoPussyFooting",
+      "creator": "Cynthia2006",
+      "creatorUrl": "https://illarin.com/@cynthia",
+      "version": "v1",
+      "style": [
+        "Minimal",
+        "One-on-one",
+        "Keep it simple"
+      ],
+      "summary": "A deliberately small preset in the keep-it-simple spirit, written for one-on-one roleplay: a few direct instructions in place of a large toggle catalogue.",
+      "notes": [
+        "Matched to the community list by name, version and timing; the Illarin page carries the creator's Illarin handle."
+      ],
+      "home": "https://illarin.com/a/3e025345-8b22-4fb1-8597-1779d3376487/nopussyfooting",
+      "homeLabel": "Illarin",
+      "confidence": "medium",
+      "variants": [],
+      "basedOn": [],
+      "models": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true
+    },
+    {
       "slug": "chatfill",
       "name": "Chatfill",
       "creator": "eteitaxiv",
@@ -1188,27 +1243,6 @@
       "honorable": false
     },
     {
-      "slug": "nopussyfooting",
-      "name": "NoPussyFooting",
-      "creator": "Cynthia2006",
-      "creatorUrl": "https://www.reddit.com/user/Cynthia2006/",
-      "version": "v1",
-      "catalogued": false,
-      "confidence": "low",
-      "summary": "",
-      "home": "https://www.reddit.com/user/Cynthia2006/",
-      "homeLabel": "Reddit",
-      "variants": [],
-      "basedOn": [],
-      "models": [],
-      "style": [],
-      "notes": [],
-      "updated": "",
-      "nsfw": false,
-      "aka": "",
-      "honorable": false
-    },
-    {
       "slug": "simulator-engine",
       "name": "Simulator Engine",
       "creator": "xwsc",
@@ -1281,27 +1315,6 @@
       "confidence": "low",
       "summary": "",
       "home": "https://www.reddit.com/user/biotechie73/",
-      "homeLabel": "Reddit",
-      "variants": [],
-      "basedOn": [],
-      "models": [],
-      "style": [],
-      "notes": [],
-      "updated": "",
-      "nsfw": false,
-      "aka": "",
-      "honorable": false
-    },
-    {
-      "slug": "therefore",
-      "name": "THEREFORE",
-      "creator": "Deiomo",
-      "creatorUrl": "https://deiomo.github.io/",
-      "version": "v1",
-      "catalogued": false,
-      "confidence": "low",
-      "summary": "By the creator of Writer's Block.",
-      "home": "https://www.reddit.com/user/Deiomo/",
       "homeLabel": "Reddit",
       "variants": [],
       "basedOn": [],

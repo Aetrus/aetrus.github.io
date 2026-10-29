@@ -94,12 +94,12 @@ export async function render(main, _arg, { setTitle }) {
       <div class="hero-copy">
         <p class="eyebrow rise">${starSvg('eyebrow-star')}The Aetheria Archive</p>
         <h1 class="hero-title rise rise-2"><span class="line">Characters,</span><span class="line">kindred, and</span><span class="line gilt">the instruments.</span></h1>
-        <p class="hero-lede rise rise-3">${esc(site.tagline || 'Cards from the workshop, the makers worth following, and the Grimoire’s card-making tools, open right here in your browser.')}</p>
+        <p class="hero-lede rise rise-3">${esc(site.tagline || 'Cards from the workshop, the makers worth following, and Aetheria’s own builders, open right here in your browser.')}</p>
         <div class="btn-row rise rise-4">
           <a class="btn btn-gilt" href="#works">Browse the works</a>
           <a class="btn" href="#workshop">Open the workshop</a>
         </div>
-        <p class="hero-meta"><span><b>${workCount}</b> work${workCount === 1 ? '' : 's'}</span><span><b>${presetCount}</b> presets credited</span><span><b>5</b> instruments</span></p>
+        <p class="hero-meta"><span><b>${workCount}</b> work${workCount === 1 ? '' : 's'}</span><span><b>${presetCount}</b> presets credited</span><span><b>4</b> builders</span></p>
       </div>
       <div class="astrolabe" aria-hidden="false">${astrolabe()}</div>
     </section>
@@ -135,9 +135,9 @@ export async function render(main, _arg, { setTitle }) {
         <span class="door-foot">Enter <span aria-hidden="true">→</span></span>
       </a>
       <a class="door glass" href="#workshop">${GLYPHS.workshop}
-        <span class="door-num">IV · 5 instruments</span>
+        <span class="door-num">IV · 4 builders</span>
         <h2 class="door-title">Workshop</h2>
-        <p class="door-text">The Grimoire's tools in the browser: forge a card, read one under the lens, fill a blueprint, bind a lorebook.</p>
+        <p class="door-text">Aetheria’s builders in the browser: characters, presets, lorebooks and worlds, plus the Card Lens and Blueprints.</p>
         <span class="door-foot">Enter <span aria-hidden="true">→</span></span>
       </a>
     </section>

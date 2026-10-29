@@ -20,7 +20,7 @@ export async function render(main, _arg, { setTitle }) {
 
   main.innerHTML = `<div class="page">
     <div class="tool-head">
-      ${pageHead({ eyebrow: 'Workshop · Blueprints', title: '<em>Blueprints</em>', lede: 'Templates with questions built in. Write a slot as [[Label: hint]]; it becomes a field here. Fill the fields, then send the result to the Forge.' })}
+      ${pageHead({ eyebrow: 'Workshop · Blueprints', title: '<em>Blueprints</em>', lede: 'Templates with questions built in. Write a slot as [[Label: hint]]; it becomes a field here. Fill the fields, then send the result to the Character builder.' })}
     </div>
     <div class="bp-layout">
       <aside class="bp-side panel glass">
@@ -77,7 +77,7 @@ export async function render(main, _arg, { setTitle }) {
     const slots = parseSlots(b.body);
     const filled = slots.filter((s) => (v[s.key] || '').trim()).length;
     $m('#bp-filled').textContent = `${filled} of ${slots.length} filled`;
-    $m('#bp-send').textContent = `Send to Forge · ${TARGETS[b.target] || TARGETS.description}`;
+    $m('#bp-send').textContent = `Send to the character · ${TARGETS[b.target] || TARGETS.description}`;
   }
 
   const persist = () => { store.set(CUSTOM, custom); store.set(VALUES, values); };
@@ -130,8 +130,8 @@ export async function render(main, _arg, { setTitle }) {
     const text = tidy(renderBlueprint(b.body, vals()));
     if (!text) { toast('Fill at least one slot first.'); return; }
     const title = b.target === 'lore' ? (vals().name || b.name) : b.name;
-    handoff.forge = { patch: { target: b.target || 'description', text, title } };
-    location.hash = 'forge';
+    handoff.character = { patch: { target: b.target || 'description', text, title } };
+    location.hash = 'character';
   });
 
   drawList(); drawForm(); drawPreview();

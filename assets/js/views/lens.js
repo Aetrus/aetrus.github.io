@@ -81,9 +81,9 @@ export async function render(main, _arg, { setTitle }) {
             </div>
           </div>
           <div class="btn-row">
-            <button type="button" class="btn btn-sm" id="l-forge">Open in Forge</button>
+            <button type="button" class="btn btn-sm" id="l-forge">Open in the Character builder</button>
             <button type="button" class="btn btn-sm" id="l-json">Download V2 JSON</button>
-            ${rows.length ? '<button type="button" class="btn btn-sm" id="l-binder">Lorebook to Binder</button>' : ''}
+            ${rows.length ? '<button type="button" class="btn btn-sm" id="l-binder">Open its lorebook</button>' : ''}
             <button type="button" class="btn btn-sm btn-ghost" id="l-entry" title="A ready-made row for data/cards.json">Copy gallery entry</button>
           </div>
         </section>
@@ -128,9 +128,9 @@ export async function render(main, _arg, { setTitle }) {
       </aside>
     </div>`;
 
-    out.querySelector('#l-forge').addEventListener('click', () => { handoff.forge = file ? { file } : { data: d, imageBytes: parsed.container === 'png' ? bytes : null }; location.hash = 'forge'; });
+    out.querySelector('#l-forge').addEventListener('click', () => { handoff.character = file ? { file } : { data: d, imageBytes: parsed.container === 'png' ? bytes : null }; location.hash = 'character'; });
     out.querySelector('#l-json').addEventListener('click', () => download(JSON.stringify(toV2(d), null, 2), `${slugify(d.name)}.json`, 'application/json'));
-    out.querySelector('#l-binder')?.addEventListener('click', () => { handoff.binder = { json: d.character_book, name: d.name }; location.hash = 'binder'; });
+    out.querySelector('#l-binder')?.addEventListener('click', () => { handoff.lorebook = { json: d.character_book, name: d.name }; location.hash = 'lorebook'; });
     out.querySelector('#l-entry').addEventListener('click', () => {
       const ext = d.extensions || {};
       const slug = slugify(d.name);
@@ -167,7 +167,7 @@ export async function render(main, _arg, { setTitle }) {
 
   const h = take('lens');
   if (h && h.file) await openGallery(h.file);
-  else if (h && h.data) inspect({ spec: 'v2', data: h.data, container: 'json', chunks: [], size: null }, { name: 'From the Forge' });
+  else if (h && h.data) inspect({ spec: 'v2', data: h.data, container: 'json', chunks: [], size: null }, { name: 'From the Character builder' });
   else if (fromGallery.length) await openGallery(fromGallery[fromGallery.length - 1].file);
   else out.innerHTML = `<div class="empty-state glass">${starSvg('star')}<p>Drop a card above to begin.</p></div>`;
 

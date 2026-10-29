@@ -1,6 +1,6 @@
 # Aetheria Archive
 
-The public wing of Aetheria: a card gallery, a star chart of kindred creators, and the Aetheria Grimoire's card-making tools rebuilt for the browser.
+The public wing of Aetheria: a gallery of works, the community Preset Archive, a star chart of kindred creators, Aetheria's own builders running in the browser, and the downloads and boards for the app.
 
 Live at **https://aetrus.github.io** once Pages is on. Plain HTML, CSS and ES modules: no build step, no framework, no server.
 
@@ -16,12 +16,16 @@ works/                files for works.json entries
 cards/                card PNGs (chara + ccv3 chunks inside)
 covers/               small thumbnails for the gallery (optional)
 assets/css/archive.css   the Bindings and every style
+assets/css/builders/  the shared builder sheet, plus one stylesheet per builder
 assets/js/            app shell, router, views, and the format libraries
+  builders/           the shared sheet (sheet.js) and each builder's modules
+  vendor/aetheria/    Aetheria's own logic, bundled (see tools/aetheria-core)
   lib/png.js          PNG tEXt chunk read/write (never re-encodes the image)
   lib/card.js         V1/V2/V3 reading, V2+V3 writing, token anatomy, craft checks
   lib/lorebook.js     World Info <-> character_book (port of the Grimoire's LorebookCodec)
   lib/macros.js       SillyTavern macro catalogue (port of Macros.kt)
   lib/blueprints.js   [[slot]] blueprints (port of BlueprintSlots.kt)
+tools/aetheria-core/  rebuilds the vendor/aetheria bundles from Aetheria Experimental's source
 ```
 
 ## Add a card to Works
@@ -56,7 +60,7 @@ Lorebooks, presets, themes, guides and tools go in `data/works.json`, with their
 }
 ```
 
-`type` is one of `lorebook`, `preset`, `theme`, `guide`, `tool`, `other`; Works groups them and gives each its own tab. A lorebook with a `.json` file gets an **Open in Binder** button. Give a work the same `world` as some cards and they're shown together.
+`type` is one of `lorebook`, `preset`, `theme`, `guide`, `tool`, `other`; Works groups them and gives each its own tab. A lorebook or preset with a `.json` file gets a button that opens it in the Lorebook or Preset builder. Give a work the same `world` as some cards and they're shown together.
 
 ## The Preset Archive
 
@@ -136,13 +140,22 @@ The repository must be named `aetrus.github.io` (your username, lower-case). The
 
 ## The Workshop
 
-Everything in the Workshop runs in the visitor's browser. Cards opened in the Lens or Forge are never uploaded; Forge drafts and custom blueprints live in that browser's local storage.
+Everything in the Workshop runs in the visitor's browser. Nothing they open or build is uploaded; drafts and worlds stay in that browser (IndexedDB) until they export them.
 
-- **Card Forge**: every V2 field, macro chips, portrait cropper (2:3 or 1:1), embedded lorebook, PNG export with `chara` (V2) and optionally `ccv3` (V3). Cards without a portrait get a constellation cover drawn from their name.
+**The builders** are Aetheria Experimental's own sheets, ported to the web with the app's logic bundled in (`assets/js/vendor/aetheria/`). Anything that asks a model stays in Aetheria.
+
+- **Character** (`#character`): the character sheet's sections (identity, portrait and motion, personality, living pages, scenario, greetings, example dialogue, voice, advanced prompting, group behaviour, metadata) with the Live card beside it: token anatomy, craft checks and Aetheria's house checklist. Imports PNG, JSON (V1 to V3) and CHARX; exports PNG (`chara` V2 and `ccv3` V3), CHARX and JSON. Portrait cropper; cards without art get a constellation cover. The old `#forge` link lands here.
+- **Preset** (`#preset`): the prompt chain in the order it is really sent, choices, dials, panels, variables, display scripts with a live test, styles, request fields and samplers. The inspector shows the assembled request for a character from Aetheria's starter set. Start from the Storyteller, blank, or a SillyTavern preset; exports SillyTavern JSON.
+- **Lorebook** (`#lorebook`): volume, entry tree and the activation inspector, plus an activation test that runs Aetheria's lorebook engine on a few lines of story and shows what fires and why. Imports World Info, card books, card PNGs and Aetheria lorebooks; exports World Info or a card's `character_book`, and binds a book into the Character builder. The old `#binder` link lands here.
+- **World** (`#world`): the Ages engine. Write a world's book by hand from the engine's vocabulary (or start from Lantern Quay), bake it, then read the map, shape it (places, ways, regions, water, terrain, towns: every change reviewed before it's applied, with undo), keep its worldbook, and export or import `.aetheria-age` files.
+
+**The instruments**:
+
 - **Card Lens**: reads PNG or JSON (V1, V2, V3), shows chunks and spec, a token anatomy (permanent, ephemeral, keyed), and craft checks from the Card Workshop doctrine: frequency adverbs, `{{user}}` integrity in greetings, permanent token budget, prohibition density, lorebook key collisions, unknown macros, greeting count, em-dashes.
-- **Blueprints**: the Grimoire's `[[Label: hint]]` templates, plus a Close-Third Description blueprint built on the doctrine. Results go straight into the Forge.
-- **Lorebook Binder**: standalone World Info ⇄ embedded `character_book`, with positions 2 to 7 kept in `extensions.aetherbot_position`.
+- **Blueprints**: the Grimoire's `[[Label: hint]]` templates, plus a Close-Third Description blueprint built on the doctrine. Results go straight into the Character builder.
 - **Macro Codex**: the full macro catalogue, plus where each card field lands in the prompt.
+
+When Aetheria's logic changes, rebuild the bundles with `tools/aetheria-core` (its README has the two commands) and commit them.
 
 ## The sample cards
 

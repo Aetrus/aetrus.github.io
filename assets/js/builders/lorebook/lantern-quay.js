@@ -1,0 +1,301 @@
+// Aetheria's starter lorebook, Lantern Quay, generated from aesrc/starter/lanternQuay.js (STARTER_LOREBOOK).
+// Regenerate with /home/claude/build/tests-lorebook/make-starter.sh. Do not edit by hand.
+export default {
+ "name": "Lantern Quay",
+ "description": "What is true in Lantern Quay: the Works, the Tideright, the wreck of the Constance and the people of the town. Comes with Aetheria.",
+ "entries": {
+  "0": {
+   "uid": 0,
+   "key": [
+    "Lantern Quay",
+    "the Quay",
+    "harbour",
+    "test lamps"
+   ],
+   "keysecondary": [],
+   "comment": "Lantern Quay",
+   "content": "Lantern Quay is built up a cliff above a small harbour. At the bottom: the harbour wall with its three test lamps, the fishing boats, the slipway, the fish market, and the strand below the wall with the salvage shed. Halfway up the cliff path: the Tidewater Inn. At the top: the Works.",
+   "constant": true,
+   "selective": true,
+   "order": 50,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "1": {
+   "uid": 1,
+   "key": [
+    "the Works",
+    "glassworks",
+    "grinding floor",
+    "master grinder",
+    "Ned Rowse",
+    "the Board",
+    "Lens Board",
+    "Harrowgate"
+   ],
+   "keysecondary": [],
+   "comment": "the Works",
+   "content": "The Works: the glassworks at the top of the cliff, which employs half the town. Owned by the Lens Board in the capital, which has built a steam-driven works inland at Harrowgate and is looking for a reason to close this one. The Cape Morrow lens is that reason: if it is not delivered in forty days, the contract, and the town's work, goes inland. The grinding floor runs day and night; apprentices sleep in the loft. The master grinder is Ansel Truscott, the youngest in a hundred years. The foreman, Ned Rowse, had the wheel for thirty years, was passed over for Ansel, and has been very civil about it.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "2": {
+   "uid": 2,
+   "key": [
+    "Tideright",
+    "charter",
+    "salvage",
+    "Drowned Book",
+    "quarter-day"
+   ],
+   "keysecondary": [],
+   "comment": "Tideright",
+   "content": "The Tideright: its holder pays the town a yearly fee for it. Dilys Pengelly, who inherited it from her aunt Wenna eleven months ago, is in arrears; the fee falls due at midsummer quarter-day and is collected by the harbour clerk, Pascoe Dunn. The Drowned Book is its ledger: forty-one years of what came ashore, in three hands. The charter speaks of what the tide leaves. It says nothing about what is still on the seabed, which is why Dilys has been diving the wreck, and nothing about things found anywhere else.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "3": {
+   "uid": 3,
+   "key": [
+    "Constance",
+    "barge",
+    "wreck",
+    "capsized",
+    "squall"
+   ],
+   "keysecondary": [],
+   "comment": "Constance",
+   "content": "The Constance: a lighter barge that capsized off the causeway in a squall three nights before the story begins and lies on her side in four fathoms, her crates split. She was carrying the finished Cape Morrow lens in straw-packed crates, with its brass frame in a separate crate that went down whole. Her skipper, Jory Kitto, and his boy got ashore. Kitto swears the squall came from nowhere and that the crates had been re-stowed by someone else before they sailed; nobody has asked him who.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "4": {
+   "uid": 4,
+   "key": [
+    "Mrs Abernathy",
+    "Cape Morrow lens",
+    "the lens",
+    "prism",
+    "prisms",
+    "bullseye"
+   ],
+   "keysecondary": [],
+   "comment": "Mrs Abernathy",
+   "content": "The Cape Morrow lens, which Ansel calls Mrs Abernathy after its keeper: his own design, a first-order lighthouse lens of 312 glass prisms in rings and eight bullseye panels at its heart, cut to a curve nobody had tried before. Every prism is etched on its lower bevel with a number and Ansel's mark, a small fish-hook. A prism can be reground in days; the bullseye panels took two years and cannot be made again in forty days. A tapped prism rings; a cracked one rings sour, and Ansel can hear it.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "5": {
+   "uid": 5,
+   "key": [
+    "Ruth Abernathy",
+    "Abernathy",
+    "keeper",
+    "Cape Morrow",
+    "letters"
+   ],
+   "keysecondary": [],
+   "comment": "Ruth Abernathy",
+   "content": "Ruth Abernathy: keeper of the new light at Cape Morrow, thirty miles up the coast, where the Morrow Reef has wrecked four ships in ten years. She and Ansel write to each other every week and have never met. Her letters are about her cat, Bosun, the gulls and the price of paraffin. The light at Cape Morrow will be lit on the first of next month with its old lamp if the lens does not come, and the old lamp does not reach the reef.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "6": {
+   "uid": 6,
+   "key": [
+    "Gull Rock",
+    "causeway",
+    "test tower",
+    "keeper's cottage"
+   ],
+   "keysecondary": [],
+   "comment": "Gull Rock",
+   "content": "Gull Rock and the causeway: a tidal island off the strand, reached by a stone causeway that floods two hours either side of high water. On the Rock stand the Works' test tower, where big lenses are lit and checked against the sea, and from whose top you can see the whole bay, and the old keeper's cottage, now the Works' store. Councillor will not cross the causeway after four o'clock.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "7": {
+   "uid": 7,
+   "key": [
+    "Tidewater Inn",
+    "inn",
+    "Bettany Coad"
+   ],
+   "keysecondary": [],
+   "comment": "Tidewater Inn",
+   "content": "The Tidewater Inn: halfway up the cliff path, run by Bettany Coad, who brews her tea from yesterday's leaves and does not see the problem. Fishermen in the morning, the Works' shift at night, cards by the fire on Fridays, where Pascoe Dunn loses and keeps playing.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "8": {
+   "uid": 8,
+   "key": [
+    "Councillor",
+    "donkey",
+    "beach cart"
+   ],
+   "keysecondary": [],
+   "comment": "Councillor",
+   "content": "Councillor: Dilys's donkey, who pulls the beach cart, eats paper (tide tables, labels, a summons once) and refuses to cross the causeway after four o'clock. Named because he votes against everything.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "9": {
+   "uid": 9,
+   "key": [
+    "moor",
+    "standing stones",
+    "the Teeth",
+    "jackdaws",
+    "quarry"
+   ],
+   "keysecondary": [],
+   "comment": "moor",
+   "content": "The moor above the town: heather, peat cuttings, the road inland to Harrowgate, a ring of standing stones called the Teeth where the jackdaws nest, and the old sand quarry that gave the Works its white sand until it flooded. Jackdaws take anything that shines.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "10": {
+   "uid": 10,
+   "key": [
+    "Pascoe Dunn",
+    "Dunn",
+    "harbour clerk"
+   ],
+   "keysecondary": [],
+   "comment": "Pascoe Dunn",
+   "content": "Pascoe Dunn: the harbour clerk, who collects the Tideright fee, keeps a ledger of his own, sharpens his pencils at both ends and is paid by the hour. Correct about everything that can be written down. He also lends money, quietly, at interest: last winter Ansel Truscott borrowed forty pounds from him to keep his father's boat, and Dunn has not let him forget it. Only the two of them know of the loan; anyone else learns of it only if one of them tells.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "11": {
+   "uid": 11,
+   "key": [
+    "hobnail",
+    "hobnails",
+    "boot-prints",
+    "footprints"
+   ],
+   "keysecondary": [],
+   "comment": "hobnail",
+   "content": "The hobnailed boots: someone with a nail missing from the left heel has been walking to the tide line before Dilys at dawn and taking prisms from exactly the right places. Who it is has not been decided; let the story find out, and let it be someone the town knows. People who could be: Ned Rowse, the foreman passed over for Ansel; Jory Kitto, the Constance's skipper; Davey Truscott, Ansel's younger brother, who knows the currents better than anyone; an apprentice from the Works' loft; the Board's agent from Harrowgate, who arrived on the Tuesday coach.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  },
+  "12": {
+   "uid": 12,
+   "key": [
+    "Good Intent",
+    "Hal Truscott",
+    "Davey Truscott",
+    "Davey"
+   ],
+   "keysecondary": [],
+   "comment": "Good Intent",
+   "content": "The Good Intent: the Truscotts' fishing boat, out of the Quay for three generations. Hal Truscott, Ansel's father, skippers her with Ansel's younger brothers, Davey and Peter. Hal tells the whole Inn that his son is a master at the Works and has never once said it to Ansel. Last winter the boat nearly went for debt; Hal believes the Works advanced Ansel the money. It was Pascoe Dunn.",
+   "constant": false,
+   "selective": true,
+   "order": 100,
+   "position": 0,
+   "disable": false,
+   "probability": 100,
+   "useProbability": true,
+   "depth": 4,
+   "matchWholeWords": true,
+   "sticky": 3
+  }
+ }
+};
