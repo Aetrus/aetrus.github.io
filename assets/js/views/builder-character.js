@@ -69,7 +69,7 @@ const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').match
 /* ── the view ──────────────────────────────────────────────────────────── */
 
 export async function render(main, _arg, { setTitle }) {
-  setTitle('Character');
+  setTitle('Character builder');
   const shelf = draftShelf('character');
 
   let S = null;            // { id, d, art, video, origin, saved }

@@ -54,7 +54,7 @@ const MATCHES = [
 ];
 
 export async function render(main, _arg, { setTitle }) {
-  setTitle('Lorebook');
+  setTitle('Lorebook builder');
   main.innerHTML = '<div class="page page-wide" id="lb-page"></div>';
   const page = main.querySelector('#lb-page');
   const shelf = draftShelf('lorebook');
