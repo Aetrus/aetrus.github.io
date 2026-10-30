@@ -1439,3 +1439,67 @@ svg.star path, svg.eyebrow-star path, svg.toast-star path, .flourish svg path { 
 @media (max-width: 760px) {
   .binding-orb { padding: 6px 8px; }
 }
+
+/* ── Pictures: preset covers, shots, the Aetheria gallery and the viewer ── */
+.preset.has-cover { padding-top: 0; overflow: hidden; }
+.preset-cover { all: unset; cursor: zoom-in; display: block; position: relative; margin: 0 -24px 6px; aspect-ratio: 16 / 9; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--ink-900); }
+.preset-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 1.2s var(--ease); }
+.preset-cover:hover img, .preset-cover:focus-visible img { transform: scale(1.03); }
+.preset-cover:focus-visible { outline: 1px solid var(--accent); outline-offset: -3px; }
+.preset-shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.preset-shot { all: unset; cursor: zoom-in; position: relative; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid var(--line); background: var(--ink-900); }
+.preset-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; opacity: 0.86; transition: opacity 0.4s; }
+.preset-shot:hover img, .preset-shot:focus-visible img { opacity: 1; }
+.preset-shot:focus-visible { outline: 1px solid var(--accent); }
+.shot-tag { position: absolute; left: 0; bottom: 0; font-family: var(--f-label); font-size: 0.56rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-900); background: var(--accent); padding: 2px 6px; }
+.preset-cover .shot-tag { font-size: 0.62rem; padding: 3px 8px; }
+
+.showcase { display: flex; flex-direction: column; gap: 16px; }
+.showcase-stage { all: unset; cursor: zoom-in; display: block; border: 1px solid var(--line); background: var(--ink-900); box-shadow: 0 24px 60px rgb(var(--shadow-rgb) / 0.45); }
+.showcase-stage img { width: 100%; display: block; }
+.showcase-caption { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.showcase-caption h3 { font-size: 1.35rem; font-weight: 600; }
+.showcase-caption p { color: var(--text-dim); max-width: 64ch; }
+.showcase-strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.showcase-pick { all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 6px; }
+.showcase-pick img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border: 1px solid var(--line); opacity: 0.7; transition: opacity 0.4s, border-color 0.4s; display: block; }
+.showcase-pick span { font-family: var(--f-label); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
+.showcase-pick[aria-pressed="true"] img, .showcase-pick:hover img { opacity: 1; border-color: var(--accent); }
+.showcase-pick[aria-pressed="true"] span { color: var(--accent); }
+.showcase-phone { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 24px; align-items: start; }
+.showcase-phone .phone-frame { all: unset; cursor: zoom-in; display: block; border: 1px solid var(--line); padding: 6px; background: var(--ink-900); }
+.showcase-phone .phone-frame img { width: 100%; display: block; }
+@media (max-width: 760px) { .showcase-phone { grid-template-columns: 1fr; } .showcase-phone .phone-frame { max-width: 260px; } }
+
+dialog.shot-viewer { border: 1px solid var(--line); background: var(--ink-900); color: var(--ivory); padding: 0; max-width: min(1400px, 94vw); max-height: 94vh; overflow: auto; }
+dialog.shot-viewer::backdrop { background: rgb(var(--shadow-rgb) / 0.78); backdrop-filter: blur(3px); }
+dialog.shot-viewer figure { margin: 0; }
+dialog.shot-viewer img { display: block; max-width: 100%; max-height: calc(94vh - 64px); margin: 0 auto; }
+dialog.shot-viewer figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 12px 18px; border-top: 1px solid var(--line-soft); font-size: 0.95rem; color: var(--text-dim); }
+.shot-credit { font-family: var(--f-label); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
+.shot-step, .shot-close { position: fixed; top: 50%; background: var(--ink-850); color: var(--ivory); border: 1px solid var(--line); width: 42px; height: 42px; font-size: 1.5rem; cursor: pointer; }
+.shot-step[data-step="-1"] { left: 2vw; } .shot-step[data-step="1"] { right: 2vw; }
+.shot-close { top: 2vh; right: 2vw; }
+.shot-step[hidden] { display: none; }
+
+/* ── Docs ── */
+.docs { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 36px; align-items: start; }
+.docs-nav { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 2px; max-height: calc(100vh - 120px); overflow: auto; padding-right: 8px; }
+.docs-nav .search { margin-bottom: 10px; }
+.docs-nav a { text-decoration: none; padding: 5px 10px; border-left: 1px solid var(--line-soft); color: var(--text-dim); font-size: 0.98rem; }
+.docs-nav a[aria-current="page"] { color: var(--accent); border-left-color: var(--accent); }
+.docs-nav .docs-group { font-family: var(--f-label); font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-faint); margin: 14px 0 4px 10px; }
+.docs-page { display: flex; flex-direction: column; gap: 14px; max-width: 74ch; }
+.docs-page .docs-summary { font-size: 1.15rem; color: var(--text-dim); font-style: italic; }
+.docs-page h2 { font-size: 1.45rem; font-weight: 600; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.docs-page p, .docs-page li { line-height: 1.65; }
+.docs-page ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 4px; }
+.docs-page .label { color: var(--accent); }
+.docs-figure { all: unset; cursor: zoom-in; display: block; border: 1px solid var(--line); background: var(--ink-900); margin: 4px 0 8px; }
+.docs-figure img { width: 100%; display: block; }
+.docs-figure-note { font-size: 0.85rem; color: var(--text-faint); margin-top: -4px; }
+.docs-asof { font-family: var(--f-mono); font-size: 0.75rem; color: var(--text-faint); }
+@media (max-width: 860px) { .docs { grid-template-columns: 1fr; } .docs-nav { position: static; max-height: none; } }
+.binding-shot { margin: -8px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.binding-shot img { width: 100%; display: block; border: 1px solid var(--line); background: var(--ink-900); }
+.binding-shot figcaption { font-size: 0.95rem; color: var(--text-faint); }

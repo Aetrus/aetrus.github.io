@@ -1,11 +1,12 @@
-import { esc, pageHead, starSvg } from '../ui.js';
-import { loadSite, loadReleases, loadCards } from '../data.js';
+import { esc, pageHead, starSvg, shotViewer } from '../ui.js';
+import { loadSite, loadReleases, loadCards, loadShowcase } from '../data.js';
 import { assetButtons, relDate } from './releases.js';
 import { BINDINGS, applyBinding } from '../app.js';
 
 export async function render(main, _arg, { setTitle }) {
   setTitle('Aetheria');
-  const [site, cards] = await Promise.all([loadSite().catch(() => ({})), loadCards().catch(() => [])]);
+  const [site, cards, show] = await Promise.all([loadSite().catch(() => ({})), loadCards().catch(() => []), loadShowcase().catch(() => null)]);
+  const shots = (show && show.shots) || [];
   const a = site.aetheria || {};
   // The cards of the starter set that comes with the app (tools/starter-set writes them, tagged "starter").
   const starter = cards.filter((c) => c.world === 'Lantern Quay' && (c.tags || []).includes('starter'));
@@ -27,6 +28,20 @@ export async function render(main, _arg, { setTitle }) {
         <p class="dim">Checking for the newest build…</p>
       </div>
     </section>
+
+    ${shots.length ? `<section class="showcase" aria-labelledby="a-inside">
+      <p class="eyebrow">${starSvg('eyebrow-star')}Inside Aetheria</p>
+      <h2 class="section-title" id="a-inside">See the house</h2>
+      <button type="button" class="showcase-stage" data-shot="app" data-src="${esc(shots[0].src)}" data-caption="${esc(shots[0].text)}" data-credit="${esc(shots[0].title)}"><img src="${esc(shots[0].src)}" alt="${esc(shots[0].alt)}"></button>
+      <div class="showcase-caption"><h3 id="a-shot-title">${esc(shots[0].title)}</h3><p id="a-shot-text">${esc(shots[0].text)}</p></div>
+      <div class="showcase-strip" role="group" aria-label="Choose a picture">${shots.map((s, i) => `<button type="button" class="showcase-pick" data-pick="${i}" aria-pressed="${i === 0}"><img src="${esc(s.src)}" alt="" loading="lazy"><span>${esc(s.title)}</span></button>`).join('')}</div>
+      ${show.phone ? `<div class="showcase-phone">
+        <div style="display:flex;flex-direction:column;gap:10px"><h3 class="panel-title">${esc(show.phone.title)}</h3><p class="dim" style="max-width:52ch">${esc(show.phone.text)}</p>
+          <p class="mono faint">${esc(show.note || '')}${show.version ? ` Aetheria ${esc(show.version)}.` : ''}</p>
+          <div class="btn-row"><a class="btn" href="#docs">Read the guide to every room</a></div></div>
+        <button type="button" class="phone-frame" data-shot="phone" data-src="${esc(show.phone.src)}" data-caption="${esc(show.phone.text)}" data-credit="${esc(show.phone.title)}"><img src="${esc(show.phone.src)}" alt="${esc(show.phone.alt)}" loading="lazy"></button>
+      </div>` : ''}
+    </section>` : ''}
 
     <section class="kinds" aria-label="The three kinds of thing">
       <div class="kind glass">
@@ -63,6 +78,10 @@ export async function render(main, _arg, { setTitle }) {
         </button>`).join('')}
       </div>
     </section>
+    ${show?.bindings ? `<figure class="binding-shot">
+      <img id="a-binding-shot" src="${esc(show.bindings[current] || show.bindings.gilt || '')}" alt="A story in Aetheria, in the Binding chosen above" loading="lazy">
+      <figcaption>The same story in Aetheria, in <span id="a-binding-name">${esc((BINDINGS.find((b) => b.id === current) || BINDINGS[0]).name)}</span>. Choose a Binding above to see it.</figcaption>
+    </figure>` : ''}
 
     <section class="board-cta glass">
       <div><p class="panel-sub">Shape what comes next</p><h2 class="section-title">Requests &amp; bug reports</h2>
@@ -91,9 +110,36 @@ export async function render(main, _arg, { setTitle }) {
       : `<span class="status-pill">${esc(a.status || 'In the workshop')}</span><p class="dim">${rels === null ? 'GitHub could not be reached just now.' : 'No public build yet. When one is released it appears here and on the downloads page, with its patch notes.'}</p><a class="linkish" href="#releases">Downloads page →</a>`;
   })();
 
+  // The gallery: a pick shows that picture large; the large one opens in the viewer.
+  if (shots.length) {
+    shotViewer(main);
+    const stage = main.querySelector('.showcase-stage');
+    main.querySelector('.showcase-strip').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-pick]');
+      if (!b) return;
+      const s = shots[Number(b.dataset.pick)];
+      stage.dataset.src = s.src; stage.dataset.caption = s.text; stage.dataset.credit = s.title;
+      stage.querySelector('img').src = s.src; stage.querySelector('img').alt = s.alt;
+      main.querySelector('#a-shot-title').textContent = s.title;
+      main.querySelector('#a-shot-text').textContent = s.text;
+      for (const x of main.querySelectorAll('[data-pick]')) x.setAttribute('aria-pressed', String(x === b));
+    });
+  }
+
   const row = main.querySelector('.bindings-row');
   row.addEventListener('click', (e) => {
     const b = e.target.closest('[data-binding-choice]');
     if (b) applyBinding(b.dataset.bindingChoice);
   });
+
+  // The app in the same Binding as the site, however it was chosen (here or the header's menu).
+  const onBinding = (e) => {
+    const shot = main.querySelector('#a-binding-shot');
+    const src = show?.bindings?.[e.detail?.id];
+    if (!shot || !src) return;
+    shot.src = src;
+    main.querySelector('#a-binding-name').textContent = e.detail.name || '';
+  };
+  document.addEventListener('binding', onBinding);
+  return () => document.removeEventListener('binding', onBinding);
 }

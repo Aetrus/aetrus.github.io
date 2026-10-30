@@ -72,8 +72,9 @@ const VIEWS = {
   blueprints: () => import('./views/blueprints.js'),
   codex: () => import('./views/codex.js'),
   aetheria: () => import('./views/aetheria.js'),
+  docs: () => import('./views/docs.js'),
 };
-const SECTION = { card: 'works', work: 'works', character: 'workshop', preset: 'workshop', lorebook: 'workshop', world: 'workshop', lens: 'workshop', blueprints: 'workshop', codex: 'workshop', releases: 'aetheria', board: 'aetheria' };
+const SECTION = { card: 'works', work: 'works', character: 'workshop', preset: 'workshop', lorebook: 'workshop', world: 'workshop', lens: 'workshop', blueprints: 'workshop', codex: 'workshop', releases: 'aetheria', board: 'aetheria', docs: 'aetheria' };
 // Old names still land somewhere sensible (the Forge and Binder became the Character and Lorebook builders).
 const ALIAS = { forge: 'character', binder: 'lorebook' };
 
@@ -81,6 +82,7 @@ function parseHash() {
   const name = decodeURIComponent(location.hash.replace(/^#/, ''));
   if (name.startsWith('card-')) return { view: 'card', arg: name.slice(5) };
   if (name.startsWith('work-')) return { view: 'work', arg: name.slice(5) };
+  if (name.startsWith('docs-')) return { view: 'docs', arg: name.slice(5) };
   if (name === 'gallery' || name === 'cards') return { view: 'works', arg: 'card' };
   if (name === 'bugs') return { view: 'board', arg: 'bug' };
   if (ALIAS[name] && VIEWS[ALIAS[name]]) return { view: ALIAS[name], arg: null };

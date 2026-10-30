@@ -1,0 +1,75 @@
+{
+  "version": "1.6.9",
+  "note": "Shot in Aetheria from a fresh install with only the starter set (npm run shots:site in Aetheria's repo).",
+  "shots": [
+    {
+      "id": "table",
+      "title": "The Table",
+      "text": "Draw cards from the archive onto the bench: what is on the table is in the story. Dilys and Ansel of Lantern Quay come with every new archive, with the lorebook that knows their town.",
+      "src": "shots/app/table.webp",
+      "alt": "The Table, with Dilys Pengelly, Ansel Truscott and the Lantern Quay lorebook laid on the bench"
+    },
+    {
+      "id": "story",
+      "title": "A story",
+      "text": "A story begun from that table, in the manuscript: the speaker's portrait beside the passage, voices set apart, every take kept.",
+      "src": "shots/app/story.webp",
+      "alt": "A story page with Dilys Pengelly's portrait and the opening passage at the Tidewater Inn"
+    },
+    {
+      "id": "world",
+      "title": "The world",
+      "text": "A world is a map the story walks: Lantern Quay, its harbour, the flooded quarry and the road out, with where everyone stands.",
+      "src": "shots/app/world.webp",
+      "alt": "The map of Lantern Quay, with Dilys Pengelly placed on the harbour and the route panel beside it"
+    },
+    {
+      "id": "guides",
+      "title": "Two guides",
+      "text": "Maelis or Ilario keeps the house with you. Either will show you where things are, answer your questions, and read beside you as you write.",
+      "src": "shots/app/guides.webp",
+      "alt": "The choice of guide: Maelis, Keeper of the Last Page, or Ilario, Lamplighter of the Unwritten"
+    },
+    {
+      "id": "library",
+      "title": "The Library",
+      "text": "Everything you own, in decks you riffle through: characters, lorebooks, worlds, presets and what the stories remember.",
+      "src": "shots/app/library.webp",
+      "alt": "The Library's Characters deck, with Dilys Pengelly's card at the centre"
+    },
+    {
+      "id": "preset",
+      "title": "A preset, read plainly",
+      "text": "A preset's instructions by what they do, your choices in plain words, and what each part costs before the story itself.",
+      "src": "shots/app/preset-sheet.webp",
+      "alt": "The Aetheria Storyteller's preset sheet, showing its choices and how many tokens it sends"
+    },
+    {
+      "id": "studio",
+      "title": "The Studio",
+      "text": "Make a character by interview: a line or two, then the questions that make them worth a story.",
+      "src": "shots/app/studio.webp",
+      "alt": "The Studio, starting a new character from a name and an idea"
+    },
+    {
+      "id": "tour",
+      "title": "A tour that points",
+      "text": "The guide's tours point at the very thing on the screen, one step at a time.",
+      "src": "shots/app/guide-tour.webp",
+      "alt": "Maelis beginning the first tour of the house"
+    }
+  ],
+  "phone": {
+    "title": "On a phone",
+    "text": "The same house on Android: the story fills the screen, and the rooms sit along the bottom.",
+    "src": "shots/app/story-phone.webp",
+    "alt": "The same story on a phone, with Table, Stories, Library, Workshop and More along the bottom"
+  },
+  "bindings": {
+    "gilt": "shots/app/binding-gilt.webp",
+    "moon": "shots/app/binding-moon.webp",
+    "verdigris": "shots/app/binding-verdigris.webp",
+    "blossom": "shots/app/binding-blossom.webp",
+    "plum": "shots/app/binding-plum.webp"
+  }
+}

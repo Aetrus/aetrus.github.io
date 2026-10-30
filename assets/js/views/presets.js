@@ -1,12 +1,38 @@
 // The Preset Archive: community SillyTavern presets, each traced to where its
 // creator posted it. Nothing is re-hosted; every link goes to the creator.
-import { esc, pageHead, starSvg, sigilSvg, flourish } from '../ui.js';
+import { esc, pageHead, starSvg, sigilSvg, flourish, shotViewer } from '../ui.js';
 import { loadPresets } from '../data.js';
 
 const handle = (p) => `${p.noU ? '' : 'u/'}${esc(p.creator || 'unknown')}`;
 const by = (p) => `by ${p.creatorUrl ? `<a href="${esc(p.creatorUrl)}" target="_blank" rel="noopener">${handle(p)}</a>` : handle(p)}${p.aka ? ` <span class="faint">(${esc(p.aka)})</span>` : ''}`;
 
-const plate = (p) => `<article class="preset glass" id="preset-${esc(p.slug)}">
+/*
+ * A preset's pictures: the creator's own (as they posted them, loaded from
+ * where they posted them and credited) and how it looks in Aetheria. The
+ * first of the creator's is the plate's cover; the rest wait below it.
+ */
+const imagesOf = (p) => (Array.isArray(p.images) ? p.images.filter((i) => i && i.src) : []);
+const creditOf = (p, i) => (i.from === 'aetheria'
+  ? `In Aetheria, on the Lantern Quay starter story`
+  : `Posted by ${p.creatorUrl ? `<a href="${esc(i.href || p.creatorUrl)}" target="_blank" rel="noopener">${handle(p)}</a>` : handle(p)}`);
+const shotButton = (p, i, cls) => `<button type="button" class="${cls}" data-shot="${esc(p.slug)}" data-src="${esc(i.src)}" data-caption="${esc(i.caption || '')}" data-credit="${esc(creditOf(p, i))}">
+    <img src="${esc(i.thumb || i.src)}" alt="${esc(i.alt || '')}" loading="lazy" decoding="async"${i.position ? ` style="object-position:${esc(i.position)}"` : ''}>
+    ${i.from === 'aetheria' ? '<span class="shot-tag">In Aetheria</span>' : ''}
+  </button>`;
+const coverOf = (p) => {
+  const imgs = imagesOf(p);
+  const cover = imgs.find((i) => i.from !== 'aetheria') || imgs[0];
+  return cover ? shotButton(p, cover, 'preset-cover') : '';
+};
+const shotsOf = (p) => {
+  const imgs = imagesOf(p);
+  const cover = imgs.find((i) => i.from !== 'aetheria') || imgs[0];
+  const rest = imgs.filter((i) => i !== cover);
+  return rest.length ? `<div class="preset-shots">${rest.map((i) => shotButton(p, i, 'preset-shot')).join('')}</div>` : '';
+};
+
+const plate = (p) => `<article class="preset glass${imagesOf(p).length ? ' has-cover' : ''}" id="preset-${esc(p.slug)}">
+  ${coverOf(p)}
   <header class="preset-head">
     <div class="preset-title"><h3 class="preset-name">${esc(p.name)}</h3>${p.version ? `<span class="preset-version">${esc(p.version)}</span>` : ''}${p.nsfw ? '<span class="flag">Mature</span>' : ''}</div>
     <p class="preset-by">${by(p)}</p>
@@ -14,6 +40,7 @@ const plate = (p) => `<article class="preset glass" id="preset-${esc(p.slug)}">
   ${(p.models || []).length ? `<div class="models">${p.models.map((m) => `<span class="model">${esc(m)}</span>`).join('')}</div>` : ''}
   ${(p.style || []).length ? `<p class="preset-style">${p.style.map(esc).join(' · ')}</p>` : ''}
   ${p.summary ? `<p class="preset-summary">${esc(p.summary)}</p>` : ''}
+  ${shotsOf(p)}
   ${(p.variants || []).length ? `<p class="preset-meta"><span>Also</span>${p.variants.map(esc).join(' · ')}</p>` : ''}
   ${(p.basedOn || []).length ? `<p class="preset-meta"><span>Built on</span>${p.basedOn.map(esc).join(' · ')}</p>` : ''}
   ${(p.notes || []).length ? `<ul class="preset-notes">${p.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}
@@ -82,6 +109,7 @@ export async function render(main, _arg, { setTitle }) {
   </div>`;
 
   if (!everyone.length) return;
+  shotViewer(main);
   const grid = main.querySelector('#p-grid');
   const count = main.querySelector('#p-count');
   function draw() {

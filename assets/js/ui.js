@@ -210,3 +210,51 @@ export function pageHead({ eyebrow, title, lede, extra = '' }) {
     ${extra}
   </header>`;
 }
+
+/*
+ * Pictures that open large: any [data-shot] button under `root` (with
+ * data-src, data-caption and data-credit) opens one shared viewer. Arrows step
+ * through the pictures of the same group; Escape or a click outside closes it.
+ */
+export function shotViewer(root) {
+  let dialog = document.querySelector('dialog.shot-viewer');
+  if (!dialog) {
+    dialog = document.createElement('dialog');
+    dialog.className = 'shot-viewer';
+    dialog.innerHTML = `<figure><img alt=""><figcaption><span class="shot-caption"></span><span class="shot-credit"></span></figcaption></figure>
+      <button type="button" class="shot-step" data-step="-1" aria-label="Previous picture">‹</button>
+      <button type="button" class="shot-step" data-step="1" aria-label="Next picture">›</button>
+      <button type="button" class="shot-close" aria-label="Close">×</button>`;
+    document.body.append(dialog);
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog || e.target.closest('.shot-close')) dialog.close();
+      const step = e.target.closest('[data-step]');
+      if (step) dialog.step?.(Number(step.dataset.step));
+    });
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') dialog.step?.(-1);
+      if (e.key === 'ArrowRight') dialog.step?.(1);
+    });
+  }
+  const show = (btn) => {
+    const group = [...root.querySelectorAll(`[data-shot="${CSS.escape(btn.dataset.shot)}"]`)];
+    let at = group.indexOf(btn);
+    const paint = () => {
+      const b = group[at];
+      dialog.querySelector('img').src = b.dataset.src;
+      dialog.querySelector('img').alt = b.querySelector('img')?.alt || '';
+      dialog.querySelector('.shot-caption').textContent = b.dataset.caption || '';
+      dialog.querySelector('.shot-credit').innerHTML = b.dataset.credit || '';
+      for (const s of dialog.querySelectorAll('.shot-step')) s.hidden = group.length < 2;
+    };
+    dialog.step = (d) => { at = (at + d + group.length) % group.length; paint(); };
+    paint();
+    if (!dialog.open) dialog.showModal();
+  };
+  root.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-shot]');
+    if (!btn || !root.contains(btn)) return;
+    e.preventDefault();
+    show(btn);
+  });
+}

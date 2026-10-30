@@ -96,7 +96,16 @@
       "nsfw": false,
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/NemoVonNirgend/NemoEngine/main/Magpie/banner.png",
+          "alt": "Banner art: a blue-haired woman in a feathered black-and-blue coat holds a book stuffed with character photos, beside the title \"Magpie\" and four panels labelled Ensemble, Continuity, Consequence and Craft.",
+          "from": "creator",
+          "href": "https://github.com/NemoVonNirgend/NemoEngine/blob/main/Magpie/README.md",
+          "caption": "Magpie's README banner"
+        }
+      ]
     },
     {
       "slug": "nemo-engine",
@@ -132,7 +141,23 @@
       "nsfw": false,
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/NemoVonNirgend/NemoEngine/main/Nemo%20Engine/assets/nemo-engine-one-year-anniversary.webp",
+          "alt": "Chibi-style group of purple-haired fox-eared characters and pets around a birthday cake under the title \"Nemo Engine v10! - Celebrating 1 Year\", with signs reading Total System Rewrite, V10 Engine Redesign and More Features.",
+          "from": "creator",
+          "href": "https://github.com/NemoVonNirgend/NemoEngine/tree/main/Nemo%20Engine/assets",
+          "caption": "Nemo Engine v10's one-year anniversary art"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/NemoVonNirgend/NemoEngine/main/Nemo%20Engine/assets/vex/default/neutral.png",
+          "alt": "Full-length portrait of Vex, a purple-haired wolf-eared figure in a long black coat lined with starry purple fabric, holding a book.",
+          "from": "creator",
+          "href": "https://github.com/NemoVonNirgend/NemoEngine/tree/main/Nemo%20Engine/assets/vex",
+          "caption": "Vex, the preset's guide persona"
+        }
+      ]
     },
     {
       "slug": "vivarium",
@@ -161,7 +186,16 @@
       "nsfw": false,
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/NemoVonNirgend/NemoEngine/main/Vivarium/banner.png",
+          "alt": "Banner art: a red-haired woman smiles beside a glass globe holding a tiny lit village, under the title \"Vivarium - A small core for living worlds\", with four panels labelled User Agency, World in Motion, Plain Language and No Trackers.",
+          "from": "creator",
+          "href": "https://github.com/NemoVonNirgend/NemoEngine/blob/main/Vivarium/README.md",
+          "caption": "Vivarium's README banner"
+        }
+      ]
     },
     {
       "slug": "celia",
@@ -193,7 +227,24 @@
       "nsfw": false,
       "aka": "",
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://leafcanfly.neocities.org/Celia%20Web%20BG.png",
+          "alt": "Green-haired anime girl in a black cap gives a thumbs-up against a plain orange background.",
+          "from": "creator",
+          "href": "https://leafcanfly.neocities.org/presets.html",
+          "caption": "Celia, from the header of the Celia site",
+          "position": "right top"
+        },
+        {
+          "src": "https://leafcanfly.neocities.org/Download%20now.png",
+          "alt": "Green-haired girl in an orange bear-ear hoodie holds up a wooden sign reading \"Download Now\".",
+          "from": "creator",
+          "href": "https://leafcanfly.neocities.org/presets.html",
+          "caption": "Celia holding a download sign, from the presets page"
+        }
+      ]
     },
     {
       "slug": "deus-ex-machina",
@@ -231,7 +282,43 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/cover_v3.png",
+          "alt": "Anime-style group of seven characters on a flowered terrace above a coastal town at sunset, under the title \"Deus Ex Machina V3\".",
+          "from": "creator",
+          "href": "https://github.com/lsennn/Deus-ex-machina#readme",
+          "caption": "DEUS EX MACHINA V3's cover art"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/chat_1_tracker.png",
+          "alt": "Chat output with a \"Scene Plan\" bar, a starry tracker card showing 07:15 AM, Day 3, the ship location and temperatures, then story text with each speaker's dialogue in its own colour.",
+          "from": "creator",
+          "href": "https://github.com/lsennn/Deus-ex-machina#readme",
+          "caption": "The scene tracker and coloured dialogue, from the README"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/dem%20active%20modules%20status.png",
+          "alt": "The \"DEM Active Modules\" panel open on its Characters tab, listing each character's physical state, clothes, mental state, location and a bond meter.",
+          "from": "creator",
+          "href": "https://github.com/lsennn/Deus-ex-machina#readme",
+          "caption": "The Active Modules panel, Characters tab"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/companions.png",
+          "alt": "A \"Companions\" panel where two narrator characters, Phi and Chi, trade chat-bubble comments about the scene.",
+          "from": "creator",
+          "href": "https://github.com/lsennn/Deus-ex-machina#readme",
+          "caption": "The Companions asides panel"
+        },
+        {
+          "src": "shots/presets/dem-v3-modules.webp",
+          "alt": "Deus Ex Machina V3's Active Modules tray on the Story Threads tab",
+          "from": "aetheria",
+          "caption": "V3's Active Modules tray, on its Story Threads tab."
+        }
+      ]
     },
     {
       "slug": "voyage",
@@ -272,7 +359,16 @@
       "confidence": "medium",
       "nsfw": false,
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://huggingface.co/nohurry/sillytavern/resolve/main/Images/voyage-v6.png",
+          "alt": "Two anime girls, one red-haired and one blue-haired, kneel on a pier at night holding paper lanterns beside two plush creatures, red and yellow, with floating lanterns, a mountain and fireworks behind; the title reads \"Voyage v6\".",
+          "from": "creator",
+          "href": "https://huggingface.co/nohurry/sillytavern/tree/main/Images",
+          "caption": "Voyage v6's cover art"
+        }
+      ]
     },
     {
       "slug": "moonlight",
@@ -411,7 +507,37 @@
       "confidence": "medium",
       "variants": [],
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://i.redd.it/te5wzc81p6kh1.png",
+          "alt": "Comic-style drawing of Frankenstein's monster in a dark coat, a rose in his teeth, studying a twenty-sided die; a framed \"Degree in Love from the Greeks\" hangs behind him and a thought bubble reads \"To love... that is the true critical success.\"",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1vrzcv6/preset_update_freaky_frankensim_30_13axis/",
+          "caption": "Freaky FrankenSIM 3.0's release art"
+        },
+        {
+          "src": "https://i.redd.it/ji0qvjs4p6kh1.jpg",
+          "alt": "A \"Bonds\" tracker comparing pairs of characters on paired bars such as Hatred/Desire, Strife/Play and Enmity/Friendship.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1vrzcv6/preset_update_freaky_frankensim_30_13axis/",
+          "caption": "The Bonds tracker, from the 3.0 release post"
+        },
+        {
+          "src": "https://i.redd.it/kuj0ojs4p6kh1.png",
+          "alt": "Collapsible tracker sections (NPC Memory, Factions, Bonds, Quests) with the \"Arc Engine\" section open, listing story beats as fired, unlocked or locked.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1vrzcv6/preset_update_freaky_frankensim_30_13axis/",
+          "caption": "The Arc Engine tracker"
+        },
+        {
+          "src": "https://i.redd.it/srme7ks4p6kh1.png",
+          "alt": "Four character cards each showing a Self-Worth score on a bar, three positive and one negative.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1vrzcv6/preset_update_freaky_frankensim_30_13axis/",
+          "caption": "The Self-Worth meters"
+        }
+      ]
     },
     {
       "slug": "frankengarage",
@@ -486,7 +612,55 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://github.com/Pyrxpia/sola-hub/blob/main/assets/Sola%20V4.png?raw=true",
+          "alt": "Seven anime women, six with flame-orange hair and one blue-haired, laugh together at an autumn party with candles, cake and drinks, under the title \"Sola V4\".",
+          "from": "creator",
+          "href": "https://github.com/Pyrxpia/sola-hub/tree/main/assets",
+          "caption": "Sola V4's cover art"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Pyrxpia/sola-hub/main/assets/Sola%20Kindling%20V2.png",
+          "alt": "Chibi-style blue-haired and orange-haired girls with drinks at a starry party with cake and a smiling star plush, under the title \"Sola Kindling V2\".",
+          "from": "creator",
+          "href": "https://github.com/Pyrxpia/sola-hub/tree/main/assets",
+          "caption": "Sola Kindling V2's cover art"
+        },
+        {
+          "src": "https://pyrxpia.github.io/sola-hub/assets/Scholar%20Sola.png",
+          "alt": "Orange-haired woman in glasses and a green shirt writes in a notebook at a desk in front of bookshelves.",
+          "from": "creator",
+          "href": "https://pyrxpia.github.io/sola-hub/",
+          "caption": "Scholar Sola, one of V4's five minds"
+        },
+        {
+          "src": "https://pyrxpia.github.io/sola-hub/assets/gremlin-sola.png",
+          "alt": "Orange-haired girl with a wide grin in a teal bunny T-shirt sits on a bed in front of a gaming PC.",
+          "from": "creator",
+          "href": "https://pyrxpia.github.io/sola-hub/",
+          "caption": "Gremlin Sola, one of V4's five minds"
+        },
+        {
+          "src": "shots/presets/sola-v4-scene.webp",
+          "alt": "Sola V4 Flame's scene header, coloured voices and folded Showrunner HUD",
+          "from": "aetheria",
+          "caption": "Flame V4 Complete: the scene header, Dilys's copper voice, and the Showrunner HUD open at the bond radar."
+        },
+        {
+          "src": "shots/presets/sola-v4-hud.webp",
+          "alt": "Sola V4's Feeling Engine, Thought Engine and Heart Engine cards",
+          "from": "aetheria",
+          "caption": "The HUD open: the Feeling Engine's inner weather, the Thought Engine's interview."
+        },
+        {
+          "src": "shots/presets/kindling-v2-easel.webp",
+          "alt": "Sola Kindling V2's Feeling Engine and Easel",
+          "from": "aetheria",
+          "caption": "Kindling V2: the Feeling Engine and the Director's Chart."
+        }
+      ]
     },
     {
       "slug": "lucid-loom",
@@ -521,7 +695,16 @@
       "updated": "",
       "nsfw": false,
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/prolix-oc/ST-Presets/main/Character%20Cards/Lumias/Lumia%20(Official)/Lumia%20-%20Weaver%20of%20the%20Lucid%20Loom.png",
+          "alt": "Black-haired woman in a purple robe sits by a loom under a starry sky, rainbow threads flowing between her hands.",
+          "from": "creator",
+          "href": "https://github.com/prolix-oc/ST-Presets/tree/main/Character%20Cards/Lumias/Lumia%20(Official)",
+          "caption": "Lumia, Weaver of the Lucid Loom, the preset's narrator"
+        }
+      ]
     },
     {
       "slug": "megumin-suite",
@@ -563,7 +746,30 @@
       "nsfw": false,
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/Arif-salah/Megumin-Suite/main/Screenshots/banner.png",
+          "alt": "Banner: a brown-haired girl in glasses and a tracksuit reads a book titled \"Megumin Suite V11\" on a bed, beside the title \"Megumin Suite V11\", the word \"Тайна\" and icons for hidden plot twists, one-click model setup, fewer tokens, background worker model and consistent character images.",
+          "from": "creator",
+          "href": "https://github.com/Arif-salah/Megumin-Suite#readme",
+          "caption": "Megumin Suite V11's README banner"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Arif-salah/Megumin-Suite/main/Screenshots/Screenshot2.png",
+          "alt": "Suite settings panel with \"Enable Memory Core\" switched on, a context allocation dashboard and memory architecture settings.",
+          "from": "creator",
+          "href": "https://github.com/Arif-salah/Megumin-Suite#readme",
+          "caption": "The Memory Core settings, from the README"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Arif-salah/Megumin-Suite/main/Screenshots/Screenshot4.png",
+          "alt": "Suite settings panel for Image Generation, with ComfyUI integration enabled, a prompt generator method and a server address field.",
+          "from": "creator",
+          "href": "https://github.com/Arif-salah/Megumin-Suite#readme",
+          "caption": "The Image Generation settings, from the README"
+        }
+      ]
     },
     {
       "slug": "marinara",
@@ -599,7 +805,16 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://i.imgur.com/eWinVla.png",
+          "alt": "Tall list of the preset's prompt toggles (Game Master, Roleplayer, Writer; tense; narration person; point of view; length), with the active choices switched on.",
+          "from": "creator",
+          "href": "https://spicymarinara.github.io/",
+          "caption": "The \"Guide To Prompts\" toggle list, from the creator's site"
+        }
+      ]
     },
     {
       "slug": "puras-director",
@@ -640,7 +855,37 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/pura-director-preset-16.0.png",
+          "alt": "Chibi drawing of a cheerful pale-blue-haired nurse offering a milkshake to a startled black-haired man in a chained coat, under the title \"Pura's Director Preset 16.0\", with labels \"Route: Health Check\" and \"Stage: Complicated\".",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "Pura's Director 16.0's release art"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/relationship-meter.png",
+          "alt": "A relationship panel for Wriothesley showing route progress (Familiar, Complicated, Confidant) and cards for heart, trust, wants, guard, likes, dislikes, a keepsake memory and the next threshold.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Relationship Meter tracker"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/choices-skill-check.png",
+          "alt": "A \"What will you do?\" panel with five numbered choices, each tagged with a skill check such as Speech 55/100 or Stealth 35/100.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "Choices with skill checks"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/level-up.png",
+          "alt": "A green terminal-style \"LEVEL_UP.exe\" window reporting a level-up, skill growth and a new perk.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Level Up report"
+        }
+      ]
     },
     {
       "slug": "the-ethereality-express",
@@ -676,7 +921,37 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/the-ethereality-express-1.1.png",
+          "alt": "A grey-haired man in headphones reads calmly in an armchair while a blond man points and shouts that the chairs are unionising, as angry chairs, lamps and blueprints carry protest signs in a lamplit library; the title \"The Ethereality Express 1.1\" is written in stars.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Ethereality Express 1.1's release art"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/ethereality/small-miracles.png",
+          "alt": "A cream certificate from \"The Department of Small Miracles\" titled \"Certificate of Miracle\", awarded to \"The Kettle That Boiled Itself\" for \"Clerical Impossibility\", with a red seal and a signature.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Department of Small Miracles tracker"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/ethereality/census.png",
+          "alt": "A dark \"Census Record\" card listing a character's identity, appearance, strangeness, manner, history and ties.",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Census tracker"
+        },
+        {
+          "src": "https://platberlitz.github.io/preset/screenshots/ethereality/doors.png",
+          "alt": "A panel titled \"The Corridor\" offering four numbered choices, each with a skill check such as \"Bracket Etiquette 65/100\".",
+          "from": "creator",
+          "href": "https://platberlitz.github.io/",
+          "caption": "The Doors tracker's choices"
+        }
+      ]
     },
     {
       "slug": "stabs-directives",
@@ -713,7 +988,37 @@
       "nsfw": false,
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/Zorgonatis/Stabs-EDH/main/preview-images/BTS%20Delta.png",
+          "alt": "A \"Details\" panel of behind-the-scenes notes listing each character's mood, stress and relationship scores, with off-screen characters logged at the bottom.",
+          "from": "creator",
+          "href": "https://github.com/Zorgonatis/Stabs-EDH/tree/main/preview-images",
+          "caption": "The v3.0 Behind the Scenes tracker, from the preview images"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Zorgonatis/Stabs-EDH/main/preview-images/VTK2.png",
+          "alt": "A \"Temporal Foresight\" card showing two probability paths, Confrontation at 88.4% and Evasion at 11.6%, beside a \"Predictive Lock\" eye icon.",
+          "from": "creator",
+          "href": "https://github.com/Zorgonatis/Stabs-EDH/tree/main/preview-images",
+          "caption": "A v3.0 visual card (Temporal Foresight)"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Zorgonatis/Stabs-EDH/main/preview-images/VTK.png",
+          "alt": "A \"Strategic Theorem: The Vanguard\" card with a simple triangle diagram and two notes, Superiority Axiom and Support Dependency.",
+          "from": "creator",
+          "href": "https://github.com/Zorgonatis/Stabs-EDH/tree/main/preview-images",
+          "caption": "A v3.0 visual card (Strategic Theorem)"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Zorgonatis/Stabs-EDH/main/preview-images/v2.5%20SS.png",
+          "alt": "Chat output with a time and place header, a pink \"Sarah's Brain\" box of short thought bubbles, and a panel where a penguin \"Emotional Consultant\" offers four numbered choices.",
+          "from": "creator",
+          "href": "https://github.com/Zorgonatis/Stabs-EDH/tree/main/preview-images",
+          "caption": "An example chat from v2.5"
+        }
+      ]
     },
     {
       "slug": "writers-block",
@@ -781,7 +1086,37 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/MentallyQuill/ST-Wandlight/main/Images/wandlight-banner.jpg",
+          "alt": "Dark gold-framed banner: a glowing quill and spellbooks before a castle under a full moon, with the title \"Wandlight - A featherweight preset for SillyTavern HP roleplay & fanfiction\".",
+          "from": "creator",
+          "href": "https://github.com/MentallyQuill/ST-Wandlight#readme",
+          "caption": "Wandlight's README banner"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/MentallyQuill/ST-Wandlight/main/Images/dynamic-canon.jpg",
+          "alt": "Gold-on-black graphic \"Dynamic Canon Timeline\": a timeline from three years past to the current scene, with future knowledge obscured.",
+          "from": "creator",
+          "href": "https://github.com/MentallyQuill/ST-Wandlight/tree/main/Images",
+          "caption": "The Dynamic Canon graphic"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/MentallyQuill/ST-Wandlight/main/Images/toggle-modules.jpg",
+          "alt": "Gold-on-black graphic \"Toggleable Modules\" listing on/off switches for timestamp, length, tense, point of view and cast groups.",
+          "from": "creator",
+          "href": "https://github.com/MentallyQuill/ST-Wandlight/tree/main/Images",
+          "caption": "The toggle modules graphic"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/MentallyQuill/ST-Wandlight/main/Images/scriveners-antislop.jpg",
+          "alt": "Gold-on-black graphic \"The Scrivener's Ward - Anti-Slop Feature\": a quill in a glowing circle scattering cliché phrases, above three boxes reading Suppresses clichés, Reduces repetition, Protects voice.",
+          "from": "creator",
+          "href": "https://github.com/MentallyQuill/ST-Wandlight/tree/main/Images",
+          "caption": "The anti-slop feature graphic"
+        }
+      ]
     },
     {
       "slug": "white-lotus",
@@ -818,7 +1153,16 @@
       "updated": "",
       "nsfw": false,
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://mokimoko.github.io/images/white-lotus.png",
+          "alt": "A long-haired swordsman in flowing white and blue robes draws a glowing sword on a misty mountain path, with temples and waterfalls behind and the title \"White Lotus for SillyTavern\".",
+          "from": "creator",
+          "href": "https://mokimoko.github.io/pages/presets/white-lotus.html",
+          "caption": "White Lotus's cover art"
+        }
+      ]
     },
     {
       "slug": "worldhopper",
@@ -860,7 +1204,16 @@
       "confidence": "medium",
       "basedOn": [],
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://coz-rp.github.io/img/character.webp",
+          "alt": "Full-length drawing of a grinning girl with teal-and-blue hair in a black cat-ear hoodie, spiked collar, pleated skirt and striped stockings, arms crossed.",
+          "from": "creator",
+          "href": "https://coz-rp.github.io/",
+          "caption": "Hero art from the Worldhopper site"
+        }
+      ]
     },
     {
       "slug": "sukino",
@@ -898,7 +1251,16 @@
       "nsfw": false,
       "aka": "",
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://sukinocreates.neocities.org/img/repository_header.webp",
+          "alt": "Close-up of a red-haired girl with freckles and round glasses in a lab coat, frowning at a clipboard.",
+          "from": "creator",
+          "href": "https://huggingface.co/Sukino/SillyTavern-Settings-and-Presets",
+          "caption": "Header of Sukino's presets repository"
+        }
+      ]
     },
     {
       "slug": "evening-truth",
@@ -971,7 +1333,23 @@
       "updated": "",
       "nsfw": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "https://cdn-uploads.huggingface.co/production/uploads/66a2a6820c4cd36ffbc95623/tSbyjyTZ8CfaAMg8vaFS3.png",
+          "alt": "Chat screenshot: a user's short roll command, then a reply from \"Juno Sakai (Ghost of Tsushima)\" with dialogue in orange, narration in grey italics and inner thoughts in a monospaced box.",
+          "from": "creator",
+          "href": "https://huggingface.co/sphiratrioth666/SillyTavern-Presets-Sphiratrioth",
+          "caption": "A roleplay reply, from the README"
+        },
+        {
+          "src": "https://cdn-uploads.huggingface.co/production/uploads/66a2a6820c4cd36ffbc95623/HUTmiFEeMcdfd9RN-wjvz.png",
+          "alt": "Chat screenshot of a tabletop-style session where a \"TTRPG - Game Master\" and the character \"Juno Sakai\" take turns.",
+          "from": "creator",
+          "href": "https://huggingface.co/sphiratrioth666/SillyTavern-Presets-Sphiratrioth",
+          "caption": "A game-master session, from the README"
+        }
+      ]
     },
     {
       "slug": "therefore",
@@ -1049,7 +1427,16 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/x87chx10mrmh1.jpeg",
+          "alt": "Smiling brown-haired woman in a cape holds open a book whose cover reads \"Chatfill III: Jailbreaks & Extensions\", in a lamplit library.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1w3qqlz/chatfill_iii_genres_summaries_and_jailbreaks/",
+          "caption": "Chatfill III's release image"
+        }
+      ]
     },
     {
       "slug": "chatstream",
@@ -1114,7 +1501,23 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/0pipz3zadtvh1.png",
+          "alt": "A green-eyed woman with long dark hair and a crescent circlet smiles behind a game master's screen, with glowing dice floating in a starry sky and a castle on a cliff behind her.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1x7doiv/preset_dice_of_the_lady_my_roleplay_preset/",
+          "caption": "Dice of the Lady's release art"
+        },
+        {
+          "src": "https://i.redd.it/g5ekmbqnuhyh1.png",
+          "alt": "Painterly picture of a barista with a name badge working an espresso machine in a steamy, dim café.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1xj092o/preset_dev_retrospective_dice_of_the_lady/",
+          "caption": "Art from the creator's retrospective post"
+        }
+      ]
     },
     {
       "slug": "realistic-frankenstein",
@@ -1160,7 +1563,23 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/c035eu38thvh1.png",
+          "alt": "Magazine-cover-style image: an anime girl with long pale hair in an oversized dark sweater and thigh-high stockings looks back over her shoulder in front of a weathered doorway, under the title \"floris - a sillytavern preset\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1x6287v/preset_floris_v02/",
+          "caption": "Floris v0.2's release image"
+        },
+        {
+          "src": "https://i.redd.it/0vbo67h61luh1.png",
+          "alt": "A \"log\" panel with time and place lines and a relationship card with Affection, Trust, Yearning and Fear bars.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1x27ypt/preset_floris_v01_a_smallish_preset/",
+          "caption": "The relationship tracker, from the v0.1 post"
+        }
+      ]
     },
     {
       "slug": "le-emotionalism",
@@ -1181,7 +1600,16 @@
       "notes": [],
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/n32va62jmxeh1.png",
+          "alt": "An officer in a peaked cap and gas mask holds out a glowing rainbow star; behind him a burning war-torn city fades into a sunny fantasy landscape with a white castle; text reads \"LE_EMOTIONALISM! Version 1.1.5\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1v46vqe/le_emotionalism_version_115_emotionalbased_preset/",
+          "caption": "LE_EMOTIONALISM 1.1.5's release image"
+        }
+      ]
     },
     {
       "slug": "kazuma-secret-sauce",
@@ -1223,7 +1651,16 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/ezrb4ricjpxh1.jpeg",
+          "alt": "Silhouette of a figure hurling a mug that shatters against an orange wall, with the title \"Mimo Needs To Calm Down!\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1xfin4l/mimo_needs_to_calm_down_tailored_preset_for_mimo/",
+          "caption": "Mimo Needs To Calm Down!'s release image"
+        }
+      ]
     },
     {
       "slug": "natural-20",
@@ -1244,7 +1681,16 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/vv270pbzt9yh1.png",
+          "alt": "A brown-haired woman in a black-and-white outfit, grey tights and fishnet socks sits cross-legged in an office chair in a library, beside the title \"Natural 20\" with a twenty-sided die.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1xi08jb/natural_20_preset_not_made_specifically_for_dnd/",
+          "caption": "Natural 20's release image"
+        }
+      ]
     },
     {
       "slug": "simulator-engine",
@@ -1265,7 +1711,30 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/w5anf4mjckfh1.png",
+          "alt": "Pencil drawing of a wooden mannequin labelled \"You\" working two marionettes with strings, captioned \"Director\" and \"Preset\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1v72pju/preset_simulator_engine_directorstyle_roleplay/",
+          "caption": "Simulator Engine's release image"
+        },
+        {
+          "src": "https://i.redd.it/kuioxjbkckfh1.png",
+          "alt": "Chat output with dialogue lines in pink and white and a \"Scene Anchor\" block at the bottom listing time, location, thread, status and each character's state.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1v72pju/preset_simulator_engine_directorstyle_roleplay/",
+          "caption": "Example output with the Scene Anchor"
+        },
+        {
+          "src": "https://i.redd.it/cuxbcqvaekfh1.png",
+          "alt": "A second chat example, set in an art studio, with the Scene Anchor block below it.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1v72pju/preset_simulator_engine_directorstyle_roleplay/",
+          "caption": "Another example with the Scene Anchor"
+        }
+      ]
     },
     {
       "slug": "purrfect-logic",
@@ -1286,7 +1755,23 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/kq6oqmaf895h1.png",
+          "alt": "Illustrated poster of a fluffy kitten mechanic in goggles and a \"Logic Mechanic\" cap fixing a box labelled \"Preset Engine 4 Max\", surrounded by notes listing what is new, under the title \"Little Update! Purrfect Logic 4 Max\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1twlef0/purrfect_logic_4_max_mini_update_token_cleanup/",
+          "caption": "Purrfect Logic 4 Max Mini Update's release image"
+        },
+        {
+          "src": "https://i.redd.it/mhgt1sfell3h1.png",
+          "alt": "Illustrated poster of a kitten in glasses and a pink hoodie at a laptop, surrounded by notes on what is new, which models it suits and thanks, under the title \"Purrfect Logic 4 Max\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1totfpn/kittylisheous_update_purrfect_logic_4_max_preset/",
+          "caption": "Purrfect Logic 4 Max's release image"
+        }
+      ]
     },
     {
       "slug": "rice",
@@ -1307,7 +1792,17 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://github.com/user-attachments/assets/b5d47f97-8365-439d-9d80-4adbba878691",
+          "alt": "Soft illustration of a hand lifting a triangular rice ball with a strip of seaweed from a white plate.",
+          "from": "creator",
+          "href": "https://github.com/takuu8/RICE-A-GEMINI-PRESET#readme",
+          "caption": "The image at the top of the RICE README",
+          "position": "center"
+        }
+      ]
     },
     {
       "slug": "sun-rider",
@@ -1328,7 +1823,23 @@
       "updated": "",
       "nsfw": false,
       "aka": "",
-      "honorable": false
+      "honorable": false,
+      "images": [
+        {
+          "src": "https://i.redd.it/uoomw4kakhth1.png",
+          "alt": "A black-and-gold armoured hero with a sun-shaped helmet leaps into a flying kick over a ruined city, beside the title \"Sun Rider v1.0\".",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1wxleib/sun_rider_v10_a_lightweight_modular_rp_preset/",
+          "caption": "Sun Rider v1.0's cover art"
+        },
+        {
+          "src": "https://i.redd.it/jsobpnnakhth1.jpg",
+          "alt": "Phone screenshot of a chat: a dark time card reading 8:47 PM, story text of a hero transforming and fighting a fire creature, and a \"Ride Booker\" tracker panel.",
+          "from": "creator",
+          "href": "https://www.reddit.com/r/SillyTavernAI/comments/1wxleib/sun_rider_v10_a_lightweight_modular_rp_preset/",
+          "caption": "The time card and Ride Booker tracker, from the release post"
+        }
+      ]
     }
   ]
 }

@@ -21,6 +21,8 @@ export const loadSite = () => once('site', () => getJSON('data/site.json'));
 export const loadCreators = () => once('creators', () => getJSON('data/creators.json'));
 export const loadWorks = () => once('works', () => getJSON('data/works.json').then((d) => d.works || []).catch(() => []));
 export const loadPresets = () => once('presets', () => getJSON('data/presets.json'));
+export const loadShowcase = () => once('showcase', () => getJSON('data/showcase.json'));
+export const loadDocs = () => once('docs', () => getJSON('data/docs.json'));
 
 /** Public releases from GitHub, cached for ten minutes per visitor to spare the API limit. */
 export const loadReleases = (repo) => once(`releases:${repo}`, async () => {
