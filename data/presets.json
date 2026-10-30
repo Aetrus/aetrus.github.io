@@ -67,7 +67,15 @@
       "updated": "",
       "nsfw": false,
       "honorable": false,
-      "catalogued": true
+      "catalogued": true,
+      "images": [
+        {
+          "src": "shots/presets/atelier.webp",
+          "alt": "Atelier's dialogue, each speaker in their own colour",
+          "from": "aetheria",
+          "caption": "Atelier in Aetheria: each speaker's dialogue in their own colour."
+        }
+      ]
     },
     {
       "slug": "magpie",
@@ -113,8 +121,8 @@
       "creator": "Head-Mousse6943",
       "aka": "NemoVonNirgend",
       "creatorUrl": "https://github.com/NemoVonNirgend",
-      "version": "v12.1",
-      "updated": "2026-10-15",
+      "version": "v12.3",
+      "updated": "2026-10-22",
       "variants": [
         "Standard",
         "Full",
@@ -128,10 +136,10 @@
         "RPG-capable",
         "Heavyweight"
       ],
-      "summary": "A very large modular preset for general roleplay, collaborative fiction and RPG scenes: the v11.5.1 General RP build alone carries 451 prompts and 91 regex scripts. You pick one option per family across craft cores, 31 narrator personalities, planning modes, world logic, difficulty, POV and length, with optional HTML or ASCII trackers. Powerful and complex; keep the shipped defaults first.",
+      "summary": "A very large modular preset for general roleplay, collaborative fiction and RPG scenes: its builds carry hundreds of prompts and regex scripts. You pick one option per family across craft cores, 31 narrator personalities, planning modes, world logic, difficulty, POV and length, with optional HTML or ASCII trackers. Powerful and complex; keep the shipped defaults first.",
       "notes": [
-        "NemoPresetExt is strongly recommended and installs v12.1 in one click.",
-        "The community list names v10; the repo hosts v11.5.1 with older builds archived.",
+        "NemoPresetExt is strongly recommended and installs the current build in one click.",
+        "The community list names v10; the repo hosts v12.3, with older builds archived.",
         "The shipped General RP profile has NSFW Core on; switch it off for SFW play."
       ],
       "home": "https://github.com/NemoVonNirgend/NemoEngine",
@@ -156,6 +164,12 @@
           "from": "creator",
           "href": "https://github.com/NemoVonNirgend/NemoEngine/tree/main/Nemo%20Engine/assets/vex",
           "caption": "Vex, the preset's guide persona"
+        },
+        {
+          "src": "shots/presets/nemo-engine.webp",
+          "alt": "Nemo Engine's scene card, speaker colours, thought chips and Scene Scratchpad",
+          "from": "aetheria",
+          "caption": "Nemo Engine in Aetheria: the scene card, each speaker in their own colour, thought chips and the Scene Scratchpad."
         }
       ]
     },
@@ -313,10 +327,10 @@
           "caption": "The Companions asides panel"
         },
         {
-          "src": "shots/presets/dem-v3-modules.webp",
-          "alt": "Deus Ex Machina V3's Active Modules tray on the Story Threads tab",
+          "src": "shots/presets/dem-v3.webp",
+          "alt": "Deus Ex Machina V3's Scene Plan, time and weather bar, coloured dialogue and Active Modules tray",
           "from": "aetheria",
-          "caption": "V3's Active Modules tray, on its Story Threads tab."
+          "caption": "Deus Ex Machina V3 in Aetheria: the Scene Plan, the time and weather bar, coloured dialogue and the Active Modules tray."
         }
       ]
     },
@@ -536,6 +550,24 @@
           "from": "creator",
           "href": "https://www.reddit.com/r/SillyTavernAI/comments/1vrzcv6/preset_update_freaky_frankensim_30_13axis/",
           "caption": "The Self-Worth meters"
+        },
+        {
+          "src": "shots/presets/frankensim-scene.webp",
+          "alt": "FrankenSIM's header, the harbour's tide board and the Internal States",
+          "from": "aetheria",
+          "caption": "FrankenSIM in Aetheria: the header, the harbour's tide board, and the Internal States."
+        },
+        {
+          "src": "shots/presets/frankensim-bonds.webp",
+          "alt": "FrankenSIM's bond bars between Dilys, Ansel and you",
+          "from": "aetheria",
+          "caption": "The bonds between Dilys, Ansel and you, axis by axis."
+        },
+        {
+          "src": "shots/presets/frankensim-dice.webp",
+          "alt": "FrankenSIM's inventory, Chekhov's guns, dice task and GM's notebook",
+          "from": "aetheria",
+          "caption": "The inventory, Chekhov's guns, the dice task and the GM's notebook."
         }
       ]
     },
@@ -573,7 +605,15 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "shots/presets/frankengarage.webp",
+          "alt": "FrankenGarage's header, coloured voices, tide notice and Plot Momentum",
+          "from": "aetheria",
+          "caption": "FrankenGarage in Aetheria: the header, coloured voices, the harbour's tide notice and Plot Momentum."
+        }
+      ]
     },
     {
       "slug": "sola",
@@ -644,21 +684,27 @@
         },
         {
           "src": "shots/presets/sola-v4-scene.webp",
-          "alt": "Sola V4 Flame's scene header, coloured voices and folded Showrunner HUD",
+          "alt": "Sola V4 Flame's scene header, coloured voices and the HUD's bond radar",
           "from": "aetheria",
-          "caption": "Flame V4 Complete: the scene header, Dilys's copper voice, and the Showrunner HUD open at the bond radar."
+          "caption": "Flame V4 Complete in Aetheria: the night's scene header, Dilys's copper voice, and the HUD's bond radar."
         },
         {
-          "src": "shots/presets/sola-v4-hud.webp",
-          "alt": "Sola V4's Feeling Engine, Thought Engine and Heart Engine cards",
+          "src": "shots/presets/sola-v4-feelings.webp",
+          "alt": "Sola V4's Feeling Engine cards for Dilys and Ansel",
           "from": "aetheria",
-          "caption": "The HUD open: the Feeling Engine's inner weather, the Thought Engine's interview."
+          "caption": "The Feeling Engine for Dilys and Ansel, and the start of the Thought Engine's interview."
         },
         {
-          "src": "shots/presets/kindling-v2-easel.webp",
-          "alt": "Sola Kindling V2's Feeling Engine and Easel",
+          "src": "shots/presets/sola-v4-heart.webp",
+          "alt": "Sola V4's Heart Engine faculties and Character Matrix",
           "from": "aetheria",
-          "caption": "Kindling V2: the Feeling Engine and the Director's Chart."
+          "caption": "The Heart Engine's four faculties and the Character Matrix."
+        },
+        {
+          "src": "shots/presets/sola-kindling-v2.webp",
+          "alt": "Sola Kindling V2's header, scene and Feeling Engine",
+          "from": "aetheria",
+          "caption": "Kindling V2 in Aetheria: the mobile header, the scene and the Feeling Engine."
         }
       ]
     },
@@ -739,7 +785,8 @@
       "notes": [
         "Install the extension, import Megumin Suite V11 Universal.json and enable its bundled regex.",
         "Optional secondary model for tracker blocks and optional ComfyUI inline images.",
-        "The earlier Kazuma Secret Sauce style lives on as a balance mode."
+        "The earlier Kazuma Secret Sauce style lives on as a balance mode.",
+        "Its prompts are placeholders that the creator's SillyTavern extension fills in each turn, so it needs that extension (and does not run in Aetheria)."
       ],
       "home": "https://github.com/Arif-salah/Megumin-Suite",
       "homeLabel": "GitHub",
@@ -795,7 +842,7 @@
       ],
       "summary": "A universal preset where you pick the model's role (Game Master, Roleplayer or Writer) and set tense, person, POV and length with toggles. Its core rules ask for autonomous, morally complex characters, proactive plot movement, fair success or failure on your actions, and never writing for your character.",
       "notes": [
-        "Optional stats, info box, mind reading and immersive HTML toggles need the bundled regex.",
+        "v10 dropped 9.x's optional stats, info box and mind-reading toggles; the creator points to a separate extension for them.",
         "The read-me suggests max context, 4096+ response length and temperature 1.0."
       ],
       "home": "https://github.com/SpicyMarinara/SillyTavern-Settings",
@@ -884,6 +931,12 @@
           "from": "creator",
           "href": "https://platberlitz.github.io/",
           "caption": "The Level Up report"
+        },
+        {
+          "src": "shots/presets/puras-director.webp",
+          "alt": "Pura's Director's scene and time cards, relationship meter and choices",
+          "from": "aetheria",
+          "caption": "Pura's Director in Aetheria with its Scene, Time and Relationship trackers and CYOA choices switched on: the scene and time cards, Dilys's relationship meter and the choices."
         }
       ]
     },
@@ -950,6 +1003,12 @@
           "from": "creator",
           "href": "https://platberlitz.github.io/",
           "caption": "The Doors tracker's choices"
+        },
+        {
+          "src": "shots/presets/ethereality-express.webp",
+          "alt": "The Ethereality Express's Clock, Drift, Census, Phenomenon and Omen cards",
+          "from": "aetheria",
+          "caption": "The Ethereality Express in Aetheria: the Clock Is Lying and Drift cards, a Census record for the ferryman, an Unscheduled Phenomenon, the Omen and the Doors."
         }
       ]
     },
@@ -1017,6 +1076,12 @@
           "from": "creator",
           "href": "https://github.com/Zorgonatis/Stabs-EDH/tree/main/preview-images",
           "caption": "An example chat from v2.5"
+        },
+        {
+          "src": "shots/presets/stabs-directives.webp",
+          "alt": "Stab's Directives' HTML cards: a creditors' ledger with a sticky note, and the lamp's stats",
+          "from": "aetheria",
+          "caption": "Stab's Directives in Aetheria: the model's own HTML, a ledger of Wenna's creditors with a sticky note, and the worst lamp in the Tidewater."
         }
       ]
     },
@@ -1053,14 +1118,22 @@
       "aka": "",
       "honorable": false,
       "catalogued": true,
-      "confidence": "high"
+      "confidence": "high",
+      "images": [
+        {
+          "src": "shots/presets/writers-block.webp",
+          "alt": "Writer's Block's Director's Notes card",
+          "from": "aetheria",
+          "caption": "Writer's Block in Aetheria with its Fancy Director's Notes switched on: the Notes card, with the objective, the place and the cast."
+        }
+      ]
     },
     {
       "slug": "wandlight",
       "name": "Wandlight",
       "creator": "MentallyQuill",
       "creatorUrl": "https://github.com/MentallyQuill",
-      "version": "v1",
+      "version": "v2.0",
       "models": [
         "Claude",
         "GLM",
@@ -1075,13 +1148,14 @@
       "summary": "A small preset for Harry Potter roleplay and fanfiction. Modules for length, tense, POV and which part of the cast appears; an optional timestamp header; and characters limited to what they'd know at that point in canon. Anti-cliche rules and an optional logit-bias list target stock fantasy phrasing.",
       "notes": [
         "Meant for a blank story card plus one of the included openers.",
-        "The creator also runs the Tavernary catalogue of SillyTavern tools."
+        "The creator also runs the Tavernary catalogue of SillyTavern tools.",
+        "2.0 is the Coauthor build, which writes the beat you give it and stops before your next choice; the standard build is 1.9."
       ],
       "home": "https://github.com/MentallyQuill/ST-Wandlight",
       "homeLabel": "GitHub",
       "variants": [],
       "basedOn": [],
-      "updated": "",
+      "updated": "2026-10-25",
       "nsfw": false,
       "aka": "",
       "honorable": false,

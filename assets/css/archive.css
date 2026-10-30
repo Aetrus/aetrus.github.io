@@ -1474,7 +1474,9 @@ svg.star path, svg.eyebrow-star path, svg.toast-star path, .flourish svg path { 
 dialog.shot-viewer { border: 1px solid var(--line); background: var(--ink-900); color: var(--ivory); padding: 0; max-width: min(1400px, 94vw); max-height: 94vh; overflow: auto; }
 dialog.shot-viewer::backdrop { background: rgb(var(--shadow-rgb) / 0.78); backdrop-filter: blur(3px); }
 dialog.shot-viewer figure { margin: 0; }
-dialog.shot-viewer img { display: block; max-width: 100%; max-height: calc(94vh - 64px); margin: 0 auto; }
+/* A tall picture (a whole passage) is read at its width, the viewer scrolling; a wide one fits. */
+dialog.shot-viewer img { display: block; max-width: 100%; margin: 0 auto; }
+dialog.shot-viewer figcaption { position: sticky; bottom: 0; background: var(--ink-900); }
 dialog.shot-viewer figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; padding: 12px 18px; border-top: 1px solid var(--line-soft); font-size: 0.95rem; color: var(--text-dim); }
 .shot-credit { font-family: var(--f-label); font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); }
 .shot-step, .shot-close { position: fixed; top: 50%; background: var(--ink-850); color: var(--ivory); border: 1px solid var(--line); width: 42px; height: 42px; font-size: 1.5rem; cursor: pointer; }
