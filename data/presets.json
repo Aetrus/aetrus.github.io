@@ -1811,6 +1811,40 @@
       ]
     },
     {
+      "slug": "kittylotus",
+      "name": "KittyLotus",
+      "creator": "kittylotus",
+      "noU": true,
+      "creatorUrl": "https://github.com/kittylotus",
+      "version": "v3.5",
+      "models": [],
+      "style": [
+        "Highly modular",
+        "Narrator persona",
+        "Tracker HUD",
+        "Game master"
+      ],
+      "summary": "A modular narrative preset, made mainly for Lumiverse with a SillyTavern build, run by Gabrielle (Gabi), an engine operator who also adds commentary. You toggle pacing, POV rules, prose style, story progression, antagonists, a darkness and consequence dial, trackers, optional HTML interfaces and an optional Dungeon Master campaign mode. Villains get archetypes such as Strategist, Charmer or Trickster instead of a generic evil.",
+      "notes": [
+        "Detects supported models and applies an adapter for them, with manual model choice as a fallback; no models are named.",
+        "The project's links still say v1.x in places, but its SillyTavern file is v3.5. A Lumiverse edition is listed on Illarin.",
+        "The creator's carrd page asks for the Clickable Inputs and Sim Tracker extensions (SimTracker - Lumi on Lumiverse) for some features, with Character Colors optional.",
+        "No release date or Reddit post was found when it was added."
+      ],
+      "home": "https://github.com/kittylotus/KittyLotus-v1.x-Multimodal",
+      "homeLabel": "GitHub",
+      "variants": [
+        "Lumiverse edition"
+      ],
+      "basedOn": [],
+      "updated": "",
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "confidence": "medium"
+    },
+    {
       "slug": "purrfect-logic",
       "name": "Purrfect Logic",
       "creator": "No-Bus-3618",
