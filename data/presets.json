@@ -340,8 +340,8 @@
       "creator": "Kahvana",
       "aka": "nohurry",
       "creatorUrl": "https://www.reddit.com/user/Kahvana/",
-      "version": "v6",
-      "updated": "2026-10",
+      "version": "v6.0.2",
+      "updated": "2026-10-30",
       "variants": [
         "v5.1",
         "v4 exp"
@@ -365,7 +365,7 @@
       ],
       "summary": "A lean game-master preset that runs roleplay as a light Powered by the Apocalypse game, aimed at interaction-driven stories with better dialogue and NPC-to-NPC scenes. The GM is bound to the assistant role so it doesn't speak for you, builds NPCs and places from tags, and calls skill checks. Born on local Gemma 4; model-agnostic from v5.",
       "notes": [
-        "Hugging Face hosts v1 to v5.1; v6 had not been uploaded there when checked.",
+        "Hugging Face hosts every version from v1 to v6.0.2; v6.0.1 and v6.0.2 are patches on v6, posted without a changelog.",
         "Pitched at slice of life, action, adventure and exploration."
       ],
       "home": "https://huggingface.co/nohurry/sillytavern",
@@ -1090,9 +1090,10 @@
       "name": "Writer's Block",
       "creator": "Deiomo",
       "creatorUrl": "https://deiomo.github.io/",
-      "version": "Unlimited v2",
+      "version": "Unlimited v3",
       "variants": [
-        "Writer's Block 5"
+        "Writer's Block 5",
+        "Local Version (by ReaZr)"
       ],
       "models": [
         "GLM",
@@ -1107,13 +1108,13 @@
       ],
       "summary": "A large, toggle-driven preset for roleplay and co-writing. Always-on writing rules sit underneath; on top you switch on narrative modes (Roleplay, Director, Active Persona), how hard the plot pushes, 30+ combinable tones, and controls for rhythm, POV, tense, length and violence. Includes trackers, a brainstormer, trope spotter and plot-thread tracker.",
       "notes": [
-        "Unlimited v2 keeps the universal rules from Writer's Block 5.",
+        "The Unlimited line keeps the universal rules from Writer's Block 5; v3 came out on Oct 31, with its change notes in the creator's Reddit post.",
         "The optional 18+ section is off by default."
       ],
       "home": "https://github.com/deiomo/Writer-s-Block-Unlimited",
       "homeLabel": "GitHub",
       "basedOn": [],
-      "updated": "",
+      "updated": "2026-10-31",
       "nsfw": false,
       "aka": "",
       "honorable": false,
