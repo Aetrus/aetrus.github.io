@@ -1245,21 +1245,22 @@
       "creator": "goonerpos",
       "aka": "Coz",
       "creatorUrl": "https://www.reddit.com/user/goonerpos/",
-      "version": "v1.3",
-      "updated": "2026-10",
+      "version": "v1.4",
+      "updated": "2026-11-03",
       "variants": [
         "Shifter (Claude)",
         "Planeswalker (Gemini)",
         "Delver (DeepSeek)",
         "Nomad (GLM)",
-        "Pilgrim (Kimi)"
+        "Pilgrim (Kimi, MiMo)"
       ],
       "models": [
         "Claude",
         "Gemini",
         "DeepSeek",
         "GLM",
-        "Kimi"
+        "Kimi",
+        "MiMo"
       ],
       "style": [
         "Supernatural scenarios",
@@ -1268,9 +1269,10 @@
         "State tracking"
       ],
       "nsfw": true,
-      "summary": "A modular, prose-focused preset built around supernatural and metaphysical scenarios: possession, body swaps, mind control, hive minds. The main 1.3 preset has per-chat toggles, with slimmer builds for each model family. 1.3 adds voice consistency, optional co-writing of your character, hard limits, and length and ending controls.",
+      "summary": "A modular, prose-focused preset built around supernatural and metaphysical scenarios: possession, body swaps, mind control, hive minds. The flagship 1.4 preset covers every model in one file with per-chat toggles, alongside slimmer builds for each model family. 1.4 swaps the banned lists for Prose Habits that tell the model what to write instead, turns Scene Anchor on by default, and adds Swipe Feedback, OOC Memory and new POV, pacing and tone options.",
       "notes": [
-        "Pairs with the optional Worldhopper Engine extension, which tracks who is in which body.",
+        "Pairs with the optional Worldhopper Engine extension (2.0.1 on the site), which tracks who is in which body.",
+        "1.4 drops Lines & Veils, so save any lists you filled in before upgrading; MiMo joins Kimi in the Pilgrim build.",
         "Published under the name Coz; matched to this creator by name and version history.",
         "The site is labelled 18+."
       ],
