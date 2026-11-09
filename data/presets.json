@@ -1516,6 +1516,65 @@
       ]
     },
     {
+      "slug": "casus-chatfill-ii",
+      "name": "Casus Custom Chatfill II",
+      "creator": "Casus-B",
+      "noU": true,
+      "creatorUrl": "https://github.com/Casus-B",
+      "version": "v10.0",
+      "updated": "2026-09-19",
+      "models": [
+        "GLM",
+        "Kimi",
+        "DeepSeek",
+        "Qwen",
+        "MiniMax",
+        "MiMo",
+        "Local"
+      ],
+      "style": [
+        "Lightweight",
+        "Switch-based",
+        "Scene tracker",
+        "Antislop"
+      ],
+      "summary": "A lighter, universal take on eteitaxiv's Chatfill v2: the rules sit in switches inside the system prompt, and one short final instruction after the chat history points the model back to them. Version 10.0 has the model play Sophia (rename her freely), a writer who is allowed to be hard on {{user}}, with a reworked antislop entry and an agency rule against positivity bias. Optional toys add colored NPC dialogue, a date, time and weather line, and a collapsible tracker of who is present, plot points and next moves. About 950 tokens at its core, around 1,750 with everything on.",
+      "notes": [
+        "Tested on GLM 4.6 to 5.3, Kimi 2.5 to 2.7, DeepSeek 3.1 to 4.0, Gemma 4 (also run locally), Qwen 3.5, MiniMax 2.7 and MiMo 2.5 Pro, mostly through NanoGPT; the creator says it works with or without reasoning.",
+        "Writer is the default role, with a roleplay game-engine role as the alternative. Three NSFW toggles (Eroticism, Hentai, Smut) all ship off, and there are optional toggles for DeepSeek v4, MiMo 2.5 and local Gemma 4.",
+        "A Tracker Cleanup regex comes attached and strips tracker blocks from older messages to save tokens. The same repo has a Lumiverse build of 10.0 with its own regex scripts, and every earlier version in its prior versions folder."
+      ],
+      "home": "https://github.com/Casus-B/Casus-custom-Chatfill-II",
+      "homeLabel": "GitHub",
+      "confidence": "high",
+      "variants": [
+        "Lumiverse build"
+      ],
+      "basedOn": [
+        "Chatfill v2"
+      ],
+      "nsfw": false,
+      "aka": "",
+      "honorable": false,
+      "catalogued": true,
+      "images": [
+        {
+          "src": "https://raw.githubusercontent.com/Casus-B/Casus-custom-Chatfill-II/main/screenshots/mha-tracker-expanded.webp",
+          "alt": "The expanded tracker in a My Hero Academia roleplay: current scene, major and minor plot points, fourteen characters present each in their own name color with place and outfit, an NPC agenda, scene pacing, and four next-path options with the one chosen.",
+          "from": "creator",
+          "href": "https://github.com/Casus-B/Casus-custom-Chatfill-II#the-tracker",
+          "caption": "The tracker, expanded, keeping fourteen characters straight"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/Casus-B/Casus-custom-Chatfill-II/main/screenshots/mha-tracker-collapsed.webp",
+          "alt": "A reply with the tracker folded away above a status line reading 11:28 AM, Saturday June 8, Heights Alliance Kitchen, clear skies, then the start of the prose.",
+          "from": "creator",
+          "href": "https://github.com/Casus-B/Casus-custom-Chatfill-II#the-tracker",
+          "caption": "The tracker collapsed, with the date, place and weather line"
+        }
+      ]
+    },
+    {
       "slug": "chatstream",
       "name": "Chatstream",
       "creator": "eteitaxiv",
