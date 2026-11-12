@@ -2,7 +2,7 @@ name: Keep the board awake
 
 on:
   schedule:
-    - cron: '17 15 */3 * *'   # every third day, 8:17 AM Phoenix
+    - cron: '17 */6 * * *'   # every 6 hours; Supabase wants a few requests a day
   workflow_dispatch:
 
 permissions:
@@ -16,10 +16,13 @@ jobs:
         with:
           sparse-checkout: data/site.json
           sparse-checkout-cone-mode: false
-      - name: Read one row from the board
+      - name: Read from the board
         run: |
           URL=$(jq -r .board.url data/site.json)
           KEY=$(jq -r .board.key data/site.json)
-          curl -fsS "$URL/rest/v1/board_items?select=id&limit=1" \
-            -H "apikey: $KEY" -H "Authorization: Bearer $KEY" > /dev/null
+          for i in 1 2 3; do
+            curl -fsS "$URL/rest/v1/board_items?select=id&limit=1" \
+              -H "apikey: $KEY" -H "Authorization: Bearer $KEY" > /dev/null
+            sleep 5
+          done
           echo "Board answered."
