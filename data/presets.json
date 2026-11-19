@@ -266,8 +266,8 @@
       "name": "Deus Ex Machina",
       "creator": "lsennn",
       "creatorUrl": "https://github.com/lsennn",
-      "version": "v3.0",
-      "updated": "2026-10-26",
+      "version": "v4.0",
+      "updated": "2026-11-18",
       "models": [
         "Claude",
         "Gemini",
@@ -282,15 +282,15 @@
         "Cinematic narration",
         "Beginner-friendly"
       ],
-      "summary": "A modular, story-first preset meant to work with nearly any card, narrated by Phi, its Story Master. Modules cover user agency and CYOA choices, story threads, Undercurrents (now the default over the Momentum Engine), Meanwhile for off-scene events, Hidden Truths for who knows what, Relationships, Companions who react to the story, and rules against positivity bias, omniscient characters and repetition. Version 3 gathers the trackers into one Active Modules tray with a tab for each module.",
+      "summary": "A modular, story-first preset meant to work with nearly any card, narrated by Phi, its Story Master. Modules cover user agency and CYOA choices, story threads, Undercurrents, Meanwhile for off-scene events, Hidden Truths for who knows what, Relationships, Companions who react to the story, and rules against positivity bias, omniscient characters and repetition, with every tracker in one Active Modules tray. Version 4 adds Fate, hidden dice that decide risky actions and make failure cost something, private Diaries for the two characters closest to you, New Faces cards for each new character with Pinned Cards to keep them through summaries, a Gore and Violence pick, Dark Portrayals, Phi's Take in the Scene Plan, and replies that repair their own broken tags.",
       "notes": [
-        "Needs SillyTavern's experimental macro engine; if it is off, a card in the chat says how to switch it on.",
-        "Its regex scripts come inside the preset and again as a separate file. A setup page walks through every section.",
-        "Narration styles now include Intimate, Melancholic and Suspenseful, with an Anime dialogue option and an Extra Long length (700 to 1,000 words). Adult options exist but are off by default.",
-        "Imports into Aetheria (1.6.9 and later) whole, module tabs and all."
+        "Needs SillyTavern 1.18.0 or later with the experimental macro engine on (the default since 1.17); if it is off, a card in the chat says how to switch it on.",
+        "Allow the embedded regex scripts when SillyTavern asks on import; they also come as a separate file. Tavo and Lumiverse versions are offered too.",
+        "Fate, Diaries, New Faces, Dark Portrayals and every Adult and Gore pick ship off. Content Policy ships on, so violence or sex that a scene holds is written in full unless you pick Nothing Graphic.",
+        "Download V4 from the creator's site, which also has setup for each model and the full release notes; V3 and older stay in the GitHub repo."
       ],
-      "home": "https://github.com/lsennn/Deus-ex-machina/releases/tag/v3.0",
-      "homeLabel": "GitHub",
+      "home": "https://lsennn.github.io/deus-ex-machina/#letter",
+      "homeLabel": "Website",
       "variants": [],
       "basedOn": [],
       "nsfw": false,
@@ -300,25 +300,32 @@
       "confidence": "high",
       "images": [
         {
-          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/cover_v3.png",
-          "alt": "Anime-style group of seven characters on a flowered terrace above a coastal town at sunset, under the title \"Deus Ex Machina V3\".",
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/covers/DEUS%20EX%20MACHINA%20V4%20cover.png",
+          "alt": "Anime-style blue-haired woman in a white coat reading a book as she walks across a mirror-flat salt plain under the Milky Way, beside the title \"Deus Ex Machina V4\".",
           "from": "creator",
           "href": "https://github.com/lsennn/Deus-ex-machina#readme",
-          "caption": "DEUS EX MACHINA V3's cover art"
+          "caption": "DEUS EX MACHINA V4's cover art"
         },
         {
-          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/chat_1_tracker.png",
-          "alt": "Chat output with a \"Scene Plan\" bar, a starry tracker card showing 07:15 AM, Day 3, the ship location and temperatures, then story text with each speaker's dialogue in its own colour.",
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/v4.demo.1.png",
+          "alt": "A starry tracker card reading 03:52 AM aboard a ship's stasis bay, story text with each speaker's dialogue in its own colour, and a small Fate note underneath: rolled 93, needed under 60, failed.",
           "from": "creator",
           "href": "https://github.com/lsennn/Deus-ex-machina#readme",
-          "caption": "The scene tracker and coloured dialogue, from the README"
+          "caption": "The scene tracker, the story and a failed Fate roll, from the README"
         },
         {
-          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/dem%20active%20modules%20status.png",
-          "alt": "The \"DEM Active Modules\" panel open on its Characters tab, listing each character's physical state, clothes, mental state, location and a bond meter.",
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/v4.demo.2.png",
+          "alt": "A New Faces card titled \"the stranger from the pod\", listing the character's name, appearance, background, personality, speech, goal and skills, with a copy button for Pinned Cards.",
           "from": "creator",
           "href": "https://github.com/lsennn/Deus-ex-machina#readme",
-          "caption": "The Active Modules panel, Characters tab"
+          "caption": "A New Faces character card"
+        },
+        {
+          "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/v4.demo.3.png",
+          "alt": "The \"DEM Active Modules\" tray with All, Characters, Threads and Diaries tabs, open on Characters: each character's physical state, clothes, mental state and location, and a bond meter.",
+          "from": "creator",
+          "href": "https://github.com/lsennn/Deus-ex-machina#readme",
+          "caption": "The Active Modules tray, Characters tab"
         },
         {
           "src": "https://raw.githubusercontent.com/lsennn/Deus-ex-machina/main/assets/companions.png",
