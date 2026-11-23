@@ -1687,6 +1687,54 @@
       "honorable": false
     },
     {
+      "slug": "aria",
+      "name": "ARIA",
+      "creator": "QuillFlash",
+      "noU": true,
+      "creatorUrl": "https://github.com/QuillFlash",
+      "version": "v1.0",
+      "updated": "2026-11-22",
+      "models": [
+        "Claude",
+        "Gemini",
+        "GLM",
+        "Kimi",
+        "Qwen",
+        "DeepSeek",
+        "MiniMax",
+        "MiMo",
+        "Local"
+      ],
+      "style": [
+        "Anti-slop",
+        "Natural dialogue",
+        "Dice-driven",
+        "Per-model variants"
+      ],
+      "summary": "Aria's Realistic Intelligence Assistance, the third generation of Realistic Frankenstein, rebuilt on Geechan's minimalist roleplay prompts at a fraction of the old size. It keeps characters true to their card's body, mood and knowledge, gives NPCs their own goals and voices, and leans hard on anti-slop rules checked again by a Last-Mile Gate at the very end of the prompt. A Fate & Chekhov Ledger rolls hidden dice for background life and rare big events, Bonds Lite tracks slow-growing relationships, and a short Logic Core plans each reply. About 4,800 tokens as shipped; the Chibi Edition says the same in about 2,800.",
+      "notes": [
+        "Needs SillyTavern 1.19.0 or later with the Experimental Macro Engine ticked. Allow the regex scripts on import for the thinking box and the Fate and Bonds panels; Text Completions users import the separate regex file.",
+        "Comes as Chat Completions, Text Completions (local models) and Marinara Engine files, each in full and Chibi editions, plus ready-made configs per model family with the right patch and reasoning settings; use one model patch at a time.",
+        "Adult Context and Freaky Override ship off, so nothing explicit runs until you switch them on."
+      ],
+      "home": "https://github.com/QuillFlash/ARIA/tree/stable",
+      "homeLabel": "GitHub",
+      "confidence": "high",
+      "variants": [
+        "Chibi Edition",
+        "Text Completions",
+        "Marinara Engine Edition"
+      ],
+      "basedOn": [
+        "Realistic Frankenstein",
+        "Geechan's Universal Roleplay"
+      ],
+      "nsfw": false,
+      "aka": "TheAestheticFur",
+      "honorable": false,
+      "catalogued": true
+    },
+    {
       "slug": "floris",
       "name": "Floris",
       "creator": "knoxarium",
