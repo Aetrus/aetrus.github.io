@@ -128,7 +128,7 @@
         "Standard",
         "Full",
         "Braille-space editions",
-        "v11.5.1 General RP"
+        "v11.5.2 General RP (V12 Core Port)"
       ],
       "style": [
         "Toggle-heavy",
@@ -141,6 +141,7 @@
       "notes": [
         "NemoPresetExt is strongly recommended and installs the current build in one click.",
         "The community list names v10; the repo hosts v12.3, with older builds archived.",
+        "The v11.5.2 General RP V12 Core Port (November 24) rebuilds the older General RP preset on the v12 core, with 457 prompts and 117 regex scripts.",
         "The shipped General RP profile has NSFW Core on; switch it off for SFW play."
       ],
       "home": "https://github.com/NemoVonNirgend/NemoEngine",
@@ -628,30 +629,35 @@
       "name": "Sola",
       "creator": "Pyrxpia",
       "creatorUrl": "https://github.com/Pyrxpia",
-      "version": "v4",
-      "updated": "2026-10-29",
+      "version": "v5",
+      "updated": "2026-11-23",
       "variants": [
-        "Flame V4 Complete (regex attached)",
-        "Flame V4 (with the Full or Lite regex pack)",
-        "Kindling V2 (compact)",
-        "Lumiverse and Tavo editions"
+        "Flame V5 Complete and Complete Lite (regex attached)",
+        "Flame V5 (with the Full or Lite regex pack)",
+        "Kindling V3 (compact)",
+        "Lumiverse, SillyTavern and Tavo editions"
       ],
       "models": [
         "Gemini",
         "GLM",
+        "Kimi",
+        "Qwen",
+        "MiMo",
+        "DeepSeek",
         "Local"
       ],
       "style": [
         "Co-author persona",
         "NPC agency",
         "Anti-echo prose",
-        "Tracker HUD"
+        "Tracker HUD",
+        "Story review"
       ],
-      "summary": "Casts the model as an eager co-author who narrates the outcome of your actions while you keep control of your character, with an OOC line for pausing to brainstorm or adjust pacing. It pushes NPCs to act on their own and bans repetitive phrasing. Flame V4 lets you pick one of five minds for Sola's voice (Riot, Gremlin, Velvet, Mystic, Scholar) or keep her Golden voice, and its full build adds a Showrunner HUD: a bond radar, feeling, thought and heart engines, a character matrix and the Easel story review. Kindling V2 is the compact, scene-focused Sola in her Golden voice.",
+      "summary": "Casts the model as an eager co-author who narrates the outcome of your actions while you keep control of your character, with an OOC line for pausing to brainstorm or adjust pacing. It pushes NPCs to act on their own, ends each reply on a live beat instead of choosing your next move, and bans repetitive phrasing and stock names. Flame V5 has eight minds for Sola's voice (Riot, Golden, Gremlin, Velvet, Mystic, Scholar and the new Kitsune and Doomer), a story sheet she fills before each reply, and optional trackers: Sola's Board follows up to 32 people, factions and threads on a chessboard, beside a Monitor for NPC thoughts, an NPC Roster, an Infirmary and the Easel story audit. Kindling V3 is the compact, scene-focused Sola in her Golden voice, brought up to Flame V5's writing.",
       "notes": [
-        "Flame V4 Complete has its Full regex pack attached. Plain Flame V4 needs the matching Full or Lite pack; import one pack, not both.",
-        "Kindling V2 carries its own regex scripts; its Feeling Engine and Easel are optional.",
-        "Imports into Aetheria (1.6.9 and later) whole, the Lumiverse edition too: its HUD cards, drawings and coloured voices show as they do in SillyTavern."
+        "Flame V5 Complete and Complete Lite come with the Full or Lite regex pack attached, for Lumiverse and SillyTavern. Plain Flame V5 (the only choice on Tavo) needs one matching pack; remove any older Sola pack first.",
+        "Kindling V3 carries its own regex scripts; its Feeling Engine and Easel are optional.",
+        "Council Bridge, Memory, Now Playing, Pocket and Crossroads need Lumiverse, so the SillyTavern and Tavo files leave them out. The jailbreaks, Adult Fiction Note and per-model patches ship off."
       ],
       "home": "https://pyrxpia.github.io/sola-hub/",
       "homeLabel": "Sola Hub",
@@ -663,32 +669,39 @@
       "confidence": "high",
       "images": [
         {
-          "src": "https://github.com/Pyrxpia/sola-hub/blob/main/assets/Sola%20V4.png?raw=true",
-          "alt": "Seven anime women, six with flame-orange hair and one blue-haired, laugh together at an autumn party with candles, cake and drinks, under the title \"Sola V4\".",
+          "src": "https://pyrxpia.github.io/sola-hub/assets/Sola%E2%80%99s%20Golden%20Comeback.png",
+          "alt": "Magazine-style cover: an orange-haired woman in a black jacket and skirt walks a glowing golden runway under the titles \"Sola Magazine\", \"Sola's Comeback\" and \"The official release Sola V5, the next era of Sola\".",
           "from": "creator",
-          "href": "https://github.com/Pyrxpia/sola-hub/tree/main/assets",
-          "caption": "Sola V4's cover art"
+          "href": "https://pyrxpia.github.io/sola-hub/",
+          "caption": "Sola V5's release cover art"
         },
         {
-          "src": "https://raw.githubusercontent.com/Pyrxpia/sola-hub/main/assets/Sola%20Kindling%20V2.png",
-          "alt": "Chibi-style blue-haired and orange-haired girls with drinks at a starry party with cake and a smiling star plush, under the title \"Sola Kindling V2\".",
+          "src": "https://pyrxpia.github.io/sola-hub/assets/Doomer%20Sola.png",
+          "alt": "Orange-haired girl in a black hoodie and grey sweatpants reaches out from a gaming chair beside a glowing keyboard, energy drink cans and crumpled paper.",
           "from": "creator",
-          "href": "https://github.com/Pyrxpia/sola-hub/tree/main/assets",
-          "caption": "Sola Kindling V2's cover art"
+          "href": "https://pyrxpia.github.io/sola-hub/",
+          "caption": "Doomer Sola, one of V5's two new minds"
         },
         {
           "src": "https://pyrxpia.github.io/sola-hub/assets/Scholar%20Sola.png",
           "alt": "Orange-haired woman in glasses and a green shirt writes in a notebook at a desk in front of bookshelves.",
           "from": "creator",
           "href": "https://pyrxpia.github.io/sola-hub/",
-          "caption": "Scholar Sola, one of V4's five minds"
+          "caption": "Scholar Sola, one of V5's eight minds"
         },
         {
           "src": "https://pyrxpia.github.io/sola-hub/assets/gremlin-sola.png",
           "alt": "Orange-haired girl with a wide grin in a teal bunny T-shirt sits on a bed in front of a gaming PC.",
           "from": "creator",
           "href": "https://pyrxpia.github.io/sola-hub/",
-          "caption": "Gremlin Sola, one of V4's five minds"
+          "caption": "Gremlin Sola, one of V5's eight minds"
+        },
+        {
+          "src": "https://pyrxpia.github.io/sola-hub/assets/v5-gallery/board.webp",
+          "alt": "Sola's Board inside the Showrunner HUD: an 8 by 8 chessboard with eight pieces in play and a note under it for the black pawn at H8, \"The cold: creeping in under the hall doors.\"",
+          "from": "creator",
+          "href": "https://pyrxpia.github.io/sola-hub/",
+          "caption": "Sola's Board, from the hub's V5 gallery"
         },
         {
           "src": "shots/presets/sola-v4-scene.webp",
@@ -766,8 +779,8 @@
       "creator": "CallMeOniisan",
       "aka": "Kazuma",
       "creatorUrl": "https://github.com/Arif-salah",
-      "version": "v11",
-      "updated": "2026-10",
+      "version": "v11.5",
+      "updated": "2026-11-07",
       "variants": [
         "V11 Writers' Room",
         "V11 DeepSeek",
@@ -789,10 +802,11 @@
         "Slow-burn secrets",
         "Natural dialogue"
       ],
-      "summary": "A SillyTavern extension paired with one preset file that rebuilds the prompt every turn, adding only what that turn needs. It tracks locations, outfits, relationships, inventory and hidden plot threads in the background so long roleplays keep continuity. V11 adds a Notebook where the story sets hidden truths early, plants clues and holds the reveal until it fits.",
+      "summary": "A SillyTavern extension paired with one preset file that rebuilds the prompt every turn, adding only what that turn needs. It tracks locations, outfits, relationships, inventory and hidden plot threads in the background so long roleplays keep continuity. V11 added a Notebook where the story sets hidden truths early, plants clues and holds the reveal until it fits; V11.5 adds custom tracker blocks, a scene list with names, a Dev Mode that opens every prompt for editing, and Qwen Image and Krea 2 image styles alongside SillyTavern's own Image Generation.",
       "notes": [
         "Install the extension, import Megumin Suite V11 Universal.json and enable its bundled regex.",
-        "Optional secondary model for tracker blocks and optional ComfyUI inline images.",
+        "V11.5 shipped November 7; a November 23 fix made its settings, side panel and images load again, so update the extension if you installed it before then.",
+        "Optional secondary model for tracker blocks, and optional inline images through ComfyUI or SillyTavern's Image Generation.",
         "The earlier Kazuma Secret Sauce style lives on as a balance mode.",
         "Its prompts are placeholders that the creator's SillyTavern extension fills in each turn, so it needs that extension (and does not run in Aetheria)."
       ],
@@ -1692,8 +1706,8 @@
       "creator": "QuillFlash",
       "noU": true,
       "creatorUrl": "https://github.com/QuillFlash",
-      "version": "v1.0",
-      "updated": "2026-11-22",
+      "version": "v1.0.1",
+      "updated": "2026-11-25",
       "models": [
         "Claude",
         "Gemini",
@@ -1714,7 +1728,7 @@
       "summary": "Aria's Realistic Intelligence Assistance, the third generation of Realistic Frankenstein, rebuilt on Geechan's minimalist roleplay prompts at a fraction of the old size. It keeps characters true to their card's body, mood and knowledge, gives NPCs their own goals and voices, and leans hard on anti-slop rules checked again by a Last-Mile Gate at the very end of the prompt. A Fate & Chekhov Ledger rolls hidden dice for background life and rare big events, Bonds Lite tracks slow-growing relationships, and a short Logic Core plans each reply. About 4,800 tokens as shipped; the Chibi Edition says the same in about 2,800.",
       "notes": [
         "Needs SillyTavern 1.19.0 or later with the Experimental Macro Engine ticked. Allow the regex scripts on import for the thinking box and the Fate and Bonds panels; Text Completions users import the separate regex file.",
-        "Comes as Chat Completions, Text Completions (local models) and Marinara Engine files, each in full and Chibi editions, plus ready-made configs per model family with the right patch and reasoning settings; use one model patch at a time.",
+        "Comes as Chat Completions, Text Completions (local models) and Marinara Engine files, each in full and Chibi editions, plus ready-made configs per model family with the right patch and reasoning settings; use one model patch at a time. Since 1.0.1 the Marinara files carry the same switches as Chat Completions.",
         "Adult Context and Freaky Override ship off, so nothing explicit runs until you switch them on."
       ],
       "home": "https://github.com/QuillFlash/ARIA/tree/stable",
