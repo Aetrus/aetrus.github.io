@@ -122,12 +122,10 @@
       "creator": "Head-Mousse6943",
       "aka": "NemoVonNirgend",
       "creatorUrl": "https://github.com/NemoVonNirgend",
-      "version": "v12.3",
-      "updated": "2026-10-22",
+      "version": "v12.5.3",
+      "updated": "2026-11-11",
       "variants": [
-        "Standard",
-        "Full",
-        "Braille-space editions",
+        "v12.3 Standard and Message Dock (previous)",
         "v11.5.2 General RP (V12 Core Port)"
       ],
       "style": [
@@ -137,12 +135,12 @@
         "RPG-capable",
         "Heavyweight"
       ],
-      "summary": "A very large modular preset for general roleplay, collaborative fiction and RPG scenes: its builds carry hundreds of prompts and regex scripts. You pick one option per family across craft cores, 31 narrator personalities, planning modes, world logic, difficulty, POV and length, with optional HTML or ASCII trackers. Powerful and complex; keep the shipped defaults first.",
+      "summary": "A very large modular preset for general roleplay, collaborative fiction and RPG scenes: v12.5.3 carries over 600 prompts and nearly 300 regex scripts. You pick one option per family across craft cores, 31 narrator personalities, planning modes, world logic, difficulty, POV and length, with optional HTML or ASCII trackers. New in v12.5: Mental Projection, which models each character's body, needs, memory and motives before they act; story-memory checkpoints every 50 messages; and an optional Runtime (Setup, Auto or Manual) with chat commands, off as shipped. Powerful and complex; keep the shipped defaults first.",
       "notes": [
         "NemoPresetExt is strongly recommended and installs the current build in one click.",
-        "The community list names v10; the repo hosts v12.3, with older builds archived.",
+        "The community list names v10; the repo hosts v12.5.3, keeps both v12.3 editions as the previous version and archives older builds.",
         "The v11.5.2 General RP V12 Core Port (November 24) rebuilds the older General RP preset on the v12 core, with 457 prompts and 117 regex scripts.",
-        "The shipped General RP profile has NSFW Core on; switch it off for SFW play."
+        "NSFW Core ships on in both v12.5.3 and the Core Port; switch it off for SFW play."
       ],
       "home": "https://github.com/NemoVonNirgend/NemoEngine",
       "homeLabel": "GitHub",
